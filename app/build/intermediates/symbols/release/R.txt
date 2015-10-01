@@ -378,9 +378,9 @@ int drawable quienessomos 0x7f02004a
 int drawable redpin 0x7f02004b
 int drawable right 0x7f02004c
 int drawable search 0x7f02004d
-int drawable speaker 0x7f02004e
-int drawable speaker_nofoto 0x7f02004f
-int drawable splashsoched 0x7f020050
+int drawable soched 0x7f02004e
+int drawable speaker 0x7f02004f
+int drawable speaker_nofoto 0x7f020050
 int drawable starempty 0x7f020051
 int drawable starfull 0x7f020052
 int id Content 0x7f080048

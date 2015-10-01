@@ -5,10 +5,10 @@
  * should not be modified by hand.
  */
 
-package mc.soched2015;
+package mc.mextesol;
 
 public final class Manifest {
     public static final class permission {
-        public static final String C2D_MESSAGE="mc.soched2015.permission.C2D_MESSAGE";
+        public static final String C2D_MESSAGE="mc.mextesol.permission.C2D_MESSAGE";
     }
 }

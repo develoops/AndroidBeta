@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mc.soched2015"
+    package="mc.mextesol"
     android:versionCode="10"
     android:versionName="2.0" >
 
@@ -19,10 +19,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <permission
-        android:name="mc.soched2015.permission.C2D_MESSAGE"
+        android:name="mc.mextesol.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="mc.soched2015.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mc.mextesol.permission.C2D_MESSAGE" />
 
     <uses-feature
         android:name="android.hardware.telephony"
@@ -36,7 +36,7 @@
         android:xlargeScreens="true" />
 
     <application
-        android:name="mc.soched2015.myApp"
+        android:name="mc.mextesol.myApp"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
@@ -44,7 +44,7 @@
         android:largeHeap="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="mc.soched2015.MainActivity"
+            android:name="mc.mextesol.MainActivity"
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
             android:screenOrientation="portrait" >
@@ -78,7 +78,7 @@
                 <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
 
 <!--                   IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name. -->
-                <category android:name="mc.soched2015" />
+                <category android:name="mc.mextesol" />
             </intent-filter>
         </receiver>
         <receiver
@@ -92,10 +92,10 @@
         </receiver>
 
         <service
-            android:name="mc.soched2015.ServicioAlarma"
+            android:name="mc.mextesol.ServicioAlarma"
             android:enabled="true" />
 
-        <receiver android:name="mc.soched2015.BroadcastAlarma" />
+        <receiver android:name="mc.mextesol.BroadcastAlarma" />
 
         <meta-data
             android:name="com.parse.push.notification_icon"
