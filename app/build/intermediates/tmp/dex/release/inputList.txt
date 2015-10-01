@@ -1,0 +1,14 @@
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/classes/release
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/support-annotations-21.0.3-96105ab3f482b115480c0ca73d83a1a598069bb9.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/classes-96df98f7dbb11cb3d03de257082abab871d86843.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0-3989c5fe1117d8de46e31eab12220980aca1c740.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/ParseCrashReporting-1.9.1-4051c7a095b7cb78b3590f24b1952ac87b61f0d4.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/library-2.4.0-b3fc2aa316eb9a8ad552fc3c010049d828d332a3.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/YouTubeAndroidPlayerApi-0d95a030f4c83e8a6bf8903a6470d60587f96265.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.3-0d66f96a3a8986ca03252382cc7b44a49b09063e.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/gson-2.2.4-34a716b9e62fba371f2bfb13efecb91c5cd76856.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/internal_impl-21.0.3-8c913104f3d55cbbdc95d259ec92bb8ac24645da.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0-javadoc-1e68546d1db8c7e6a4f9c121ed5db39dc425388c.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/classes-1d2a29bdcecfce19bb4851549b0d4d9812ce407e.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/Parse-1.9.1-ef426542cbead98708c8fc79a20487c513074a1e.jar
+/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/pre-dexed/release/classes-8d01f4d96c077e38ae0e16c05a7fa6e10eb1b7d5.jar
