@@ -573,7 +573,7 @@ public class EventDetailFragment extends Fragment {
                         makeFavourite.setText("Make Favorite");
                     }
                     deleteFavorite();
-                    cancelarAlarmaEvento(selectedEvent.getTitle());
+                    CancelAlarmaEvento(selectedEvent.getTitle());
 
                 }
                 else {
@@ -680,7 +680,7 @@ public class EventDetailFragment extends Fragment {
 
     }
 
-    private void cancelarAlarmaEvento(String mensaje){
+    private void CancelAlarmaEvento(String mensaje){
         Intent myIntent = new Intent(getActivity(), BroadcastAlarma.class);
         myIntent.setAction("My.Action.Alarm");
         myIntent.putExtra("alarma",mensaje);

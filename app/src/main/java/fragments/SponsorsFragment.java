@@ -3,7 +3,9 @@ package fragments;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -175,13 +177,31 @@ public class SponsorsFragment extends Fragment {
                     public void onItemClick(AdapterView<?> parent, View v,
                                             int position, long id) {
 
+
+
                         ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
-                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-                        Fragment fragment = CompanyDirectoryFragment.newInstance(stand.getCompany(),true);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container,fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
+
+                        if(object.getObjectId().equals("ha6qcF9vQF")){
+
+
+                            Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                            String url = stand.getCompany().getWeb();
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+
+
+                        }
+
+                        else {
+                            Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                            Fragment fragment = CompanyDirectoryFragment.newInstance(stand.getCompany(),true);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container,fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }
+
                     }
                 });
             }

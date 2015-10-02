@@ -8,8 +8,8 @@ android {
         applicationId "mc.mextesol"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 10
-        versionName "2.0"
+        versionCode 9
+        versionName "1.8"
     }
     buildTypes {
         release {

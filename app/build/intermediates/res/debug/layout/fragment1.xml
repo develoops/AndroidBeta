@@ -20,4 +20,4 @@
             android:layout_height="0dp"
             android:layout_weight="0" />
     </android.support.v4.app.FragmentTabHost>
-</LinearLayout><!-- From: file:/Users/Alvaro/Downloads/AndroidBeta/app/src/main/res/layout/fragment1.xml -->
+</LinearLayout><!-- From: file:/Users/Alvaro/Downloads/mobiCongress_Android/app/src/main/res/layout/fragment1.xml -->
