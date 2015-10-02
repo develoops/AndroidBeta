@@ -4,12 +4,12 @@
     <string name="app_name">MEXTESOL</string>
     <string name="start">Cargando..</string>
     <string name="action_settings">Configuración</string>
-    <string name="rate">Evaluacion Enviada</string>
-    <string name="finished">Evento Finalizado</string>
-    <string name="not_finished">Evento está por comenzar</string>
-    <string name="alarm">Alarma seteada</string>
-    <string name="alarm_cancel">Alarma cancelada</string>
-    <string name="Rate">Evaluar</string>
- <string name="cancelled">Evento Favorito cancelado</string>
+    <string name="rate">Rate sent</string>
+    <string name="finished">Event is done</string>
+    <string name="not_finished">Event is about to start</string>
+    <string name="alarm">Alarm setted!</string>
+    <string name="alarm_cancel">Alarm cancelled!</string>
+    <string name="Rate">Rate</string>
+ <string name="cancelled">Favorite event cancelled!</string>
 
 </resources>

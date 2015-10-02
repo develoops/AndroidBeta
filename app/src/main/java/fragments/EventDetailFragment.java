@@ -329,18 +329,18 @@ public class EventDetailFragment extends Fragment {
 
             if(myapp.getFavoriteApp(selectedEvent.getObjectId())){
                 if(Locale.getDefault().getLanguage().equals("en") ){
-                    makeFavourite.setText("Cancelar Favorito");
+                    makeFavourite.setText("Cancel Favorite");
                 }
                 else {
-                    makeFavourite.setText("Cancelar Favorito");
+                    makeFavourite.setText("Cancel Favorite");
                 }
             }
             else {
                 if(Locale.getDefault().getLanguage().equals("en") ){
-                    makeFavourite.setText("Hacer Favorito");
+                    makeFavourite.setText("Make Favorite");
                 }
                 else {
-                    makeFavourite.setText("Hacer Favorito");
+                    makeFavourite.setText("Make Favorite");
                 }
             }
 
@@ -381,12 +381,12 @@ public class EventDetailFragment extends Fragment {
                 TextView textView = (TextView)dialogo.findViewById(R.id.durationTitle);
 
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    btn_Cancel.setText("Cancelar");
-                    textView.setText("Evaluar");
+                    btn_Cancel.setText("Cancel");
+                    textView.setText("Rate");
                 }
                 else {
-                    btn_Cancel.setText("Cancelar");
-                    textView.setText("Evaluar");
+                    btn_Cancel.setText("Cancel");
+                    textView.setText("Rate");
                 }
                 ratingBar = (RatingBar) dialogo.findViewById(R.id.rating_bar);
                 btn_Ok.setOnClickListener(new View.OnClickListener() {
@@ -524,7 +524,7 @@ public class EventDetailFragment extends Fragment {
 
 
 
-                if(makeFavourite.getText().equals("Hacer Favorito")){
+                if(makeFavourite.getText().equals("Make Favorite")){
                     Calendar cal = Calendar.getInstance();
 
                     if(selectedEvent.getStartDate().getTime()<=cal.getTimeInMillis()){
@@ -548,11 +548,11 @@ public class EventDetailFragment extends Fragment {
                             SetAlarmaEvento(selectedEvent.getStartDate().getTime() - 900000, selectedEvent.getTitle());
 
                             if(Locale.getDefault().getLanguage().equals("en")){
-                                makeFavourite.setText("Cancelar Favorito");
+                                makeFavourite.setText("Cancel Favorite");
 
                             }
                             else {
-                                makeFavourite.setText("Cancelar Favorito");
+                                makeFavourite.setText("Cancel Favorite");
                             }
                         }
 
@@ -564,13 +564,13 @@ public class EventDetailFragment extends Fragment {
 
                 }
 
-                else if (makeFavourite.getText().equals("Cancelar Favorito")||
-                        makeFavourite.getText().equals("Cancelar Favorito")){
+                else if (makeFavourite.getText().equals("Cancel Favorite")||
+                        makeFavourite.getText().equals("Cancel Favorite")){
                     if(Locale.getDefault().getLanguage().equals("en")){
-                        makeFavourite.setText("Hacer Favorito");
+                        makeFavourite.setText("Make Favorite");
                     }
                     else {
-                        makeFavourite.setText("Hacer Favorito");
+                        makeFavourite.setText("Make Favorite");
                     }
                     deleteFavorite();
                     cancelarAlarmaEvento(selectedEvent.getTitle());

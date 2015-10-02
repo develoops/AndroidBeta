@@ -32,4 +32,4 @@
         android:focusable="true"
         android:layout_below="@id/document_toolbar"/>
 
-</FrameLayout><!-- From: file:/Users/Alvaro/Downloads/mobiCongress_Android/app/src/main/res/layout/documents_gridlayout.xml -->
+</FrameLayout><!-- From: file:/Users/Alvaro/Downloads/AndroidBeta/app/src/main/res/layout/documents_gridlayout.xml -->
