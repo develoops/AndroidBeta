@@ -104,7 +104,7 @@ public class MoreFragment extends Fragment {
         query.findInBackground(new FindCallback<MobiFile>() {
               @Override
               public void done(List<MobiFile> mobiFiles, ParseException e) {
-                  adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_event,mobiFiles);
+                  adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
                   listView.setAdapter(adapter);
 
                   listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

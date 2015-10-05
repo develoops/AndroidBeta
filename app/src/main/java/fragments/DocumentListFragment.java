@@ -56,10 +56,10 @@ public class DocumentListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.documentslistlayout, container , false);
-        final ListView listView = (ListView) RootView.findViewById(R.id.commonListView);// crear el
+        final ListView listView = (ListView) RootView.findViewById(R.id.documentListView);// crear el
         // gridview a partir del elemento del xml gridview
 
-        adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_event,documents);
+        adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,documents);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

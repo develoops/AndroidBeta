@@ -49,6 +49,7 @@ import java.util.Locale;
 
 import adapters.DirectiveListViewAdapter;
 
+import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
 import mc.soched2015.BroadcastAlarma;
@@ -67,7 +68,7 @@ import utils.TouchImageView;
 public class EventDetailFragment extends Fragment {
 
     public static Event selectedEvent;
-    ListView listview,speakers_listview,events_listview;
+    ListView listview,speakers_listview,events_listview,fileslistview;
     HetpinProgramListViewAdapter adapter,adapter2;
     private RatingBar ratingBar;
     RelativeLayout footer;
@@ -129,6 +130,7 @@ public class EventDetailFragment extends Fragment {
         checkin = (Button) RootView.findViewById(R.id.checkin);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview = (ListView)RootView.findViewById(R.id.commonListView);
+        fileslistview = (ListView)RootView.findViewById(R.id.filesListView);
         speakers_listview = (ListView)RootView.findViewById(R.id.speakers_list_view);
         events_listview= (ListView)RootView.findViewById(R.id.events_list_view);
         header= (ParseImageView)RootView.findViewById(R.id.header);
@@ -141,6 +143,13 @@ public class EventDetailFragment extends Fragment {
         }
         else {
             footer.setVisibility(View.GONE);
+        }
+
+        if(selectedEvent.getEventFiles()!=null){
+            fileslistview.setVisibility(View.VISIBLE);
+            GridDocumentsAdapter adapter;
+            adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
+            fileslistview.setAdapter(adapter);
         }
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
@@ -223,11 +232,12 @@ public class EventDetailFragment extends Fragment {
             map.setVisibility(View.INVISIBLE);
         }
 
+        /*
         if(selectedEvent.getEventFiles()!=null){
             checkin.setVisibility(View.VISIBLE);
             checkin.setText("Docs");
         }
-
+*/
 
         DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
         int width = displayMetrics.widthPixels;
@@ -241,7 +251,13 @@ public class EventDetailFragment extends Fragment {
 
 
         TextView description = (TextView) RootView.findViewById(R.id.content);
-        description.setText(selectedEvent.getDetails());
+        if(selectedEvent.getDetails()!=null){
+            description.setText(selectedEvent.getDetails());
+        }
+        else {
+            description.setVisibility(View.GONE);
+        }
+
         Log.i("DESCRIPTION",String.valueOf(selectedEvent.getDetails()));
         if(myapp.getBooleanApp(selectedEvent.getObjectId())){
             rate.setVisibility(View.INVISIBLE);
@@ -354,6 +370,7 @@ public class EventDetailFragment extends Fragment {
         }
 
 
+        /*
         checkin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -364,7 +381,7 @@ public class EventDetailFragment extends Fragment {
                 ft.commit();
             }
         });
-
+*/
 
         rate.setOnClickListener(new View.OnClickListener() {
             @Override

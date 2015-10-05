@@ -2,12 +2,17 @@ package adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.parse.ParseFile;
+import com.parse.ParseImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,10 +51,10 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
             row = inflater.inflate(layoutResourceId, parent, false);
 
             holder = new RecordHolder();
-            holder.txtTitle = (TextView) row.findViewById(R.id.name_event);
-            holder.size = (TextView) row.findViewById(R.id.time);
+            holder.txtTitle = (TextView) row.findViewById(R.id.title_doc);
+            holder.size = (TextView) row.findViewById(R.id.size_doc);
 
-            holder.imageItem = (ImageView) row.findViewById(R.id.icon_speaker);
+            holder.imageItem = (ParseImageView) row.findViewById(R.id.doc_icon);
             row.setTag(holder);
         } else {
             holder = (RecordHolder) row.getTag();
@@ -57,16 +62,35 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
 
         MobiFile mobiFile= data.get(position);
 
-        holder.txtTitle.setText(mobiFile.getTitle());
-        if(mobiFile.getParseFileV1()==null){
+        if(mobiFile.getThumbnail()!=null){
+            ParseFile photoFile = mobiFile.getThumbnail();
 
+            if (photoFile != null) {
+                //Get singleton instance of ImageLoader
+                ImageLoader imageLoader = ImageLoader.getInstance();
+                //Load the image from the url into the ImageView.
+
+                imageLoader.displayImage(photoFile.getUrl(), holder.imageItem);
+
+
+            }
+            else{
+                Log.i("NO HAY FOTITO","NOFOTO");
+            }
         }
+
+        else {
+            Log.i("NO HAY FOTITO","NOFOTO");
+        }
+        holder.txtTitle.setText(mobiFile.getTitle());
+
         if((mobiFile.getSize())>=100){
             holder.size.setText(mobiFile.getSize() + " KB");
         }
         else {
             holder.size.setText(mobiFile.getSize() + " MB");
         }
+
 
 
         return row;
