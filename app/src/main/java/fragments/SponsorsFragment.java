@@ -90,6 +90,7 @@ public class SponsorsFragment extends Fragment {
                     imageLoader.displayImage(map.getParseFileV1().getUrl(), touchImageView);
                 }
 
+                /*
                 touchImageView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -99,7 +100,7 @@ public class SponsorsFragment extends Fragment {
                         startActivity(i);
                     }
                 });
-
+*/
 
 
 
