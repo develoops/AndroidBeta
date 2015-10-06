@@ -83,12 +83,15 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
             Log.i("NO HAY FOTITO","NOFOTO");
         }
         holder.txtTitle.setText(mobiFile.getTitle());
+        holder.size.setText(mobiFile.getSize() + " MB");
 
-        if((mobiFile.getSize())>=100){
-            holder.size.setText(mobiFile.getSize() + " KB");
+
+        if((mobiFile.getSize()).doubleValue()>=1){
+            holder.size.setText(mobiFile.getSize().doubleValue() + " MB");
         }
         else {
-            holder.size.setText(mobiFile.getSize() + " MB");
+            holder.size.setText(mobiFile.getSize().doubleValue()*1000 + " KB");
+
         }
 
 

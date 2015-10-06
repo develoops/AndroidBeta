@@ -265,15 +265,26 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         if(end_minute ==0){
             endminute= "00";
         }
+        else if(end_minute ==05){
+            endminute= "05";
+        }
         else {
             endminute =  String.valueOf(end_minute);
         }
         if(start_minute ==0){
             startminute="00";
         }
+
+        else if(start_minute==05){
+            startminute= "05";
+        }
         else {
             startminute =  String.valueOf(start_minute);
         }
+
+
+
+
         holder.time.setText(start_hour+":"+startminute+"-"+end_hour+":"+endminute);
         //view.setBackgroundColor(context.getResources().getColor(R.color.modulo));
         String eventType = eventList.get(position).getType();

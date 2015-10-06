@@ -2,7 +2,7 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#ffffff">
+    android:background="#eeeeee">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -30,8 +30,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/commonListView"
             android:listSelector="#00000000"
-            android:divider="#fff"
-            android:dividerHeight="1dip"
+            android:divider="#eeeeee"
+
+
             android:layout_marginBottom="5dp"
             android:layout_below="@+id/header"
             />
@@ -42,8 +43,8 @@
             android:id="@+id/speakers_list_view"
             android:layout_below="@id/commonListView"
             android:listSelector="#00000000"
-            android:divider="#fff"
-            android:dividerHeight="1dip"
+            android:divider="#eeeeee"
+
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"

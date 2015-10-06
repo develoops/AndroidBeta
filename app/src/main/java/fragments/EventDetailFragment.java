@@ -145,12 +145,7 @@ public class EventDetailFragment extends Fragment {
             footer.setVisibility(View.GONE);
         }
 
-        if(selectedEvent.getEventFiles()!=null){
-            fileslistview.setVisibility(View.VISIBLE);
-            GridDocumentsAdapter adapter;
-            adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
-            fileslistview.setAdapter(adapter);
-        }
+
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
         if(Locale.getDefault().getLanguage().equals("en")){
@@ -234,8 +229,7 @@ public class EventDetailFragment extends Fragment {
 
         /*
         if(selectedEvent.getEventFiles()!=null){
-            checkin.setVisibility(View.VISIBLE);
-            checkin.setText("Docs");
+
         }
 */
 
@@ -263,6 +257,31 @@ public class EventDetailFragment extends Fragment {
             rate.setVisibility(View.INVISIBLE);
         }
 
+        if(selectedEvent.getEventFiles()!=null){
+
+            if(selectedEvent.getType().equals("Trabajos Libres")){
+                fileslistview.setVisibility(View.VISIBLE);
+                GridDocumentsAdapter adapter;
+                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
+                fileslistview.setAdapter(adapter);
+            }
+            else {
+                checkin.setVisibility(View.VISIBLE);
+                checkin.setText("Docs");
+                checkin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Fragment fragment = DocumentListFragment.newInstance(selectedEvent.getEventFiles());
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container, fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();
+                    }
+                });
+
+            }
+
+        }
 
         //Manejo de eventos anidados (eventos dentro de modulo y dentro de investigaciones
         if(selectedEvent.getAnidateEvents()!=null){
@@ -271,8 +290,9 @@ public class EventDetailFragment extends Fragment {
             List<Event> anidateEvents = selectedEvent.getAnidateEvents();
             for(Event event:anidateEvents){
                 Log.i("OBJECTID",event.getObjectId());
-                Log.i("STARTDATE", String.valueOf(event.getStartDate().getTime()));
+                //Log.i("STARTDATE", String.valueOf(event.getStartDate().getTime()));
             }
+
 
             Collections.sort(anidateEvents, new Comparator<Event>() {
                 @Override
@@ -320,7 +340,7 @@ public class EventDetailFragment extends Fragment {
             speaker_adapter = new DirectiveListViewAdapter(getActivity(),selectedEvent.getActors(),false);
         }
         else {
-            //speakers_listview.setVisibility(View.GONE);
+            speakers_listview.setVisibility(View.GONE);
         }
 
 
@@ -370,18 +390,8 @@ public class EventDetailFragment extends Fragment {
         }
 
 
-        /*
-        checkin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = DocumentListFragment.newInstance(selectedEvent.getEventFiles());
-                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.container, fragment);
-                ft.addToBackStack(null);
-                ft.commit();
-            }
-        });
-*/
+
+
 
         rate.setOnClickListener(new View.OnClickListener() {
             @Override

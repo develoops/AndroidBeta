@@ -23,8 +23,8 @@ public class MobiFile extends ParseObject {
     public ParseFile getParseFileV3() {
         return (ParseFile)get("parseFileV3");
     }
-    public Integer getSize() {
-        return getInt("size");
+    public Number getSize() {
+        return getNumber("size");
     }
     public String getsubtype() {
         return getString("subtype");
