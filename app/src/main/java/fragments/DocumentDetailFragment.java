@@ -63,7 +63,7 @@ public class DocumentDetailFragment extends Fragment {
         webview.loadUrl("http://docs.google.com/gview?embedded=true&url=" + pdf);
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.webviewtoolbar);
 
-        toolbar.setTitle("Documents");
+        toolbar.setTitle("Documentos");
         toolbar.setNavigationIcon(R.drawable.left);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

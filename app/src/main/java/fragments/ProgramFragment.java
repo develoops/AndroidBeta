@@ -202,9 +202,10 @@ public class ProgramFragment extends Fragment {
 
 
 
-            if(Locale.getDefault().getLanguage().equals("en")) {
-                headerDay = headerDay.replace("September", "Septiembre");
-            }
+
+            headerDay = headerDay.replace("October", "Octubre");
+
+
             day_program.setText(headerDay);
             //Llama al adaptador con boolean true para mostrar celda como deberia salir en el Programa
             // (no viene de evento detalle), en el adaptador se configura la celda

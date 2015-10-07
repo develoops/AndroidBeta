@@ -77,6 +77,7 @@ public class EventDetailFragment extends Fragment {
     public static List <Event> events;
     public myApp myapp;
     public static MeetingApp mApp;
+    GridDocumentsAdapter docsadapter;
 
     ParseImageView header;
     private PendingIntent pendingIntent;
@@ -123,7 +124,6 @@ public class EventDetailFragment extends Fragment {
         setHasOptionsMenu(true);
 
         makeFavourite = (Button) RootView.findViewById(R.id.makefavourite);
-
         rate = (Button) RootView.findViewById(R.id.rate);
         ask = (Button) RootView.findViewById(R.id.ask);
         map = (Button) RootView.findViewById(R.id.map);
@@ -261,9 +261,27 @@ public class EventDetailFragment extends Fragment {
 
             if(selectedEvent.getType().equals("Trabajos Libres")){
                 fileslistview.setVisibility(View.VISIBLE);
-                GridDocumentsAdapter adapter;
-                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
-                fileslistview.setAdapter(adapter);
+                docsadapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,selectedEvent.getEventFiles());
+                fileslistview.setAdapter(docsadapter);
+
+                fileslistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+
+                        ParseObject object = (ParseObject)(fileslistview.getItemAtPosition(position));
+                        MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
+                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
+                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                        ft.replace(R.id.container,fragment);
+                        ft.addToBackStack(null);
+                        ft.commit();
+
+                    }
+                });
+
+
             }
             else {
                 checkin.setVisibility(View.VISIBLE);
@@ -331,10 +349,12 @@ public class EventDetailFragment extends Fragment {
         list.add(0,selectedEvent);
 
 
+
         //llama al adaptador con boolean false para indicar que es una celda de programa que se necesita mostrar
         //como encabezado para el detalle de evento
         adapter = new HetpinProgramListViewAdapter(getActivity(),list,mApp,false,false);
         listview.setAdapter(adapter);
+
 
         if(selectedEvent.getActors()!=null){
             speaker_adapter = new DirectiveListViewAdapter(getActivity(),selectedEvent.getActors(),false);
@@ -342,6 +362,8 @@ public class EventDetailFragment extends Fragment {
         else {
             speakers_listview.setVisibility(View.GONE);
         }
+
+
 
 
         speakers_listview.setAdapter(speaker_adapter);
@@ -544,6 +566,7 @@ public class EventDetailFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
 
         makeFavourite.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -20,6 +20,7 @@
             android:id="@+id/doc_icon"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:focusable="false"
             android:layout_centerVertical="true"
             android:background="#6198d4"/>
 
