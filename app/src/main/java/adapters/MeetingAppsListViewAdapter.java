@@ -133,14 +133,7 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
         cal.setTime(date);
         int year = cal.get(Calendar.YEAR);
 
-        if(Locale.getDefault().getLanguage().equals("en")){
-            Locale spanish = new Locale("es", "ES");
-            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
-        }
-        else {
-            Locale spanish = new Locale("es", "ES");
-            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
-        }
+        month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
 
         int day = cal.get(Calendar.DAY_OF_MONTH);
         Log.i("STARTDATE",String.valueOf(day));

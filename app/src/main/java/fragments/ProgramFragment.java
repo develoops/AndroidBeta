@@ -142,7 +142,7 @@ public class ProgramFragment extends Fragment {
             });
 
 
-
+            /*
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -162,10 +162,12 @@ public class ProgramFragment extends Fragment {
             });
 
 
-
+/*
             if(Locale.getDefault().getLanguage().equals("en")) {
                 headerDay = headerDay.replace("September", "Septiembre");
             }
+
+            */
             day_program.setText(headerDay);
             //Llama al adaptador con boolean true para mostrar celda como deberia salir en el Programa
             // (no viene de evento detalle), en el adaptador se configura la celda

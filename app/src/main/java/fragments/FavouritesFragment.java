@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -19,7 +20,12 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
@@ -27,7 +33,10 @@ import mc.mextesol.R;
 import mc.mextesol.myApp;
 import model.Event;
 import model.MeetingApp;
+import model.Person;
 import model.Rating;
+import utils.Sectionizer;
+import utils.SimpleSectionAdapter;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -39,6 +48,7 @@ public class FavouritesFragment extends Fragment {
     ListView listview;
     public static MeetingApp meetingApp;
     public myApp myapp;
+    RelativeLayout relativeLayout;
     public static FavouritesFragment newInstance(MeetingApp mApp) {
 
         // Instantiate a new fragment
@@ -52,12 +62,13 @@ public class FavouritesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View RootView = inflater.inflate(R.layout.common_list_layout, container , false);
+        final View RootView = inflater.inflate(R.layout.favorite_list_layout, container , false);
 
 
         this.myapp = (myApp) getActivity().getApplicationContext();
 
-
+       // relativeLayout = (RelativeLayout) RootView.findViewById(R.id.fav_bar);
+       // relativeLayout.setBackgroundColor(getResources().getColor(R.color.eventoTerciario));
         /*
 
 
@@ -75,11 +86,24 @@ public class FavouritesFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+
         /*
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
 */
+/*
+        Date date = meetingAppList.get(position).getStartDate();
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date);
+        int year = cal.get(Calendar.YEAR);
 
+        month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        Log.i("STARTDATE",String.valueOf(day));
+        holder.date.setText(month +" "+day+", "+ year);
+*/
 
         ParseQuery<Rating> query = ParseQuery.getQuery(Rating.class);
         query.whereEqualTo("user",ParseUser.getCurrentUser());
@@ -97,6 +121,8 @@ public class FavouritesFragment extends Fragment {
 
                     }
 
+
+
                     Log.i("IDDSS",String.valueOf(ids));
                     ParseQuery<Event> query2 = ParseQuery.getQuery(Event.class);
                     query2.whereContainedIn("objectId", ids);
@@ -104,14 +130,51 @@ public class FavouritesFragment extends Fragment {
                     query2.findInBackground(new FindCallback<Event>() {
                         @Override
                         public void done(List<Event> events, ParseException e) {
-                            Log.i("PASEEEAFSADF","SDAFNVV");
-                            Log.i("EVENTS",String.valueOf(events));
+
                             events2 = events;
                             Log.i("EVENTS2",String.valueOf(events2));
+                            Collections.sort(events2, new Comparator<Event>() {
+                                @Override
+                                public int compare(Event lhs, Event rhs) {
+
+                                    int date1Diff = lhs.getStartDate().compareTo(rhs.getStartDate());
+                                    if(date1Diff==0){
+                                        return (int)lhs.getEndDate().getTime()-(int)rhs.getEndDate().getTime();
+                                    }
+                                    else {
+                                        return (int)lhs.getStartDate().getTime() - (int)rhs.getStartDate().getTime();
+                                    }
+
+                                }
+                            });
                             if(events2!=null){
                                 if(getActivity()!=null){
                                     adapter = new HetpinProgramListViewAdapter(getActivity(),events2,meetingApp,false,true);
-                                    listview.setAdapter(adapter);
+
+                                    Sectionizer<Event> alphabetSectionizer = new Sectionizer<Event>() {
+
+
+                                        @Override
+                                        public String getSectionTitleForItem(Event instance) {
+                                            /*
+                                            Calendar cal = Calendar.getInstance();
+                                            cal.setTime(instance.getStartDate());
+                                            String month;
+                                            String date;
+                                            int year = cal.get(Calendar.YEAR);
+                                            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+                                            int day = cal.get(Calendar.DAY_OF_MONTH);
+                                            date = month +" "+day+", "+ year;
+                                            */
+                                            return instance.getTitle2();
+                                        }
+                                    };
+
+                                    SimpleSectionAdapter<Event> sectionAdapter = new SimpleSectionAdapter<Event>(getActivity(),
+                                            adapter, R.layout.fav_bar, R.id.dayFavorite, alphabetSectionizer);
+
+                                    // 6. Set the adapter to your ListView
+                                    listview.setAdapter(sectionAdapter);
                                 }
 
                             }
@@ -139,7 +202,6 @@ public class FavouritesFragment extends Fragment {
 
             }
         });
-
 
 
         getView().setFocusableInTouchMode(true);
