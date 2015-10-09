@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.soched2015.R;
-import mc.soched2015.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 
 /**

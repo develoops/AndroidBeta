@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.soched2015.R;
-import mc.soched2015.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

@@ -2,26 +2,17 @@ package fragments;
 
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -30,15 +21,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import adapters.GridGalleryAdapter;
-import adapters.GridImageAdapter;
-import adapters.GridMediaAdapter;
-import mc.soched2015.R;
-import model.Actor;
-import model.Facade;
+import mc.soched.R;
 import model.MeetingApp;
 import model.MobiFile;
-import utils.TouchImageView;
 
 /**
  * Created by Alvaro on 2/25/15.

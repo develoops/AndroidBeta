@@ -21,8 +21,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import adapters.NewsListViewAdapter;
-import mc.soched2015.R;
-import mc.soched2015.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.New;
 
 /**

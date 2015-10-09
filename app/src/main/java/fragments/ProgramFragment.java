@@ -26,13 +26,12 @@ import com.parse.ParseObject;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.soched2015.R;
+import mc.soched.R;
 
 import model.Event;
 import model.MeetingApp;

@@ -22,7 +22,7 @@ import java.util.List;
 
 import adapters.SpeakersListViewAdapter;
 
-import mc.soched2015.R;
+import mc.soched.R;
 import model.Actor;
 import model.MeetingApp;
 import model.Person;

@@ -1,4 +1,4 @@
-package mc.soched2015;
+package mc.soched;
 
 import android.app.Application;
 import android.content.Context;
@@ -124,7 +124,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("soched2015", new SaveCallback() {
+        ParsePush.subscribeInBackground("soched", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

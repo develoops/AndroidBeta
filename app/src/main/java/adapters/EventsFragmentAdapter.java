@@ -24,7 +24,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.soched2015.myApp;
+import mc.soched.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;

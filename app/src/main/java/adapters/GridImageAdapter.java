@@ -16,8 +16,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.soched2015.R;
-import model.Facade;
+import mc.soched.R;
 import model.MobiFile;
 
 /**

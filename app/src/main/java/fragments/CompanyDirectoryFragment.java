@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched2015.R;
-import mc.soched2015.MainActivity;
+import mc.soched.R;
+import mc.soched.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

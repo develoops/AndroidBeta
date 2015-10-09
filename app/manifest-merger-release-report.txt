@@ -49,13 +49,13 @@ uses-permission#android.permission.READ_PHONE_STATE
 ADDED from AndroidManifest.xml:12:5
 	android:name
 		ADDED from AndroidManifest.xml:12:22
-permission#mc.soched2015.permission.C2D_MESSAGE
+permission#mc.soched.permission.C2D_MESSAGE
 ADDED from AndroidManifest.xml:14:5
 	android:protectionLevel
 		ADDED from AndroidManifest.xml:15:9
 	android:name
 		ADDED from AndroidManifest.xml:14:17
-uses-permission#mc.soched2015.permission.C2D_MESSAGE
+uses-permission#mc.soched.permission.C2D_MESSAGE
 ADDED from AndroidManifest.xml:17:5
 	android:name
 		ADDED from AndroidManifest.xml:17:22
@@ -96,7 +96,7 @@ MERGED from it.sephiroth.android.library.imagezoom:imagezoom:2.2.2:11:5
 		ADDED from AndroidManifest.xml:29:9
 	android:name
 		ADDED from AndroidManifest.xml:33:9
-activity#mc.soched2015.MainActivity
+activity#mc.soched.MainActivity
 ADDED from AndroidManifest.xml:35:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:40:13
@@ -154,7 +154,7 @@ ADDED from AndroidManifest.xml:68:9
 		ADDED from AndroidManifest.xml:69:13
 	android:name
 		ADDED from AndroidManifest.xml:68:19
-intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+mc.soched2015
+intent-filter#com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION+mc.soched
 ADDED from AndroidManifest.xml:70:13
 action#com.google.android.c2dm.intent.RECEIVE
 ADDED from AndroidManifest.xml:71:17
@@ -164,7 +164,7 @@ action#com.google.android.c2dm.intent.REGISTRATION
 ADDED from AndroidManifest.xml:72:17
 	android:name
 		ADDED from AndroidManifest.xml:72:25
-category#mc.soched2015
+category#mc.soched
 ADDED from AndroidManifest.xml:77:17
 	android:name
 		ADDED from AndroidManifest.xml:77:27
@@ -188,13 +188,13 @@ action#com.parse.push.intent.OPEN
 ADDED from AndroidManifest.xml:84:17
 	android:name
 		ADDED from AndroidManifest.xml:84:25
-service#mc.soched2015.ServicioAlarma
+service#mc.soched.ServicioAlarma
 ADDED from AndroidManifest.xml:88:9
 	android:enabled
 		ADDED from AndroidManifest.xml:90:13
 	android:name
 		ADDED from AndroidManifest.xml:89:13
-receiver#mc.soched2015.BroadcastAlarma
+receiver#mc.soched.BroadcastAlarma
 ADDED from AndroidManifest.xml:92:9
 	android:name
 		ADDED from AndroidManifest.xml:92:19

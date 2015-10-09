@@ -1,4 +1,4 @@
-package mc.soched2015;
+package mc.soched;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
