@@ -8,7 +8,7 @@
 
     <GridView
 
-        android:id="@+id/gridView"
+        android:id="@+id/grid"
         android:numColumns="3"
         android:clickable="false"
         android:layout_gravity="center"

@@ -195,7 +195,7 @@ public class SponsorsFragment extends Fragment {
 
                         else {
                             Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-                            Fragment fragment = CompanyDirectoryFragment.newInstance(stand.getCompany(),true);
+                            Fragment fragment = CompanySponsorFragment.newInstance(stand.getCompany(),true);
                             final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                             ft.replace(R.id.container,fragment);
                             ft.addToBackStack(null);
