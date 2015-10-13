@@ -49,32 +49,35 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp" />
 
+        <GridView
+
+            android:id="@+id/grid"
+            android:numColumns="3"
+            android:clickable="false"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/footer"
+            android:visibility="gone"
+
+            />
+
 
         <TextView
             android:id="@+id/content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/speakers_list_view"
+            android:layout_above="@id/grid"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="5dp"
-
+            android:layout_below="@id/speakers_list_view"
             android:textColor="@android:color/black"
             android:scrollbars="vertical"/>
 
-        <GridView
 
-            android:id="@+id/gridView"
-            android:numColumns="3"
-            android:clickable="false"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="400dp"
-            android:layout_below="@+id/content"
-            android:layout_above="@+id/footer"
-
-            />
 
 
 

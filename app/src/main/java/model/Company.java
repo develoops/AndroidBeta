@@ -34,7 +34,7 @@ public class Company extends ParseObject {
     public String getFacebook() {
         return getString("facebook");
     }
-    public List<MobiFile> getGallery() {
+    public List<Company> getGallery() {
         return getList("gallery");
     }
     public MobiFile getheaderImage(){

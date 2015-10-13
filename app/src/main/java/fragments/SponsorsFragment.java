@@ -165,12 +165,14 @@ public class SponsorsFragment extends Fragment {
             if(mApp.getCompaniesFacade()!=null){
 
                 List<Facade> facades = mApp.getCompaniesFacade();
+
                 ArrayList<Facade> facade1 = new ArrayList<>();
                 for(Facade facade:facades){
                     if(!facade.getRole().equals("Organizadores")){
                         facade1.add(facade);
                     }
                 }
+                Log.i("MAPP",String.valueOf(facade1));
                 gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 

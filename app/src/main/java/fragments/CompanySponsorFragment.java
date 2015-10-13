@@ -19,6 +19,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListView;
@@ -28,15 +29,19 @@ import android.widget.TextView;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
+import com.parse.ParseObject;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
+import adapters.GridCompanyAdapter;
+import adapters.GridImageAdapter;
 import adapters.SocietyLogoAdapter;
 import mc.mextesol.R;
 import mc.mextesol.MainActivity;
 import model.Company;
+import model.Facade;
 import model.MeetingApp;
 
 /**
@@ -56,6 +61,7 @@ public class CompanySponsorFragment extends Fragment{
     public ListView logoynombre,listview;
     public TextView description;
     public static GridView gridview;
+    GridCompanyAdapter companyAdapter;
     public static MeetingApp meetingApp;
 
     public static CompanySponsorFragment newInstance(Company company,boolean b) {
@@ -110,7 +116,27 @@ public class CompanySponsorFragment extends Fragment{
             //map = (Button) RootView.findViewById(R.id.checkin);
 //            map.setVisibility(View.GONE);
 
+            if(com.getGallery()!=null){
+                //description.setVisibility(View.GONE);
 
+                Log.i("TENGO CHALECO VISTE","CHALECO VITEH");
+                gridview.setVisibility(View.VISIBLE);
+                gridview.setAdapter(new GridCompanyAdapter(getActivity(),com.getGallery()));
+                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
+                        Company company = ParseObject.createWithoutData(Company.class, object.getObjectId());
+                        String url = company.getWeb();
+                        if(url!=null){
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+                        }
+
+                    }
+                });
+            }
             ArrayList<Company> stands = new ArrayList<>();
 
             stands.add(0, com);

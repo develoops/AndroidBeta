@@ -129,6 +129,7 @@ public class LoadDataFragment extends Fragment {
         query.include("companies.company.actors.person.profileImage");
 		query.include("companies.company.headerImage");
 		query.include("companies.company.logo");
+        query.include("companies.company.gallery.logo");
 		query.include("companies.company.location.country");
 		//query.include("companies.company.place");
 		query.include("meetingApps");
@@ -139,6 +140,7 @@ public class LoadDataFragment extends Fragment {
         query.include("meetingApps.companies.company.logo");
 		query.include("meetingApps.companies.headerImage");
 		query.include("meetingApps.companies.logo");
+        query.include("meetingApps.companies.company.gallery.logo");
 		query.include("meetingApps.events");
 		query.include("meetingApps.events.actors.person");
 		query.include("meetingApps.events.actors.person.profileImage");
@@ -267,6 +269,7 @@ public class LoadDataFragment extends Fragment {
         }
 		ParseQuery<CompanyApp> query = ParseQuery.getQuery(CompanyApp.class);
 		query.include("companies");
+
 		query.include("companies.company");
 		query.include("companies.company.actors");
 		query.include("companies.company.actors.person");
@@ -274,12 +277,14 @@ public class LoadDataFragment extends Fragment {
 		query.include("companies.company.headerImage");
 		query.include("companies.company.logo");
 		query.include("companies.company.location.country");
+        query.include("companies.company.gallery.logo");
 		//query.include("companies.company.place");
 		query.include("meetingApps");
 		query.include("meetingApps.companies");
 		query.include("meetingApps.companies.company");
 		query.include("meetingApps.companies.company.location");
         query.include("meetingApps.companies.company.headerImage");
+        query.include("meetingApps.companies.company.gallery.logo");
         query.include("meetingApps.companies.company.logo");
 		query.include("meetingApps.companies.headerImage");
 		query.include("meetingApps.companies.logo");
