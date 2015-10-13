@@ -145,6 +145,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.events.icon");
 		query.include("meetingApps.events.palette");
 		query.include("meetingApps.events.place");
+        query.include("meetingApps.events.library");
 		query.include("meetingApps.library");
 		query.include("meetingApps.icon");
         query.include("meetingApps.palette");
@@ -289,6 +290,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.events.icon");
 		query.include("meetingApps.events.palette");
 		query.include("meetingApps.events.place");
+        query.include("meetingApps.events.library");
 		query.include("meetingApps.library");
 		query.include("meetingApps.icon");
         query.include("meetingApps.palette");

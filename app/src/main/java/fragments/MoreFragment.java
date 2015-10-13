@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,7 +34,7 @@ public class MoreFragment extends Fragment {
     public static MeetingApp mApp;
     public static MobiFile map;
     public static ListView listView;
-    ArrayList<MobiFile> mFiles = new ArrayList<>();
+    //ArrayList<MobiFile> mFiles = new ArrayList<>();
     GridDocumentsAdapter adapter;
 
     public static MoreFragment newInstance(MeetingApp meetingApp) {
@@ -85,10 +86,11 @@ public class MoreFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("type","doc");
+        query.whereEqualTo("type","material");
         query.findInBackground(new FindCallback<MobiFile>() {
               @Override
               public void done(List<MobiFile> mobiFiles, ParseException e) {
+
                   adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
                   listView.setAdapter(adapter);
 

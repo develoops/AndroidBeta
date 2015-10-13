@@ -217,41 +217,41 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         Calendar cal2 = Calendar.getInstance();
         cal2.setTime(eventList.get(position).getEndDate());
         if(timeZone().equals("-03:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+3;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+3;
-        }
-        else if(timeZone().equals("-04:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+4;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+4;
-        }
-        else if(timeZone().equals("-05:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+5;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+5;
-        }
-        else if(timeZone().equals("-06:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+6;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+6;
-        }
-        else if(timeZone().equals("-07:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+7;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+7;
-        }
-
-        else if(timeZone().equals("-08:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+8;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+8;
-        }
-        else if(timeZone().equals("-02:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+2;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+2;
         }
-        else if(timeZone().equals("-01:00")){
+        else if(timeZone().equals("-04:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+3;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+3;
+        }
+        else if(timeZone().equals("-05:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+4;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+4;
+        }
+        else if(timeZone().equals("-06:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+5;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+5;
+        }
+        else if(timeZone().equals("-07:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+6;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+6;
+        }
+
+        else if(timeZone().equals("-08:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+7;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+7;
+        }
+        else if(timeZone().equals("-02:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+1;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+1;
         }
-        else if(timeZone().equals("00:00")){
+        else if(timeZone().equals("-01:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY);
             end_hour = cal2.get(Calendar.HOUR_OF_DAY);
+        }
+        else if(timeZone().equals("00:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)-1;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)-1;
         }
 
 
