@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.R;
-import mc.soched.MainActivity;
+import mc.cau.R;
+import mc.cau.MainActivity;
 import model.Company;
 import model.MeetingApp;
 
@@ -198,7 +198,17 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+            if(Locale.getDefault().getLanguage().equals("es")){
+                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+            }
+            else if(Locale.getDefault().getLanguage().equals("en")){
+                description.setText(com.getDetails2()+"\n"+"\n"+"\n"+"\n");
+            }
+
+            else {
+                description.setText(com.getDetails3()+"\n"+"\n"+"\n"+"\n");
+            }
+
             description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
@@ -222,14 +232,22 @@ public class CompanyDirectoryFragment extends Fragment{
                 call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-            //    map.setText("Map");
+
 
             }
-            else {
-                call.setText("Call");
+            else if(Locale.getDefault().getLanguage().equals("es")){
+                call.setText("Llamar");
                 web.setText("Web");
                 mail.setText("Mail");
-                //map.setText("Map");
+
+
+            }
+
+            else {
+                call.setText("Chamada");
+                web.setText("Web");
+                mail.setText("Mail");
+
 
             }
             makeFavourite.setVisibility(View.GONE);

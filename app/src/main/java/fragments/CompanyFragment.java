@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.MainActivity;
-import mc.soched.R;
+import mc.cau.MainActivity;
+import mc.cau.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;
@@ -181,8 +181,16 @@ public class CompanyFragment extends Fragment{
                 map.setText("Map");
 
             }
+            else if(Locale.getDefault().getLanguage().equals("es")){
+                call.setText("Llamar");
+                web.setText("Web");
+                mail.setText("Mail");
+                map.setText("Mapa");
+
+            }
+
             else {
-                call.setText("Call");
+                call.setText("Chamada");
                 web.setText("Web");
                 mail.setText("Mail");
                 map.setText("Map");
@@ -265,7 +273,16 @@ public class CompanyFragment extends Fragment{
                 //lgo.setParseFile(logo);
                 //lgo.loadInBackground();
 
-                description.setText(company.getDetails()+"\n"+"\n"+"\n"+"\n");
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    description.setText(company.getDetails()+"\n"+"\n"+"\n"+"\n");
+                }
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    description.setText(company.getDetails2()+"\n"+"\n"+"\n"+"\n");
+                }
+
+                else {
+                    description.setText(company.getDetails3()+"\n"+"\n"+"\n"+"\n");
+                }
                 description.setMovementMethod(new ScrollingMovementMethod());
                 //companyName.setText(company.getCompany().getName());
             } else {

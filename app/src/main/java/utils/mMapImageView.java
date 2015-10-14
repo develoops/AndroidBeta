@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 
 
 /**

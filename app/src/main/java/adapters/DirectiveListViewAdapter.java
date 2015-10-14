@@ -14,10 +14,11 @@ import com.parse.ParseFile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 import model.Actor;
 
 /**
@@ -164,7 +165,18 @@ public class DirectiveListViewAdapter extends BaseAdapter  {
         //directiva es que en directiva solo se muestra el cargo.
         if(bool){
             if(actorList.get(position).getRole()!=null){
-                holder.charge_speaker.setText(actorList.get(position).getRole());
+
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    holder.charge_speaker.setText(actorList.get(position).getRole());
+                }
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    holder.charge_speaker.setText(actorList.get(position).getRole2());
+                }
+
+                else {
+                    holder.charge_speaker.setText(actorList.get(position).getRole3());
+                }
+
             }
             else{
                 Log.i("LOG","LOG");
@@ -174,7 +186,18 @@ public class DirectiveListViewAdapter extends BaseAdapter  {
         else{
             holder.country_speaker.setVisibility(View.GONE);
             if(actorList.get(position).getRole()!=null){
-                holder.charge_speaker.setText(actorList.get(position).getRole());
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    holder.charge_speaker.setText(actorList.get(position).getRole());
+                }
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    holder.charge_speaker.setText(actorList.get(position).getRole2());
+                }
+
+                else {
+                    holder.charge_speaker.setText(actorList.get(position).getRole3());
+                }
+
+
             }
             else{
                 Log.i("LOG","LOG");

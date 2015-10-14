@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.soched.R;
+import mc.cau.R;
 import model.MobiFile;
 
 /**

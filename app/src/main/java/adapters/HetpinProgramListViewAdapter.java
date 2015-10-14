@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -199,12 +199,15 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         Log.i("NAME",String.valueOf(eventList.get(position).getObjectId()));
         if(Locale.getDefault().getLanguage().equals("en")){
             if(eventList.get(position).getTitle2()!=null && !eventList.get(position).getTitle2().isEmpty()){
-                holder.name.setText(eventList.get(position).getTitle());
-            }
-            else {
-                holder.name.setText(eventList.get(position).getTitle());
+                holder.name.setText(eventList.get(position).getTitle2());
             }
 
+        }
+
+        else if(Locale.getDefault().getLanguage().equals("pt")){
+            if(eventList.get(position).getTitle3()!=null && !eventList.get(position).getTitle3().isEmpty()){
+                holder.name.setText(eventList.get(position).getTitle3());
+            }
         }
         else {
             holder.name.setText(eventList.get(position).getTitle());
@@ -315,8 +318,12 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    Locale spanish = new Locale("es", "ES");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
+
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+                }
+                else if(Locale.getDefault().getLanguage().equals("pt")){
+                    Locale portuguese = new Locale("pt", "PT");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -462,8 +469,12 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.place.setText(eventList.get(position).getPlace().getName());
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    Locale spanish = new Locale("es", "ES");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
+
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+                }
+                else if(Locale.getDefault().getLanguage().equals("pt")){
+                    Locale portuguese = new Locale("pt", "PT");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -485,8 +496,12 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    Locale spanish = new Locale("es", "ES");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
+
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+                }
+                else if(Locale.getDefault().getLanguage().equals("pt")){
+                    Locale portuguese = new Locale("pt", "PT");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");

@@ -15,10 +15,11 @@ import com.parse.ParseFile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 import model.MeetingApp;
 import model.Person;
 
@@ -190,18 +191,53 @@ public class SpeakersListViewAdapter extends BaseAdapter implements Filterable {
 
             else{
                 //Log.i("Objectid",personList.get(position).getCompany().getObjectId());
-                if(personList.get(position).getCompany()!=null &&
-                        !personList.get(position).getCompany().getName().isEmpty() ){
+
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    if(personList.get(position).getCompany()!=null &&
+                            !personList.get(position).getCompany().getName().isEmpty() ){
 
 
-                    holder.company_speaker.setText(personList.get(position).getCompany().getName());
+                        holder.company_speaker.setText(personList.get(position).getCompany().getName());
+                    }
+
+
+                    else {
+                        Log.i("NA","EMPTU");
+                    }
+
                 }
 
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    if(personList.get(position).getCompany()!=null &&
+                            !personList.get(position).getCompany().getName2().isEmpty() ){
 
+
+                        holder.company_speaker.setText(personList.get(position).getCompany().getName2());
+                    }
+
+
+                    else {
+                        Log.i("NA","EMPTU");
+                    }
+
+                }
                 else {
-                    Log.i("NA","EMPTU");
+
+                    if(personList.get(position).getCompany()!=null &&
+                            !personList.get(position).getCompany().getName3().isEmpty() ){
+
+
+                        holder.company_speaker.setText(personList.get(position).getCompany().getName3());
+                    }
+
+
+                    else {
+                        Log.i("NA","EMPTU");
+                    }
+
                 }
-                Log.i("LOG","LOG");
+
+
             }
         }
 

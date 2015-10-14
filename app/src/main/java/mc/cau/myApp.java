@@ -1,4 +1,4 @@
-package mc.soched;
+package mc.cau;
 
 import android.app.Application;
 import android.content.Context;
@@ -66,7 +66,7 @@ public class myApp extends Application {
         mContext = this;
         Parse.enableLocalDatastore(this);
         ParseCrashReporting.enable(this);
-        Parse.initialize(this, "ygcB8L9eCUCFGx7b3z1tursWxkI40p5qN6HRcKMj", "9Huwzl9uWjxlnXmeWaxDNdr9oXObFs1TpWYe1G55");
+        Parse.initialize(this, "ao2aS1poKcD9OQVjojvk9dT7LW5QfQjpNoJDxN93", "1Ib9Syk64kAz8glznAMeZ9wRHnq8zhG4EV8UJo7s");
         //Parse.initialize(this, "4cxQOqEv89irqJxoqXY67SCelvOpRuPMoUazSi4b", "zpSulFdKyT4HVVESQr8iC2oLN6JGjI0v7nZN9bxL");
         // Parse.initialize(this, "pThOBYo97xXHKzeBn32O2shH398KvwFrnRcqze4m", "i9915R5ITUDpF8OOw6vd0yFSzKgc9M8JRkLoiPSC");
         //Parse.initialize(this, "PJniJghr5jqtMkkadDbRmFwnCk37T8bWqaBsJvm8", "FliRL0Wp4yJAoIn6CqoGDDJePKKNQjX0AcQ3pJLb");//Expomeetings
@@ -124,7 +124,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("soched", new SaveCallback() {
+        ParsePush.subscribeInBackground("cau", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

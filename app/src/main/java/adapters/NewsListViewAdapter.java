@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 import model.New;
 
 /**

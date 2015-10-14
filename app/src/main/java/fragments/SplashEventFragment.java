@@ -16,7 +16,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
-import mc.soched.R;
+import mc.cau.R;
 import model.MeetingApp;
 
 /**

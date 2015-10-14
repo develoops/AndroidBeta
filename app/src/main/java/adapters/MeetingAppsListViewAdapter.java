@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.cau.R;
+import mc.cau.myApp;
 import model.MeetingApp;
 
 /**
@@ -101,10 +101,15 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
 
         if(Locale.getDefault().getLanguage().equals("en")){
             if(meetingAppList.get(position).getName2()!=null && !meetingAppList.get(position).getName2().isEmpty()){
-                holder.name.setText(meetingAppList.get(position).getName());
+                holder.name.setText(meetingAppList.get(position).getName2());
             }
-            else {
-                holder.name.setText(meetingAppList.get(position).getName());
+
+
+        }
+
+        else if(Locale.getDefault().getLanguage().equals("pt")){
+            if(meetingAppList.get(position).getName3()!=null && !meetingAppList.get(position).getName3().isEmpty()){
+                holder.name.setText(meetingAppList.get(position).getName3());
             }
 
         }
@@ -115,13 +120,40 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
         //THIS LINE
 
         if(meetingAppList.get(position).getPlaceParse()!=null){
-            if(meetingAppList.get(position).getPlaceParse().getName()!=null ||
-                    !meetingAppList.get(position).getPlaceParse().getName().isEmpty()){
-                holder.place.setText(meetingAppList.get(position).getPlaceParse().getName());
+
+            if(Locale.getDefault().getLanguage().equals("en")){
+                if(meetingAppList.get(position).getPlaceParse().getName2()!=null ||
+                        !meetingAppList.get(position).getPlaceParse().getName2().isEmpty()){
+                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName2());
+                }
+                else{
+                    Log.i("LOG","LOG");
+                }
+
             }
-            else{
-                Log.i("LOG","LOG");
+
+            else if(Locale.getDefault().getLanguage().equals("pt")){
+                if(meetingAppList.get(position).getPlaceParse().getName3()!=null ||
+                        !meetingAppList.get(position).getPlaceParse().getName3().isEmpty()){
+                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName3());
+                }
+                else{
+                    Log.i("LOG","LOG");
+                }
             }
+
+            else {
+                if(meetingAppList.get(position).getPlaceParse().getName()!=null ||
+                        !meetingAppList.get(position).getPlaceParse().getName().isEmpty()){
+                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName());
+                }
+                else{
+                    Log.i("LOG","LOG");
+                }
+            }
+
+
+
 
         }
         else{
@@ -134,8 +166,12 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
         int year = cal.get(Calendar.YEAR);
 
         if(Locale.getDefault().getLanguage().equals("en")){
-            Locale spanish = new Locale("es", "ES");
-            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
+
+            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
+        }
+        else if(Locale.getDefault().getLanguage().equals("pt")){
+            Locale portuguese = new Locale("pt", "PT");
+            month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
         }
         else {
             Locale spanish = new Locale("es", "ES");

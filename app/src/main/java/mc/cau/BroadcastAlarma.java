@@ -1,4 +1,4 @@
-package mc.soched;
+package mc.cau;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

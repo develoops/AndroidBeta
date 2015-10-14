@@ -1382,7 +1382,7 @@ containing a value of this type.
         public static final int redpin=0x7f02004a;
         public static final int right=0x7f02004b;
         public static final int search=0x7f02004c;
-        public static final int soched=0x7f02004d;
+        public static final int cau=0x7f02004d;
         public static final int speaker=0x7f02004e;
         public static final int speaker_nofoto=0x7f02004f;
         public static final int splasmextesol=0x7f020050;

@@ -26,12 +26,13 @@ import com.parse.ParseObject;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.soched.R;
+import mc.cau.R;
 
 import model.Event;
 import model.MeetingApp;
@@ -129,6 +130,8 @@ public class ProgramFragment extends Fragment {
         super.onResume();
         if(meetingApp!=null){
 
+
+            /*
             mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
             // second argument is the default to use if the preference can't be found
@@ -159,7 +162,7 @@ public class ProgramFragment extends Fragment {
                 editor.putBoolean(welcomeScreenShownPref, true);
                 editor.commit(); // Very important to save the preference
             }
-
+*/
             eventList = staticMap.get(headerDay);
 
             List<Event> events= eventList;
@@ -180,7 +183,7 @@ public class ProgramFragment extends Fragment {
             });
 
 
-
+/*
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -200,9 +203,19 @@ public class ProgramFragment extends Fragment {
             });
 
 
+*/
+
+            if(Locale.getDefault().getLanguage().equals("es")){
+                headerDay = headerDay.replace("November", "Noviembre");
+
+            }
+
+            if(Locale.getDefault().getLanguage().equals("pt")){
+                headerDay = headerDay.replace("November", "Novembro");
+
+            }
 
 
-            headerDay = headerDay.replace("October", "Octubre");
 
 
             day_program.setText(headerDay);
