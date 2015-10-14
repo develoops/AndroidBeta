@@ -18,6 +18,7 @@ import com.parse.ParseImageView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
 import mc.cau.R;
@@ -154,7 +155,17 @@ public class SpeakerDetailAdapter extends BaseAdapter  {
             holder.company_speaker.setTextColor(bgColor);
             holder.name_speaker.setTextColor(bgColor);
             holder.country_speaker.setVisibility(View.GONE);
-            holder.charge_speaker.setText(actorList.get(position).getRole());
+            if(Locale.getDefault().getLanguage().equals("es")){
+                holder.charge_speaker.setText(actorList.get(position).getRole());
+            }
+            else if(Locale.getDefault().getLanguage().equals("en")){
+                holder.charge_speaker.setText(actorList.get(position).getRole2());
+            }
+
+            else {
+                holder.charge_speaker.setText(actorList.get(position).getRole3());
+            }
+
 
             if(actorList.get(position).getCompanies()==null){
 

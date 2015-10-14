@@ -252,7 +252,17 @@ public class EventDetailFragment extends Fragment {
         TextView description = (TextView) RootView.findViewById(R.id.content);
         if(selectedEvent.getDetails()!=null){
             description.setMovementMethod(new ScrollingMovementMethod());
-            description.setText(selectedEvent.getDetails());
+            if(Locale.getDefault().getLanguage().equals("es")){
+                description.setText(selectedEvent.getDetails());
+            }
+
+            else if(Locale.getDefault().getLanguage().equals("en")){
+                description.setText(selectedEvent.getDetails2());
+            }
+            else {
+                description.setText(selectedEvent.getDetails3());
+            }
+
 
         }
         else {
