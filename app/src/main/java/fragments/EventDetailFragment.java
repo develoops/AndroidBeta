@@ -73,7 +73,7 @@ public class EventDetailFragment extends Fragment {
     private RatingBar ratingBar;
     RelativeLayout footer;
     DirectiveListViewAdapter speaker_adapter;
-    Button makeFavourite,rate,ask,map,checkin;
+    Button makeFavourite,rate,ask,map,checkin,resumenes;
     public static List <Event> events;
     public myApp myapp;
     public static MeetingApp mApp;
@@ -128,6 +128,7 @@ public class EventDetailFragment extends Fragment {
         ask = (Button) RootView.findViewById(R.id.ask);
         map = (Button) RootView.findViewById(R.id.map);
         checkin = (Button) RootView.findViewById(R.id.checkin);
+        resumenes = (Button) RootView.findViewById(R.id.resumenes);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview = (ListView)RootView.findViewById(R.id.commonListView);
         fileslistview = (ListView)RootView.findViewById(R.id.filesListView);
@@ -142,6 +143,11 @@ public class EventDetailFragment extends Fragment {
 
         }
         else {
+            if(selectedEvent.getAnidateEvents().get(0).getType().equals("Trabajos Libres")){
+                resumenes.setVisibility(View.VISIBLE);
+
+            }
+
             footer.setVisibility(View.GONE);
         }
 

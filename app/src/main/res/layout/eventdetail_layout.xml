@@ -83,7 +83,24 @@
             android:divider="#fff"
             android:dividerHeight="1dip"
             android:visibility="visible"
-            android:layout_above="@+id/footer" />
+            />
+
+        <Button
+
+            android:visibility="gone"
+            android:layout_width="768dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/resumenes"
+            android:layout_below="@+id/events_list_view"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/eventoTerciario"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center"
+            android:text="Ver Resumenes"
+            android:shadowColor="@android:color/holo_blue_light"
+            android:textColor="@android:color/white"/>
 
         <RelativeLayout android:id="@+id/footer"
             android:layout_width="fill_parent" android:orientation="horizontal"
@@ -97,8 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/makefavourite"
-                    android:text="Make Favorite"
-
+                    android:text="Hacer favorito"
                     android:textSize="12dp"
                     android:textStyle="bold"
                     android:background="@android:color/transparent"/>
@@ -109,8 +125,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:id="@+id/ask"
-
-
                     android:textStyle="bold"
                     android:background="@android:color/transparent"/>
 
@@ -119,7 +133,6 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/rate"
                     android:textSize="12dp"
-
                     android:text="Evaluar"
                     android:textStyle="bold"
                     android:background="@android:color/transparent"/>
@@ -130,7 +143,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="12dp"
                     android:id="@+id/checkin"
-
                     android:text="Check-in"
                     android:textStyle="bold"
                     android:background="@android:color/transparent"/>

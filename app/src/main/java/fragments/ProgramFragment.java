@@ -180,7 +180,7 @@ public class ProgramFragment extends Fragment {
             });
 
 
-
+/*
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -199,7 +199,7 @@ public class ProgramFragment extends Fragment {
                 }
             });
 
-
+*/
 
 
             headerDay = headerDay.replace("October", "Octubre");

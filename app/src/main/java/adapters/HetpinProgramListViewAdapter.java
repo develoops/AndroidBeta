@@ -217,41 +217,41 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         Calendar cal2 = Calendar.getInstance();
         cal2.setTime(eventList.get(position).getEndDate());
         if(timeZone().equals("-03:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)+2;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+2;
-        }
-        else if(timeZone().equals("-04:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+3;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+3;
         }
-        else if(timeZone().equals("-05:00")){
+        else if(timeZone().equals("-04:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+4;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+4;
         }
-        else if(timeZone().equals("-06:00")){
+        else if(timeZone().equals("-05:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+5;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+5;
         }
-        else if(timeZone().equals("-07:00")){
+        else if(timeZone().equals("-06:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+6;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+6;
         }
-
-        else if(timeZone().equals("-08:00")){
+        else if(timeZone().equals("-07:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+7;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+7;
         }
+
+        else if(timeZone().equals("-08:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+8;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+8;
+        }
         else if(timeZone().equals("-02:00")){
+            start_hour = cal.get(Calendar.HOUR_OF_DAY)+2;
+            end_hour = cal2.get(Calendar.HOUR_OF_DAY)+2;
+        }
+        else if(timeZone().equals("-01:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY)+1;
             end_hour = cal2.get(Calendar.HOUR_OF_DAY)+1;
         }
-        else if(timeZone().equals("-01:00")){
+        else if(timeZone().equals("00:00")){
             start_hour = cal.get(Calendar.HOUR_OF_DAY);
             end_hour = cal2.get(Calendar.HOUR_OF_DAY);
-        }
-        else if(timeZone().equals("00:00")){
-            start_hour = cal.get(Calendar.HOUR_OF_DAY)-1;
-            end_hour = cal2.get(Calendar.HOUR_OF_DAY)-1;
         }
 
 
@@ -533,7 +533,32 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         else if (eventType.equals("curso")||
                 eventType.equals("Curso")||
                 eventType.equals("modulo")||
-                eventType.equals("Modulo")){
+                eventType.equals("Modulo")||
+                eventType.equals("Trabajos Libres")){
+
+            if(eventList.get(position).getIcon()!=null){
+
+                holder.icon.setVisibility(View.VISIBLE);
+                final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                holder.icon.setLayoutParams(lp);
+                lp.width = 120;
+                lp.height = 120;
+                lp.setMargins(0,5,20,0);
+                holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.modulo));
+                //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                view.setBackgroundColor(context.getResources().getColor(R.color.modulo));
+                if (photoFile != null) {
+                    //Get singleton instance of ImageLoader
+                    ImageLoader imageLoader = ImageLoader.getInstance();
+                    //Load the image from the url into the ImageView.
+                    imageLoader.displayImage(photoFile.getUrl(), holder.icon);
+                }
+
+                else {
+
+                }
+            }
 
             if(b&&!det){
                 holder.speakers.setVisibility(View.VISIBLE);
