@@ -8,8 +8,8 @@ android {
         applicationId "mc.urolchi"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 12
-        versionName "2.2"
+        versionCode 13
+        versionName "3.0"
     }
     buildTypes {
         release {

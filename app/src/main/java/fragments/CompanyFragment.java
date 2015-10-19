@@ -220,6 +220,8 @@ public class CompanyFragment extends Fragment{
             web.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+
                     String url = company.getWeb();
                     if(url!=null){
                         Intent i = new Intent(Intent.ACTION_VIEW);

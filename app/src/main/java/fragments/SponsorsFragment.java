@@ -99,6 +99,8 @@ public class SponsorsFragment extends Fragment {
                 }
                 Log.i("MAPP", String.valueOf(facade1));
                 gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
+
+                gridview.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                     public void onItemClick(AdapterView<?> parent, View v,
@@ -110,11 +112,25 @@ public class SponsorsFragment extends Fragment {
 
 
                             Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-                            Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
-                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.container,fragment);
-                            ft.addToBackStack(null);
-                            ft.commit();
+
+                            if(stand.getCompany().getDetails()!=null){
+                                Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
+                                final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                ft.replace(R.id.container,fragment);
+                                ft.addToBackStack(null);
+                                ft.commit();
+                            }
+
+                            else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
+                                String url = stand.getCompany().getWeb();
+                                Intent i = new Intent(Intent.ACTION_VIEW);
+                                i.setData(Uri.parse(url));
+                                startActivity(i);
+                            }
+                            else {
+                                Log.i("NADA","NADA");
+                            }
+
                         }
 
 
