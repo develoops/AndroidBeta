@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
-import mc.soched.MainActivity;
+import mc.urolchi.MainActivity;
 
 /**
  * Created by alvaro on 05-11-14.

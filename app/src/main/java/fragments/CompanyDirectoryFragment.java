@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.R;
-import mc.soched.MainActivity;
+import mc.urolchi.R;
+import mc.urolchi.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

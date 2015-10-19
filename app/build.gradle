@@ -5,11 +5,11 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "mc.soched"
+        applicationId "mc.urolchi"
         minSdkVersion 15
         targetSdkVersion 21
-        versionCode 11
-        versionName "2.1"
+        versionCode 12
+        versionName "2.2"
     }
     buildTypes {
         release {

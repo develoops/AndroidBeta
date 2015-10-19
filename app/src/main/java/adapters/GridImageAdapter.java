@@ -16,7 +16,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.soched.R;
+import mc.urolchi.R;
+import model.Facade;
 import model.MobiFile;
 
 /**
@@ -28,11 +29,11 @@ public class GridImageAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
 
-    private List<MobiFile> stands= null;
-    private ArrayList<MobiFile> arraylist;
+    private List<Facade> stands= null;
+    private ArrayList<Facade> arraylist;
 
     public GridImageAdapter(Context context,
-                                      List<MobiFile> standsapp) {
+                                      List<Facade> standsapp) {
         this.context = context;
         this.stands= standsapp;
         inflater = LayoutInflater.from(context);
@@ -92,8 +93,8 @@ public class GridImageAdapter extends BaseAdapter {
 
 
 
-                if(stands.get(position).getParseFileV1()!=null){
-                    final ParseFile photoFile = stands.get(position).getParseFileV1();
+                if(stands.get(position).getCompany().getLogo().getParseFileV1()!=null){
+                    final ParseFile photoFile = stands.get(position).getCompany().getLogo().getParseFileV1();
                     holder.image.setParseFile(photoFile);
                     holder.image.loadInBackground();
                 }

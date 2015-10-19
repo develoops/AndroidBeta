@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.MainActivity;
-import mc.soched.R;
+import mc.urolchi.MainActivity;
+import mc.urolchi.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;
@@ -171,26 +171,26 @@ public class CompanyFragment extends Fragment{
             call.setTextColor(Color.WHITE);
             web.setTextColor(Color.WHITE);
             mail.setTextColor(Color.WHITE);
-            map.setTextColor(Color.WHITE);
+            //map.setTextColor(Color.WHITE);
             makeFavourite.setTextColor(Color.WHITE);
 
             if(Locale.getDefault().getLanguage().equals("en")){
-                call.setText("Call");
+                call.setText("Llamar");
                 web.setText("Web");
                 mail.setText("Mail");
-                map.setText("Map");
+                //map.setText("Map");
 
             }
             else {
-                call.setText("Call");
+                call.setText("Llamar");
                 web.setText("Web");
                 mail.setText("Mail");
-                map.setText("Map");
+                //map.setText("Map");
 
             }
 
             makeFavourite.setVisibility(View.GONE);
-            map.setVisibility(View.INVISIBLE);
+            //map.setVisibility(View.INVISIBLE);
 
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
@@ -250,7 +250,7 @@ public class CompanyFragment extends Fragment{
 
 
 
-            if (company!= null) {
+            if (company.getheaderImage()!= null) {
 
 
                 ParseFile header = company.getheaderImage().getParseFileV1();

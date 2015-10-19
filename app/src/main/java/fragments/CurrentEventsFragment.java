@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.urolchi.R;
+import mc.urolchi.myApp;
 import model.Event;
 import model.MeetingApp;
 

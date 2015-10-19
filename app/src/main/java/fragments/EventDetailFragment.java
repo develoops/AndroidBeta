@@ -52,9 +52,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.soched.BroadcastAlarma;
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.urolchi.BroadcastAlarma;
+import mc.urolchi.R;
+import mc.urolchi.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

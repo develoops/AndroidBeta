@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.urolchi.R;
+import mc.urolchi.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -403,6 +403,13 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         holder.fav.setImageResource(R.drawable.favorite);
                         holder.fav.setVisibility(View.VISIBLE);
                     }
+
+                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                    holder.icon.setLayoutParams(lp);
+                    lp.setMargins(0,5,20,0);
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                 }
                 List <Actor> actors = eventList.get(position).getActors();
                 if(actors!=null){

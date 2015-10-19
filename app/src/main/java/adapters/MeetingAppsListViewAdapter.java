@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.urolchi.R;
+import mc.urolchi.myApp;
 import model.MeetingApp;
 
 /**

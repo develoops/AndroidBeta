@@ -1,4 +1,4 @@
-package mc.soched;
+package mc.urolchi;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
