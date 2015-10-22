@@ -198,8 +198,11 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-            description.setMovementMethod(new ScrollingMovementMethod());
+            if(com.getDetails()!=null){
+                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                description.setMovementMethod(new ScrollingMovementMethod());
+            }
+
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();

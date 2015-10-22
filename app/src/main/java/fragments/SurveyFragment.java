@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -18,12 +20,19 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
 import mc.mextesol.R;
+import model.Event;
+import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
+import model.Question;
+import model.Question2Article;
+import model.Questionnarie2Question;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -33,13 +42,15 @@ public class SurveyFragment extends Fragment {
     public static MeetingApp mApp;
     public static MobiFile map;
     public static ListView listView;
+    public static TextView statement;
     ArrayList<MobiFile> mFiles = new ArrayList<>();
+    ArrayList<String> statements= new ArrayList<>();
     GridDocumentsAdapter adapter;
 
-    public static SurveyFragment newInstance(MeetingApp meetingApp) {
+    public static SurveyFragment newInstance() {
 
         // Instantiate a new fragment
-        mApp= meetingApp; //Alfonso
+      //Alfonso
         SurveyFragment fragment = new SurveyFragment();
 
         fragment.setRetainInstance(true);
@@ -60,14 +71,61 @@ public class SurveyFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        final View RootView = inflater.inflate(R.layout.common_list_layout, container , false);
-        listView = (ListView) RootView.findViewById(R.id.commonListView);/// crear el
+        final View RootView = inflater.inflate(R.layout.survey_layout, container , false);
+
         // gridview a partir del elemento del xml gridview
         //final Button button = (Button) RootView.findViewById(R.id.comercialmap);
 
         //button.setText("Mapa Comercial");
+        statement = (TextView) RootView.findViewById(R.id.statement);
+        Button ok = (Button) RootView.findViewById(R.id.next);
+        ParseQuery<Questionnarie2Question> query = ParseQuery.getQuery(Questionnarie2Question.class);
+        query.findInBackground(new FindCallback<Questionnarie2Question>() {
+            @Override
+            public void done(List<Questionnarie2Question> questionnarie2Questions, ParseException e) {
+                ArrayList<Question> questions= new ArrayList<>();
+
+                for(Questionnarie2Question q2q:questionnarie2Questions){
+                    questions.add(q2q.getQuestion());
+                }
 
 
+
+
+
+
+
+                    ParseQuery<Question2Article> query2 = ParseQuery.getQuery(Question2Article.class);
+                    query2.include("item");
+                    query2.include("question");
+                    query2.whereEqualTo("type","statement");
+                    query2.findInBackground(new FindCallback<Question2Article>() {
+                        @Override
+                        public void done(List<Question2Article> question2Articles, ParseException e) {
+                            for (Question2Article q2a : question2Articles) {
+
+
+                            }
+
+                            Collections.sort(question2Articles, new Comparator<Question2Article>() {
+                                @Override
+                                public int compare(Question2Article lhs, Question2Article rhs) {
+
+                                   return lhs.getQuestion().toString().compareTo(rhs.getQuestion().toString());
+
+                                }
+                            });
+
+                            statement.setText(question2Articles.get(0).getQuestion().getName());
+                        }
+                    });
+
+
+
+
+
+            }
+        });
 
 
 

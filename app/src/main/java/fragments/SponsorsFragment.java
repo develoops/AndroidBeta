@@ -173,6 +173,7 @@ public class SponsorsFragment extends Fragment {
                     }
                 }
                 Log.i("MAPP",String.valueOf(facade1));
+
                 gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -183,26 +184,30 @@ public class SponsorsFragment extends Fragment {
 
                         ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
 
-                        if(object.getObjectId().equals("ha6qcF9vQF")){
 
-
-                            Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-                            String url = stand.getCompany().getWeb();
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse(url));
-                            startActivity(i);
-
-
+                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                        if(stand.getCompany().getLogo().getParseFileV1()!=null){
+                            stand.getCompany().getLogo().getParseFileV1().getDataInBackground();
                         }
 
-                        else {
-                            Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                        if(stand.getCompany().getDetails()!=null){
                             Fragment fragment = CompanySponsorFragment.newInstance(stand.getCompany(),true);
                             final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                             ft.replace(R.id.container,fragment);
                             ft.addToBackStack(null);
                             ft.commit();
                         }
+
+                        else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
+                            String url = stand.getCompany().getWeb();
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+                        }
+                        else {
+                            Log.i("NADA","NADA");
+                        }
+
 
                     }
                 });

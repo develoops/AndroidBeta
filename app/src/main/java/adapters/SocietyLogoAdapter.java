@@ -118,8 +118,8 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.icon = (ParseImageView) view.findViewById(R.id.icon_event);
             holder.icon.getLayoutParams().height = 150;
             holder.icon.getLayoutParams().width = 150;
-          //  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-           // params.setMargins(0, 0, 0, 0);
+            //  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            // params.setMargins(0, 0, 0, 0);
             //holder.icon.setLayoutParams(params);
 
 
@@ -147,8 +147,8 @@ public class SocietyLogoAdapter extends BaseAdapter {
         }*/
         if(standList.get(position)!=null){
 
-                holder.name.setText(standList.get(position).getName());
-                holder.name.setTextColor(Color.WHITE);
+            holder.name.setText(standList.get(position).getName());
+            holder.name.setTextColor(Color.WHITE);
 
 
             if(standList.get(position).getLogo()!=null){

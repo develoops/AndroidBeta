@@ -8,4 +8,6 @@ import com.parse.ParseObject;
  */
 @ParseClassName("Product")
 public class Product extends ParseObject {
+
+
 }

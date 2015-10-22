@@ -19,6 +19,7 @@ import fragments.LoadDataFragment;
 import fragments.MeetingsFragment;
 import fragments.MoreCompanyFragment;
 import fragments.MoreFragment;
+import fragments.SurveyFragment;
 import fragments.mCongressFragment;
 import model.TabUI;
 
@@ -71,6 +72,10 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
         }
         else if(tabUIs.get(position).getnameView().equals("navAbout")){
             return mCongressFragment.newInstance(LoadDataFragment.mobiCongress);
+        }
+
+        else if(tabUIs.get(position).getnameView().equals("navSurvey")){
+            return SurveyFragment.newInstance();
         }
         else {
             return MoreCompanyFragment.newInstance(LoadDataFragment.files);

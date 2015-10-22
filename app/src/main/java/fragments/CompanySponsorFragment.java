@@ -37,6 +37,7 @@ import java.util.Locale;
 
 import adapters.GridCompanyAdapter;
 import adapters.GridImageAdapter;
+import adapters.LogoAdapterProduct;
 import adapters.SocietyLogoAdapter;
 import mc.mextesol.R;
 import mc.mextesol.MainActivity;
@@ -59,7 +60,7 @@ public class CompanySponsorFragment extends Fragment{
     public ParseImageView hdr;
     public RelativeLayout footer;
     public ListView logoynombre,listview;
-    public TextView description;
+    public TextView description,headertext;
     public static GridView gridview;
     GridCompanyAdapter companyAdapter;
     public static MeetingApp meetingApp;
@@ -100,11 +101,12 @@ public class CompanySponsorFragment extends Fragment{
             hdr = (ParseImageView) RootView.findViewById(R.id.header);
             Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
             description = (TextView) RootView.findViewById(R.id.content);
-            listview = (ListView) RootView.findViewById(R.id.speakers_list_view);
+
+            listview = (ListView) RootView.findViewById(R.id.product_list_view);
             listview.setVisibility(View.GONE);
 
             logoynombre = (ListView) RootView.findViewById(R.id.commonListView);
-            gridview = (GridView) RootView.findViewById(R.id.grid);
+            //gridview = (GridView) RootView.findViewById(R.id.grid);
 
             footer = (RelativeLayout) RootView.findViewById(R.id.footer);
             //description.setMovementMethod(new ScrollingMovementMethod());
@@ -116,19 +118,24 @@ public class CompanySponsorFragment extends Fragment{
             //map = (Button) RootView.findViewById(R.id.checkin);
 //            map.setVisibility(View.GONE);
 
+
+            description.setText(com.getDetails());
+            description.setMovementMethod(new ScrollingMovementMethod());
+
             if(com.getGallery()!=null){
                 //description.setVisibility(View.GONE);
 
+
                 Log.i("TENGO CHALECO VISTE","CHALECO VITEH");
-                gridview.setVisibility(View.VISIBLE);
-                gridview.setAdapter(new GridCompanyAdapter(getActivity(),com.getGallery()));
-                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listview.setVisibility(View.VISIBLE);
+                listview.setAdapter(new LogoAdapterProduct(getActivity(),com.getGallery()));
+                listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
+                        ParseObject object = (ParseObject) (listview.getItemAtPosition(position));
                         Company company = ParseObject.createWithoutData(Company.class, object.getObjectId());
                         String url = company.getWeb();
-                        if(url!=null){
+                        if (url != null) {
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(Uri.parse(url));
                             startActivity(i);
@@ -191,9 +198,6 @@ public class CompanySponsorFragment extends Fragment{
         /*
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
-
-
-
 */
 
 
@@ -225,8 +229,6 @@ public class CompanySponsorFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-            description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();

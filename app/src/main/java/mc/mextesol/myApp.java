@@ -23,6 +23,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import model.Actor;
+import model.Article;
 import model.ColorPalette;
 import model.CompanyApp;
 
@@ -41,6 +42,11 @@ import model.Event;
 import model.Company;
 import model.Poll;
 import model.Product;
+import model.Question;
+import model.Question2Article;
+import model.Question2Question;
+import model.Questionnaire;
+import model.Questionnarie2Question;
 import model.Rating;
 import model.Section;
 import model.Stand;
@@ -75,7 +81,7 @@ public class myApp extends Application {
         ParseUser.enableAutomaticUser();
 
         ParseObject.registerSubclass(Actor.class);
-
+        ParseObject.registerSubclass(Article.class);
 
         ParseObject.registerSubclass(ColorPalette.class);
         ParseObject.registerSubclass(Company.class);
@@ -95,6 +101,11 @@ public class myApp extends Application {
         ParseObject.registerSubclass(Place.class);
         ParseObject.registerSubclass(Poll.class);
         ParseObject.registerSubclass(Product.class);
+        ParseObject.registerSubclass(Question.class);
+        ParseObject.registerSubclass(Question2Article.class);
+        ParseObject.registerSubclass(Question2Question.class);
+        ParseObject.registerSubclass(Questionnaire.class);
+        ParseObject.registerSubclass(Questionnarie2Question.class);
         ParseObject.registerSubclass(Rating.class);
         ParseObject.registerSubclass(Section.class);
         ParseObject.registerSubclass(Stand.class);
