@@ -12,5 +12,6 @@
     <color name="brk">#bc6135</color>
     <color name="gray">#D5DADE</color>
     <color name="negro">#000000</color>
+    <color name="blanco">#FFF</color>
 
 </resources>

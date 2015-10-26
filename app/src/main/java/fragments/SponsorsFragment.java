@@ -19,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -47,7 +48,7 @@ public class SponsorsFragment extends Fragment {
     public static MeetingApp mApp;
     public static MobiFile map;
     public static GridView gridview;
-    public static Button button;
+    public static Button button,acomodation;
 
 
     public static SponsorsFragment newInstance(MeetingApp meetingApp) {
@@ -76,8 +77,80 @@ public class SponsorsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
 
-        gridview = (GridView) RootView.findViewById(R.id.gridView);
+         gridview = (GridView) RootView.findViewById(R.id.gridView);
          button = (Button) RootView.findViewById(R.id.comercialmap);
+         acomodation = (Button) RootView.findViewById(R.id.acomodation);
+         acomodation.setText(R.string.accomodation);
+         acomodation.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 String url = mApp.getStatus();
+                 Intent i = new Intent(Intent.ACTION_VIEW);
+                 i.setData(Uri.parse(url));
+                 startActivity(i);
+             }
+         });
+        if (Locale.getDefault().getLanguage().equals("en")) {
+            button.setText("Commercial Map");
+        }
+        else {
+            button.setText("Mapa Comercial");
+        }
+
+        if(mApp!=null){
+            if(mApp.getCompaniesFacade()!=null){
+
+                List<Facade> facades = mApp.getCompaniesFacade();
+
+                ArrayList<Facade> facade1 = new ArrayList<>();
+                for(Facade facade:facades){
+                    if(!facade.getRole().equals("Organizadores")){
+                        facade1.add(facade);
+                    }
+                }
+                Log.i("MAPP", String.valueOf(facade1));
+                gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
+
+                gridview.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
+                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
+
+
+
+                        ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
+
+
+                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+
+                        String url = stand.getCompany().getWeb();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+
+                        /*
+                        if(stand.getCompany().getDetails()!=null){
+                            Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
+                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                            ft.replace(R.id.container,fragment);
+                            ft.addToBackStack(null);
+                            ft.commit();
+                        }
+
+                        else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
+
+                        }
+                        else {
+                            Log.i("NADA","NADA");
+                        }
+*/
+                    }
+
+
+                });
+            }
+        }
 
 
 
@@ -96,24 +169,8 @@ public class SponsorsFragment extends Fragment {
 
 
 
-        ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("title", "Plano");
-        query.getFirstInBackground(new GetCallback<MobiFile>() {
-            @Override
-            public void done(MobiFile mobiFile, ParseException e) {
 
-                if (mobiFile != null) {
-                    button.setVisibility(View.VISIBLE);
-                    Log.i("MOBIFILE", String.valueOf(mobiFile.getObjectId()));
-                    if (Locale.getDefault().getLanguage().equals("en")) {
-                        button.setText("Commercial Map");
-                    } else {
-                        button.setText("Mapa Comercial");
-                    }
-                }
 
-            }
-        });
 
 
 
@@ -128,7 +185,7 @@ public class SponsorsFragment extends Fragment {
                 dialogo.setContentView(R.layout.map_box_layout);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("title","Plano");
+                query.whereEqualTo("title","mapaComercial");
                 query.getFirstInBackground(new GetCallback<MobiFile>() {
                     @Override
                     public void done(MobiFile mobiFile, ParseException e) {
@@ -161,57 +218,6 @@ public class SponsorsFragment extends Fragment {
 
         });
 
-        if(mApp!=null){
-            if(mApp.getCompaniesFacade()!=null){
-
-                List<Facade> facades = mApp.getCompaniesFacade();
-
-                ArrayList<Facade> facade1 = new ArrayList<>();
-                for(Facade facade:facades){
-                    if(!facade.getRole().equals("Organizadores")){
-                        facade1.add(facade);
-                    }
-                }
-                Log.i("MAPP", String.valueOf(facade1));
-                gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
-
-                gridview.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
-                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                    public void onItemClick(AdapterView<?> parent, View v,
-                                            int position, long id) {
-
-
-
-                        ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
-
-
-                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-
-                        if(stand.getCompany().getDetails()!=null){
-                            Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
-                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.container,fragment);
-                            ft.addToBackStack(null);
-                            ft.commit();
-                        }
-
-                        else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
-                            String url = stand.getCompany().getWeb();
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(Uri.parse(url));
-                            startActivity(i);
-                        }
-                        else {
-                            Log.i("NADA","NADA");
-                        }
-
-                    }
-
-
-                });
-            }
-        }
 
 
         getView().setFocusableInTouchMode(true);

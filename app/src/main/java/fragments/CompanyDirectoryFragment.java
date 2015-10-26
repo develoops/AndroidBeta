@@ -216,9 +216,9 @@ public class CompanyDirectoryFragment extends Fragment{
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
 
-            hdr.getLayoutParams().height = (height / 3) - dpToPx(55);
+            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
 
-            footer.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
+            footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
 
             call.setTextColor(Color.WHITE);

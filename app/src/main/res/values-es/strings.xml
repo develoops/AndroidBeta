@@ -12,5 +12,7 @@
     <string name="Rate">Evaluar</string>
     <string name="cancelled">Evento Favorito cancelado</string>
     <string name="map">Map</string>
+    <string name="accomodation">Alojamiento</string>
+    <string name="close">Cerrar</string>
 
 </resources>

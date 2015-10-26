@@ -12,5 +12,8 @@
     <string name="Rate">Rate</string>
     <string name="cancelled">Favorite event canceled</string>
     <string name="map">Map</string>
+    <string name="accomodation">Accommodation</string>
+    <string name="close">Close</string>
+
 
 </resources>
