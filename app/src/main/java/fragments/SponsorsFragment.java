@@ -2,7 +2,9 @@ package fragments;
 
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,10 +14,12 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.GetCallback;
@@ -25,12 +29,14 @@ import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import adapters.GridImageAdapter;
 import mc.cau.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
+import utils.TouchImageView;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -41,6 +47,7 @@ public class SponsorsFragment extends Fragment {
     public static MeetingApp mApp;
     public static MobiFile map;
     public static GridView gridview;
+    public static Button button;
 
 
     public static SponsorsFragment newInstance(MeetingApp meetingApp) {
@@ -70,7 +77,7 @@ public class SponsorsFragment extends Fragment {
         final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
 
         gridview = (GridView) RootView.findViewById(R.id.gridView);
-
+         button = (Button) RootView.findViewById(R.id.comercialmap);
 
 
 
@@ -85,6 +92,74 @@ public class SponsorsFragment extends Fragment {
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
 */
+
+
+
+
+        ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
+        query.whereEqualTo("title", "Plano");
+        query.getFirstInBackground(new GetCallback<MobiFile>() {
+            @Override
+            public void done(MobiFile mobiFile, ParseException e) {
+
+                if (mobiFile != null) {
+                    button.setVisibility(View.VISIBLE);
+                    Log.i("MOBIFILE", String.valueOf(mobiFile.getObjectId()));
+                    if (Locale.getDefault().getLanguage().equals("en")) {
+                        button.setText("Commercial Map");
+                    } else {
+                        button.setText("Mapa Comercial");
+                    }
+                }
+
+            }
+        });
+
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final Dialog dialogo = new Dialog(getActivity());
+                dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+
+                dialogo.setContentView(R.layout.map_box_layout);
+
+                ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
+                query.whereEqualTo("title","Plano");
+                query.getFirstInBackground(new GetCallback<MobiFile>() {
+                    @Override
+                    public void done(MobiFile mobiFile, ParseException e) {
+                        map=mobiFile;
+                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
+                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
+                        mapadialog.setMaxZoom(3f);
+                        mapadialog.setMinZoom(1f);
+                        if (map!= null) {
+                            ImageLoader imageLoader = ImageLoader.getInstance();
+                            //Load the image from the url into the ImageView.
+                            imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+                        }
+
+
+                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                        done.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                dialogo.dismiss();
+
+                            }
+                        });
+
+                        dialogo.show();
+                    }
+                });
+
+            }
+
+        });
 
         if(mApp!=null){
             if(mApp.getCompaniesFacade()!=null){

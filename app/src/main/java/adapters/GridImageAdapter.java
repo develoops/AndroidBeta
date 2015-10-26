@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import mc.cau.R;
+import model.Facade;
 import model.MobiFile;
 
 /**
@@ -28,11 +29,11 @@ public class GridImageAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
 
-    private List<MobiFile> stands= null;
-    private ArrayList<MobiFile> arraylist;
+    private List<Facade> stands= null;
+    private ArrayList<Facade> arraylist;
 
     public GridImageAdapter(Context context,
-                                      List<MobiFile> standsapp) {
+                            List<Facade> standsapp) {
         this.context = context;
         this.stands= standsapp;
         inflater = LayoutInflater.from(context);
@@ -77,8 +78,8 @@ public class GridImageAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height-200) - dpToPx(75);
-            holder.image.getLayoutParams().width = (width);
+            holder.image.getLayoutParams().height = (height/3) - dpToPx(75);
+            holder.image.getLayoutParams().width = (width/3);
 
 
             view.setTag(holder);
@@ -92,15 +93,15 @@ public class GridImageAdapter extends BaseAdapter {
 
 
 
-                if(stands.get(position).getParseFileV1()!=null){
-                    final ParseFile photoFile = stands.get(position).getParseFileV1();
-                    holder.image.setParseFile(photoFile);
-                    holder.image.loadInBackground();
-                }
+        if(stands.get(position).getCompany().getLogo().getParseFileV1()!=null){
+            final ParseFile photoFile = stands.get(position).getCompany().getLogo().getParseFileV1();
+            holder.image.setParseFile(photoFile);
+            holder.image.loadInBackground();
+        }
 
-                else{
-                    Log.i("LOG","LOG");
-                }
+        else{
+            Log.i("LOG","LOG");
+        }
 
 
 
