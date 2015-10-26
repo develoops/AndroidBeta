@@ -11,12 +11,40 @@
         android:id="@+id/statement"
         android:layout_gravity="center_horizontal" />
 
-    <Button
+    <RadioGroup
+        android:id="@+id/answers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
-        android:id="@+id/next"
-        android:layout_gravity="center_horizontal" />
+        android:layout_marginTop="10dp" >
+
+        <RadioButton
+            android:id="@+id/a0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/a1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/a2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/a3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/black" />
+    </RadioGroup>
 
 
 </LinearLayout>

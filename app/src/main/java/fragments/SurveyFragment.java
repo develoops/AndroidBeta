@@ -12,7 +12,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -46,6 +49,7 @@ public class SurveyFragment extends Fragment {
     ArrayList<MobiFile> mFiles = new ArrayList<>();
     ArrayList<String> statements= new ArrayList<>();
     GridDocumentsAdapter adapter;
+    //RadioGroup radioGroup;
 
     public static SurveyFragment newInstance() {
 
@@ -78,7 +82,8 @@ public class SurveyFragment extends Fragment {
 
         //button.setText("Mapa Comercial");
         statement = (TextView) RootView.findViewById(R.id.statement);
-        Button ok = (Button) RootView.findViewById(R.id.next);
+
+
         ParseQuery<Questionnarie2Question> query = ParseQuery.getQuery(Questionnarie2Question.class);
         query.findInBackground(new FindCallback<Questionnarie2Question>() {
             @Override
@@ -88,11 +93,6 @@ public class SurveyFragment extends Fragment {
                 for(Questionnarie2Question q2q:questionnarie2Questions){
                     questions.add(q2q.getQuestion());
                 }
-
-
-
-
-
 
 
                     ParseQuery<Question2Article> query2 = ParseQuery.getQuery(Question2Article.class);
@@ -120,12 +120,53 @@ public class SurveyFragment extends Fragment {
                         }
                     });
 
+                ParseQuery<Question2Article> query3 = ParseQuery.getQuery(Question2Article.class);
+                query3.include("item");
+                query3.include("question");
+
+                query3.findInBackground(new FindCallback<Question2Article>() {
+                    @Override
+                    public void done(List<Question2Article> question2Articles, ParseException e) {
+
+                        RadioGroup radioGroup = (RadioGroup) RootView.findViewById(R.id.answers);
+                        for (int i = 0; i < radioGroup.getChildCount(); i++) {
+                            ((RadioButton) radioGroup.getChildAt(i)).setText(question2Articles.get(i).getItem().getText());
+                        }
+
+                        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                            @Override
+                            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                                if (checkedId == R.id.a0){
+                                    Toast toast =
+                                            Toast.makeText(getActivity(),
+                                                    "Boton 1", Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }else if (checkedId == R.id.a1){
+                                    Toast toast =
+                                            Toast.makeText(getActivity(),
+                                                    "Boton 2", Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }else if (checkedId == R.id.a2){
+                                    Toast toast =
+                                            Toast.makeText(getActivity(),
+                                                    "Boton 3", Toast.LENGTH_SHORT);
+                                    toast.show();
+                                }
+                            }
+                        });
+
+                    }
+                });
+
+
+
 
 
 
 
             }
         });
+
 
 
 

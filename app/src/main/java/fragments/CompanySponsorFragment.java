@@ -22,8 +22,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -119,8 +123,29 @@ public class CompanySponsorFragment extends Fragment{
 //            map.setVisibility(View.GONE);
 
 
+
             description.setText(com.getDetails());
             description.setMovementMethod(new ScrollingMovementMethod());
+
+            if(com.getObjectId().equals("co6k6qfuHl")){
+                RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                        300);
+                p.addRule(RelativeLayout.BELOW, R.id.commonListView);
+                p.setMargins(10,5,10,5);
+                description.setLayoutParams(p);
+            }
+
+            if(com.getObjectId().equals("ad6rDzeDLt")){
+                RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT);
+                p.addRule(RelativeLayout.BELOW, R.id.commonListView);
+                p.addRule(RelativeLayout.ABOVE, R.id.footer);
+                p.setMargins(10,5,10,5);
+                description.setLayoutParams(p);
+            }
+
+
+
 
             if(com.getGallery()!=null){
                 //description.setVisibility(View.GONE);

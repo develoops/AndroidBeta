@@ -36,17 +36,7 @@
             android:layout_below="@+id/header"
             />
 
-        <TextView
-            android:id="@+id/content"
-            android:layout_width="wrap_content"
-            android:layout_height="200dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="5dp"
-            android:layout_below="@id/commonListView"
-            android:textColor="@android:color/black"
-            android:scrollbars="vertical"/>
+
 
 
 
@@ -116,6 +106,23 @@
         </RelativeLayout>
 
 
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/commonListView"
+            android:textColor="@android:color/black"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+
+
+            />
+
         <ListView
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
@@ -130,6 +137,8 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:visibility="gone"/>
+
+
 
     </RelativeLayout>
 
