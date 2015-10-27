@@ -11,6 +11,13 @@
         android:id="@+id/statement"
         android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sub_statement"
+        android:layout_below="@+id/statement"
+        android:layout_gravity="center_horizontal" />
+
     <RadioGroup
         android:id="@+id/answers"
         android:layout_width="wrap_content"
@@ -44,7 +51,16 @@
             android:layout_height="wrap_content"
 
             android:textColor="@android:color/black" />
+
+
+        <RadioButton
+            android:id="@+id/a4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:textColor="@android:color/black" />
     </RadioGroup>
+
 
 
 </LinearLayout>

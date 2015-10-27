@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ import model.Event;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
+import model.Person;
 import model.Question;
 import model.Question2Article;
 import model.Questionnarie2Question;
@@ -48,7 +50,10 @@ public class SurveyFragment extends Fragment {
     public static TextView statement;
     ArrayList<MobiFile> mFiles = new ArrayList<>();
     ArrayList<String> statements= new ArrayList<>();
+    ArrayList<Question> questionsA = new ArrayList<>();
     GridDocumentsAdapter adapter;
+    public int currentindex = 0;
+    public static RadioGroup radioGroup;
     //RadioGroup radioGroup;
 
     public static SurveyFragment newInstance() {
@@ -83,7 +88,19 @@ public class SurveyFragment extends Fragment {
         //button.setText("Mapa Comercial");
         statement = (TextView) RootView.findViewById(R.id.statement);
 
+        radioGroup = (RadioGroup) RootView.findViewById(R.id.answers);
+        getQuestions();
 
+
+
+
+
+
+
+
+
+
+        /*
         ParseQuery<Questionnarie2Question> query = ParseQuery.getQuery(Questionnarie2Question.class);
         query.findInBackground(new FindCallback<Questionnarie2Question>() {
             @Override
@@ -163,11 +180,10 @@ public class SurveyFragment extends Fragment {
 
 
 
-
             }
         });
 
-
+*/
 
 
 
@@ -177,6 +193,7 @@ public class SurveyFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
         /*
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
@@ -275,5 +292,80 @@ public class SurveyFragment extends Fragment {
             }
         });
 
+    }
+
+    private void getQuestions(){
+        ParseQuery<Question> queryQuestion = ParseQuery.getQuery(Question.class);
+        queryQuestion.orderByAscending("name");
+        queryQuestion.findInBackground(new FindCallback<Question>() {
+            @Override
+            public void done(List<Question> questions, ParseException e) {
+
+                for(Question question:questions){
+                    Log.i("OBJETID",question.getObjectId());
+                    questionsA.add(question);
+                }
+
+            }
+        });
+
+        Log.i("QUESTIONSA",String.valueOf(questionsA));
+
+       // getOptions();
+    }
+
+    private void getOptions(){
+        ParseQuery<Question2Article> query = ParseQuery.getQuery(Question2Article.class);
+        query.whereEqualTo("question",questionsA.get(currentindex));
+        query.include("item");
+        query.findInBackground(new FindCallback<Question2Article>() {
+            @Override
+            public void done(List<Question2Article> question2Articles, ParseException e) {
+                ArrayList<Question2Article> questions2 = new ArrayList<>();
+                for(Question2Article question2Article:question2Articles){
+                    if(question2Article.getType().equals("statement")){
+                        statement.setText(question2Article.getItem().getText());
+                    }
+                    else {
+                        questions2.add(question2Article);
+                    }
+
+                }
+
+                Collections.sort(questions2,new Comparator<Question2Article>() {
+                    @Override
+                    public int compare(Question2Article lhs, Question2Article rhs) {
+                        return lhs.getSequencePosition().intValue()-rhs.getSequencePosition().intValue();
+                    }
+                });
+
+                for (int i = 0; i < questions2.size(); i++) {
+                    ((RadioButton) radioGroup.getChildAt(i)).setText(questions2.get(i).getItem().getText());
+                }
+
+                radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        if (checkedId == R.id.a0){
+                            currentindex++;
+                            getOptions();
+
+
+                        }else if (checkedId == R.id.a1){
+                            Toast toast =
+                                    Toast.makeText(getActivity(),
+                                            "Boton 2", Toast.LENGTH_SHORT);
+                            toast.show();
+                        }else if (checkedId == R.id.a2){
+                            Toast toast =
+                                    Toast.makeText(getActivity(),
+                                            "Boton 3", Toast.LENGTH_SHORT);
+                            toast.show();
+                        }
+                    }
+                });
+
+            }
+        });
     }
 }

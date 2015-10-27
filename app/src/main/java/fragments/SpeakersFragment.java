@@ -90,7 +90,7 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
             Collections.sort(persons1,new Comparator<Person>() {
                 @Override
                 public int compare(Person lhs, Person rhs) {
-                    return lhs.getSortingAux() - rhs.getSortingAux();
+                    return lhs.getLastName().toString().compareTo(rhs.getLastName().toString());
                 }
             });
             adapter = new SpeakersListViewAdapter(getActivity(),persons1,mApp,true);
