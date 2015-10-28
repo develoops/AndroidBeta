@@ -75,25 +75,30 @@ public class SponsorsFragment extends Fragment {
         final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
 
          gridview = (GridView) RootView.findViewById(R.id.gridView);
-         button = (Button) RootView.findViewById(R.id.comercialmap);
+         //button = (Button) RootView.findViewById(R.id.comercialmap);
+
          acomodation = (Button) RootView.findViewById(R.id.acomodation);
          acomodation.setText(R.string.accomodation);
          acomodation.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  String url = mApp.getStatus();
-                 Intent i = new Intent(Intent.ACTION_VIEW);
-                 i.setData(Uri.parse(url));
-                 startActivity(i);
+                 if(url!=null){
+                     Intent i = new Intent(Intent.ACTION_VIEW);
+                     i.setData(Uri.parse(url));
+                     startActivity(i);
+                 }
+
              }
          });
+        /*
         if (Locale.getDefault().getLanguage().equals("en")) {
             button.setText("Commercial Map");
         }
         else {
             button.setText("Mapa Comercial");
         }
-
+*/
         if(mApp!=null){
             if(mApp.getCompaniesFacade()!=null){
 
@@ -170,7 +175,7 @@ public class SponsorsFragment extends Fragment {
 
 
 
-
+/*
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -216,7 +221,7 @@ public class SponsorsFragment extends Fragment {
         });
 
 
-
+*/
         getView().setFocusableInTouchMode(true);
         getView().requestFocus();
         getView().setOnKeyListener(new View.OnKeyListener() {
