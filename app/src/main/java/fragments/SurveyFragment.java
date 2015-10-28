@@ -2,7 +2,10 @@ package fragments;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -22,6 +25,7 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -30,6 +34,8 @@ import java.util.List;
 
 import adapters.GridDocumentsAdapter;
 import mc.mextesol.R;
+import mc.mextesol.myApp;
+import model.Answer;
 import model.Event;
 import model.Facade;
 import model.MeetingApp;
@@ -49,11 +55,15 @@ public class SurveyFragment extends Fragment {
     public static ListView listView;
     public static TextView statement;
     ArrayList<MobiFile> mFiles = new ArrayList<>();
-    ArrayList<String> statements= new ArrayList<>();
+
     ArrayList<Question> questionsA = new ArrayList<>();
+    public static List <Question2Article> question2ArticleList;
+    public static ArrayList<Question2Article> statements = new ArrayList<>();
     GridDocumentsAdapter adapter;
     public int currentindex = 0;
+    public myApp myapp;
     public static RadioGroup radioGroup;
+    public static RadioButton r0,r1,r2,r3,r4;
     //RadioGroup radioGroup;
 
     public static SurveyFragment newInstance() {
@@ -70,10 +80,41 @@ public class SurveyFragment extends Fragment {
     @Override
     public void onAttach(Activity activity) {
 
-
+        this.myapp = (myApp) getActivity().getApplicationContext();
         super.onAttach(activity);
 
 
+
+
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // Retain this fragment across configuration changes.
+
+        if(!myapp.getBooleanEncuesta()){
+            if(!myapp.checkConnection()){
+                new AlertDialog.Builder(getActivity())
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .setTitle("Warning")
+                        .setMessage("You need to connect to internet to answer")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener()
+                        {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                getActivity().finish();
+                            }
+
+                        })
+                        .show();
+            }
+            else {
+                getQuestion2Article();
+            }
+
+        }
 
 
     }
@@ -87,103 +128,21 @@ public class SurveyFragment extends Fragment {
 
         //button.setText("Mapa Comercial");
         statement = (TextView) RootView.findViewById(R.id.statement);
+        if(myapp.getBooleanEncuesta()){
+            statement.setText("You already answer this survey. Thank you");
+        }
+
 
         radioGroup = (RadioGroup) RootView.findViewById(R.id.answers);
-        getQuestions();
 
 
+        r0 = (RadioButton)RootView.findViewById(R.id.a0);
+        r1 = (RadioButton)RootView.findViewById(R.id.a1);
+        r2 = (RadioButton)RootView.findViewById(R.id.a2);
+        r3 = (RadioButton)RootView.findViewById(R.id.a3);
+        r4 = (RadioButton)RootView.findViewById(R.id.a4);
 
 
-
-
-
-
-
-
-        /*
-        ParseQuery<Questionnarie2Question> query = ParseQuery.getQuery(Questionnarie2Question.class);
-        query.findInBackground(new FindCallback<Questionnarie2Question>() {
-            @Override
-            public void done(List<Questionnarie2Question> questionnarie2Questions, ParseException e) {
-                ArrayList<Question> questions= new ArrayList<>();
-
-                for(Questionnarie2Question q2q:questionnarie2Questions){
-                    questions.add(q2q.getQuestion());
-                }
-
-
-                    ParseQuery<Question2Article> query2 = ParseQuery.getQuery(Question2Article.class);
-                    query2.include("item");
-                    query2.include("question");
-                    query2.whereEqualTo("type","statement");
-                    query2.findInBackground(new FindCallback<Question2Article>() {
-                        @Override
-                        public void done(List<Question2Article> question2Articles, ParseException e) {
-                            for (Question2Article q2a : question2Articles) {
-
-
-                            }
-
-                            Collections.sort(question2Articles, new Comparator<Question2Article>() {
-                                @Override
-                                public int compare(Question2Article lhs, Question2Article rhs) {
-
-                                   return lhs.getQuestion().toString().compareTo(rhs.getQuestion().toString());
-
-                                }
-                            });
-
-                            statement.setText(question2Articles.get(0).getQuestion().getName());
-                        }
-                    });
-
-                ParseQuery<Question2Article> query3 = ParseQuery.getQuery(Question2Article.class);
-                query3.include("item");
-                query3.include("question");
-
-                query3.findInBackground(new FindCallback<Question2Article>() {
-                    @Override
-                    public void done(List<Question2Article> question2Articles, ParseException e) {
-
-                        RadioGroup radioGroup = (RadioGroup) RootView.findViewById(R.id.answers);
-                        for (int i = 0; i < radioGroup.getChildCount(); i++) {
-                            ((RadioButton) radioGroup.getChildAt(i)).setText(question2Articles.get(i).getItem().getText());
-                        }
-
-                        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                            @Override
-                            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                                if (checkedId == R.id.a0){
-                                    Toast toast =
-                                            Toast.makeText(getActivity(),
-                                                    "Boton 1", Toast.LENGTH_SHORT);
-                                    toast.show();
-                                }else if (checkedId == R.id.a1){
-                                    Toast toast =
-                                            Toast.makeText(getActivity(),
-                                                    "Boton 2", Toast.LENGTH_SHORT);
-                                    toast.show();
-                                }else if (checkedId == R.id.a2){
-                                    Toast toast =
-                                            Toast.makeText(getActivity(),
-                                                    "Boton 3", Toast.LENGTH_SHORT);
-                                    toast.show();
-                                }
-                            }
-                        });
-
-                    }
-                });
-
-
-
-
-
-
-            }
-        });
-
-*/
 
 
 
@@ -193,84 +152,6 @@ public class SurveyFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
-        /*
-        View v = mTabHost.getTabWidget().getChildAt(0);
-        v.setBackgroundResource(R.drawable.programa);
-*/
-/*
-
-        ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("type","doc");
-        query.findInBackground(new FindCallback<MobiFile>() {
-            @Override
-            public void done(List<MobiFile> mobiFiles, ParseException e) {
-                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_event,mobiFiles);
-                listView.setAdapter(adapter);
-
-                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
-                        MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
-                        Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-                        final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                        ft.replace(R.id.container,fragment);
-                        ft.addToBackStack(null);
-                        ft.commit();
-                    }
-                });
-
-            }
-        });
-        /*
-        query.whereEqualTo("subtype","gallery");
-        query.findInBackground(new FindCallback<MobiFile>() {
-            @Override
-            public void done(List<MobiFile> mobiFiles, ParseException e) {
-                    mFiles = (ArrayList<MobiFile>) mobiFiles;
-
-                gridview.setAdapter(new GridGalleryAdapter(getActivity(),mFiles));
-                gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
-                        MobiFile mobiFile = (MobiFile)(gridview.getItemAtPosition(position));
-
-                        final Dialog dialogo = new Dialog(getActivity());
-                        dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                        dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
-                        dialogo.setContentView(R.layout.map_box_layout);
-                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
-                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
-                        mapadialog.setMaxZoom(3f);
-                        mapadialog.setMinZoom(1f);
-                        if (mobiFile!= null) {
-                            ImageLoader imageLoader = ImageLoader.getInstance();
-                            //Load the image from the url into the ImageView.
-                            imageLoader.displayImage(mobiFile.getParseFileV1().getUrl(), mapadialog);
-                        }
-
-
-                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                        done.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                dialogo.dismiss();
-
-                            }
-                        });
-
-                        dialogo.show();
-
-                    }
-
-                });
-            }
-        });*/
-
-
 
 
 
@@ -294,78 +175,216 @@ public class SurveyFragment extends Fragment {
 
     }
 
-    private void getQuestions(){
-        ParseQuery<Question> queryQuestion = ParseQuery.getQuery(Question.class);
-        queryQuestion.orderByAscending("name");
-        queryQuestion.findInBackground(new FindCallback<Question>() {
-            @Override
-            public void done(List<Question> questions, ParseException e) {
+    private void getQuestion2Article(){
 
-                for(Question question:questions){
-                    Log.i("OBJETID",question.getObjectId());
-                    questionsA.add(question);
+        ParseQuery<Question2Article> queryQuestion2Article = ParseQuery.getQuery(Question2Article.class);
+        queryQuestion2Article.include("item");
+        queryQuestion2Article.include("question");
+        queryQuestion2Article.fromLocalDatastore();
+        // queryQuestion2Article.orderByAscending("question.name");
+        queryQuestion2Article.findInBackground(new FindCallback<Question2Article>() {
+            @Override
+            public void done(List<Question2Article> question2Articles, ParseException e) {
+
+
+
+                question2ArticleList = question2Articles;
+
+                Collections.sort(question2ArticleList, new Comparator<Question2Article>() {
+                    @Override
+                    public int compare(Question2Article lhs, Question2Article rhs) {
+                        return lhs.getQuestion().getName().toString().compareTo(rhs.getQuestion().getName().toString());
+                    }
+                });
+            }
+
+        });
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                for(Question2Article question2Article:question2ArticleList){
+                    if(question2Article.getType().equals("statement")){
+                        Log.i("STATEMT",question2Article.getQuestion().getName().toString());
+                        statements.add(question2Article);
+                    }
                 }
 
             }
-        });
+        }, 2000);
 
-        Log.i("QUESTIONSA",String.valueOf(questionsA));
 
-       // getOptions();
+        final Handler handler2 = new Handler();
+        handler2.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 100ms
+                getStatement();
+            }
+        }, 2000);
+
+
+
     }
+
+    private void getStatement(){
+        int check;
+        check = currentindex+1;
+        Log.i("CHECK",String.valueOf(check));
+        Log.i("STAT",String.valueOf(statements.size()));
+        if(check>statements.size()){
+            statement.setText("THANK YOU");
+            r0.setVisibility(View.GONE);
+            r1.setVisibility(View.GONE);
+            r2.setVisibility(View.GONE);
+            r3.setVisibility(View.GONE);
+            r4.setVisibility(View.GONE);
+            myapp.setBooleanEncuesta();
+
+
+        }
+        else {
+            statement.setText(statements.get(currentindex).getItem().getText());
+            getOptions();
+        }
+
+    }
+
+
+
+
 
     private void getOptions(){
         ParseQuery<Question2Article> query = ParseQuery.getQuery(Question2Article.class);
-        query.whereEqualTo("question",questionsA.get(currentindex));
+        query.whereEqualTo("question",statements.get(currentindex).getQuestion());
+        query.whereEqualTo("type","option");
+        query.fromLocalDatastore();
         query.include("item");
         query.findInBackground(new FindCallback<Question2Article>() {
             @Override
             public void done(List<Question2Article> question2Articles, ParseException e) {
-                ArrayList<Question2Article> questions2 = new ArrayList<>();
-                for(Question2Article question2Article:question2Articles){
-                    if(question2Article.getType().equals("statement")){
-                        statement.setText(question2Article.getItem().getText());
-                    }
-                    else {
-                        questions2.add(question2Article);
-                    }
 
-                }
 
-                Collections.sort(questions2,new Comparator<Question2Article>() {
+
+                Collections.sort(question2Articles,new Comparator<Question2Article>() {
                     @Override
                     public int compare(Question2Article lhs, Question2Article rhs) {
                         return lhs.getSequencePosition().intValue()-rhs.getSequencePosition().intValue();
                     }
                 });
 
-                for (int i = 0; i < questions2.size(); i++) {
-                    ((RadioButton) radioGroup.getChildAt(i)).setText(questions2.get(i).getItem().getText());
+                if(question2Articles.size()==1){
+                    r0.setVisibility(View.VISIBLE);
+                    r1.setVisibility(View.GONE);
+                    r2.setVisibility(View.GONE);
+                    r3.setVisibility(View.GONE);
+                    r4.setVisibility(View.GONE);
+
+                }
+                else if(question2Articles.size()==2){
+                    r0.setVisibility(View.VISIBLE);
+                    r1.setVisibility(View.VISIBLE);
+                    r2.setVisibility(View.GONE);
+                    r3.setVisibility(View.GONE);
+                    r4.setVisibility(View.GONE);
+
+                }
+
+                else if(question2Articles.size()==3){
+                    r0.setVisibility(View.VISIBLE);
+                    r1.setVisibility(View.VISIBLE);
+                    r2.setVisibility(View.VISIBLE);
+                    r3.setVisibility(View.GONE);
+                    r4.setVisibility(View.GONE);
+                }
+
+                else if(question2Articles.size()==4){
+                    r0.setVisibility(View.VISIBLE);
+                    r1.setVisibility(View.VISIBLE);
+                    r2.setVisibility(View.VISIBLE);
+                    r3.setVisibility(View.VISIBLE);
+                    r4.setVisibility(View.GONE);
+                }
+
+                else {
+                    r0.setVisibility(View.VISIBLE);
+                    r1.setVisibility(View.VISIBLE);
+                    r2.setVisibility(View.VISIBLE);
+                    r3.setVisibility(View.VISIBLE);
+                    r4.setVisibility(View.VISIBLE);
+                }
+
+
+
+                for (int i = 0; i < question2Articles.size(); i++) {
+                    ((RadioButton) radioGroup.getChildAt(i)).setText(question2Articles.get(i).getItem().getText());
                 }
 
                 radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(RadioGroup group, int checkedId) {
                         if (checkedId == R.id.a0){
-                            currentindex++;
-                            getOptions();
+                            Log.i("CURRENT INDEX",String.valueOf(currentindex));
+                            Log.i("STAT",String.valueOf(statements.size()));
+                            setAnswer(r0.getText().toString());
 
+                            currentindex++;
+                            getStatement();
+                            r0.setChecked(false);
 
                         }else if (checkedId == R.id.a1){
-                            Toast toast =
-                                    Toast.makeText(getActivity(),
-                                            "Boton 2", Toast.LENGTH_SHORT);
-                            toast.show();
+                            Log.i("CURRENT INDEX",String.valueOf(currentindex));
+                            Log.i("STAT",String.valueOf(statements.size()));
+                            setAnswer(r1.getText().toString());
+                            currentindex++;
+                            getStatement();
+                            r1.setChecked(false);
+
                         }else if (checkedId == R.id.a2){
-                            Toast toast =
-                                    Toast.makeText(getActivity(),
-                                            "Boton 3", Toast.LENGTH_SHORT);
-                            toast.show();
+                            Log.i("CURRENT INDEX",String.valueOf(currentindex));
+                            Log.i("STAT",String.valueOf(statements.size()));
+                            setAnswer(r2.getText().toString());
+                            currentindex++;
+                            getStatement();
+                            r2.setChecked(false);
+
+                        }
+                        else if (checkedId == R.id.a3){
+                            Log.i("CURRENT INDEX",String.valueOf(currentindex));
+                            Log.i("STAT",String.valueOf(statements.size()));
+                            setAnswer(r3.getText().toString());
+                            currentindex++;
+                            getStatement();
+                            r3.setChecked(false);
+                        }
+                        else {
+                            Log.i("CURRENT INDEX",String.valueOf(currentindex));
+                            Log.i("STAT",String.valueOf(statements.size()));
+                            setAnswer(r4.getText().toString());
+                            currentindex++;
+                            getStatement();
+                            r4.setChecked(false);
                         }
                     }
                 });
 
             }
         });
+    }
+
+    private void setAnswer(String text){
+        final Answer answer = new Answer();
+        answer.setUser(ParseUser.getCurrentUser());
+        answer.setPregunta(statements.get(currentindex).getItem().getText());
+        answer.setRespuesta(text);
+        new Thread(new Runnable() {
+            public void run() {
+                answer.saveEventually();
+            }
+
+        }).start();
+
     }
 }

@@ -23,6 +23,7 @@ import com.parse.ParseUser;
 import com.parse.SaveCallback;
 
 import model.Actor;
+import model.Answer;
 import model.Article;
 import model.ColorPalette;
 import model.CompanyApp;
@@ -82,6 +83,7 @@ public class myApp extends Application {
 
         ParseObject.registerSubclass(Actor.class);
         ParseObject.registerSubclass(Article.class);
+        ParseObject.registerSubclass(Answer.class);
 
         ParseObject.registerSubclass(ColorPalette.class);
         ParseObject.registerSubclass(Company.class);
@@ -194,6 +196,20 @@ public class myApp extends Application {
         editor.putBoolean(objectId,true);
         editor.commit();
         return;
+    }
+
+    public void setBooleanEncuesta (){
+        SharedPreferences prefs = mContext.getSharedPreferences("Encuesta", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("encuestalista",true);
+        editor.commit();
+        return;
+    }
+
+    public boolean getBooleanEncuesta (){
+        SharedPreferences prefs = mContext.getSharedPreferences("Encuesta", 0);
+        boolean rb0 = prefs.getBoolean("encuestalista",false);
+        return rb0;
     }
 
     public void setFavoriteAppTrue (String objectId){

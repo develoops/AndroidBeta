@@ -13,11 +13,19 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.parse.FindCallback;
+import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
+import com.parse.ParseQuery;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 import mc.mextesol.R;
 import model.MeetingApp;
+import model.Question2Article;
 
 /**
  * Created by Alvaro on 2/25/15.
@@ -28,6 +36,7 @@ public class SplashEventFragment extends Fragment {
     public static MeetingApp meetingApp;
     public static View RootView;
     public static ParseImageView splash;
+    public static List <Question2Article> question2ArticleList;
 
     public static SplashEventFragment newInstance(MeetingApp app) {
 
@@ -61,6 +70,7 @@ public class SplashEventFragment extends Fragment {
 
         //startLoading();
 
+
         ProgressBar bar = (ProgressBar) RootView.findViewById(R.id.progressBar);
         bar.setVisibility(View.GONE);
         splash = (ParseImageView) RootView.findViewById(R.id.splash);
@@ -91,7 +101,7 @@ public class SplashEventFragment extends Fragment {
                 ft.commit();
 
             }
-        }, 3000);
+        }, 4000);
 
 
         return RootView;

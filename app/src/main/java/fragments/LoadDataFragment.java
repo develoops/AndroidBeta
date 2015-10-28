@@ -19,6 +19,8 @@ import com.parse.ParseException;
 import com.parse.ParseImageView;
 import com.parse.ParseQuery;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import mc.mextesol.R;
@@ -29,6 +31,7 @@ import model.CompanyApp;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
+import model.Question2Article;
 import model.Stand;
 import model.TabUI;
 import utils.MUtil;
@@ -39,6 +42,7 @@ import utils.MUtil;
 public class LoadDataFragment extends Fragment {
 
 	public static List<MeetingApp> meetingApps;
+    public static List <Question2Article> question2ArticleList;
 	public static List<TabUI> tabUIs;
 	public static List<Actor> staff;
 	public static List<MobiFile> files;
@@ -92,6 +96,15 @@ public class LoadDataFragment extends Fragment {
 		bar = (ProgressBar) RootView.findViewById(R.id.progressBar);
 		ImageView splash_first = (ImageView) RootView.findViewById(R.id.splash_first);
 		splash_first.setVisibility(View.VISIBLE);
+        ParseQuery<Question2Article> queryQ = ParseQuery.getQuery(Question2Article.class);
+        queryQ.include("item");
+        queryQ.include("question");
+        queryQ.findInBackground(new FindCallback<Question2Article>() {
+            @Override
+            public void done(List<Question2Article> question2Articles, ParseException e) {
+                Question2Article.pinAllInBackground("questions",question2Articles);
+            }
+        });
 		return RootView;
 	}
 
@@ -99,6 +112,7 @@ public class LoadDataFragment extends Fragment {
 	// if connection available, load server data, update local
 	// if not, load local data, finish.
 	private void loadDataAndUpdateLocal() {
+
 
 
 		Log.e(getClass().getName(), "call loadServerDataAndSaveLocal");
@@ -122,6 +136,8 @@ public class LoadDataFragment extends Fragment {
                     })
                     .show();
 		}
+
+
 		query.include("companies");
 		query.include("companies.company");
 		query.include("companies.company.actors");
@@ -236,6 +252,8 @@ public class LoadDataFragment extends Fragment {
 						}
 
 
+
+
 						//TODO update local database.
 						// Remove the previously local db.
 						newFragment();
@@ -243,6 +261,8 @@ public class LoadDataFragment extends Fragment {
 				}
 
 		);
+
+
 	}
 
 	//First time: Load server data and save to local.
@@ -267,6 +287,8 @@ public class LoadDataFragment extends Fragment {
                     })
                     .show();
         }
+
+
 		ParseQuery<CompanyApp> query = ParseQuery.getQuery(CompanyApp.class);
 		query.include("companies");
 
