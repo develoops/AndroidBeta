@@ -8,7 +8,6 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -18,8 +17,6 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -33,7 +30,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridImageAdapter;
-import mc.cau.R;
+import mc.slep.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;

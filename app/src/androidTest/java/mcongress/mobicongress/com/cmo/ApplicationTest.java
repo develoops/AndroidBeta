@@ -1,4 +1,4 @@
-package mc.cau;
+package mc.slep;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

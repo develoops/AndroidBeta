@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.cau.R;
-import mc.cau.myApp;
+import mc.slep.R;
+import mc.slep.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

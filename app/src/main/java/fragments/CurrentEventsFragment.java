@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.cau.R;
-import mc.cau.myApp;
+import mc.slep.R;
+import mc.slep.myApp;
 import model.Event;
 import model.MeetingApp;
 

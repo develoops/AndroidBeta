@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.cau.R;
+import mc.slep.R;
 import model.Event;
 
 /**

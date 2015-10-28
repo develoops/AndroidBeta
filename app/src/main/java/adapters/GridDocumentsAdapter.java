@@ -17,7 +17,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.cau.R;
+import mc.slep.R;
 
 import model.MobiFile;
 

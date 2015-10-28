@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.cau.R;
-import mc.cau.MainActivity;
+import mc.slep.R;
+import mc.slep.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

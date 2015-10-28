@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.cau.R;
-import mc.cau.myApp;
+import mc.slep.R;
+import mc.slep.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -343,9 +343,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         lp.width = 120;
                         lp.height = 120;
                         lp.setMargins(0,5,20,0);
-                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                        view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                        view.setBackgroundColor(context.getResources().getColor(R.color.brk));
                         if (photoFile != null) {
                             //Get singleton instance of ImageLoader
                             ImageLoader imageLoader = ImageLoader.getInstance();
@@ -381,9 +381,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
                         holder.icon.setLayoutParams(lp);
                         lp.setMargins(0,5,20,0);
-                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                        view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                        view.setBackgroundColor(context.getResources().getColor(R.color.brk));
                         if (photoFile != null) {
                             //Get singleton instance of ImageLoader
                             ImageLoader imageLoader = ImageLoader.getInstance();
@@ -396,9 +396,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         }
                     }
 
-                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
                     //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    view.setBackgroundColor(context.getResources().getColor(R.color.brk));
 
                 }
                 else {
@@ -410,6 +410,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         holder.fav.setImageResource(R.drawable.favorite);
                         holder.fav.setVisibility(View.VISIBLE);
                     }
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                 }
                 List <Actor> actors = eventList.get(position).getActors();
                 if(actors!=null){

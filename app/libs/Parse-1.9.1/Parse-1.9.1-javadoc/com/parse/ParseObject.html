@@ -1167,7 +1167,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
  if possible. Otherwise, they will be sent the next time a network connection is available.
  Objects saved this way will persist even after the app is closed, in which case they will be
  sent the next time the app is opened. If more than 10MB of data is waiting to be sent,
- subsequent calls to <code>#saveEventually()</code> or <a href="../../com/parse/ParseObject.html#deleteEventually()"><code>ParseObject.deleteEventually()</code></a>  will cause old
+ subsequent calls to <code>#saveEventually()</code> or <a href="../../com/parse/ParseObject.html#deleteEventually()"><code>ParseObject.deleteEventually()</code></a>  will slepse old
  saves to be silently  discarded until the connection can be re-established, and the queued
  objects can be saved.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>callback</code> - - A callback which will be called if the save completes before the app exits.</dd></dl>
@@ -1188,7 +1188,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
  if possible. Otherwise, they will be sent the next time a network connection is available.
  Objects saved this way will persist even after the app is closed, in which case they will be
  sent the next time the app is opened. If more than 10MB of data is waiting to be sent,
- subsequent calls to <code>#saveEventually()</code> or <a href="../../com/parse/ParseObject.html#deleteEventually()"><code>ParseObject.deleteEventually()</code></a>  will cause old
+ subsequent calls to <code>#saveEventually()</code> or <a href="../../com/parse/ParseObject.html#deleteEventually()"><code>ParseObject.deleteEventually()</code></a>  will slepse old
  saves to be silently  discarded until the connection can be re-established, and the queued
  objects can be saved.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>A <a href="http://boltsframework.github.io/docs/android/bolts/Task.html?is-external=true" title="class or interface in bolts"><code>Task</code></a> that is resolved when the save completes.</dd></dl>
@@ -1210,7 +1210,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
  is available. Delete instructions saved this way will persist even after the app is closed, in
  which case they will be sent the next time the app is opened. If more than 10MB of commands are
  waiting to be sent, subsequent calls to <code>#deleteEventually()</code> or
- <a href="../../com/parse/ParseObject.html#saveEventually()"><code>ParseObject.saveEventually()</code></a> will cause old instructions to be silently discarded until the
+ <a href="../../com/parse/ParseObject.html#saveEventually()"><code>ParseObject.saveEventually()</code></a> will slepse old instructions to be silently discarded until the
  connection can be re-established, and the queued objects can be saved.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>callback</code> - - A callback which will be called if the delete completes before the app exits.</dd></dl>
 </li>
@@ -1231,7 +1231,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
  is available. Delete instructions saved this way will persist even after the app is closed, in
  which case they will be sent the next time the app is opened. If more than 10MB of commands are
  waiting to be sent, subsequent calls to <code>#deleteEventually()</code> or
- <a href="../../com/parse/ParseObject.html#saveEventually()"><code>ParseObject.saveEventually()</code></a> will cause old instructions to be silently discarded until the
+ <a href="../../com/parse/ParseObject.html#saveEventually()"><code>ParseObject.saveEventually()</code></a> will slepse old instructions to be silently discarded until the
  connection can be re-established, and the queued objects can be saved.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>A <a href="http://boltsframework.github.io/docs/android/bolts/Task.html?is-external=true" title="class or interface in bolts"><code>Task</code></a> that is resolved when the delete completes.</dd></dl>
 </li>
@@ -1392,7 +1392,7 @@ public final&nbsp;void&nbsp;refreshInBackground(<a href="../../com/parse/Refresh
 <pre>public static&nbsp;&lt;T extends <a href="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</a>&gt;&nbsp;void&nbsp;deleteAll(<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&nbsp;objects)
                       throws <a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></pre>
 <div class="block">Deletes each object in the provided list. This is faster than deleting each object individually
- because it batches the requests.</div>
+ beslepse it batches the requests.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>objects</code> - The objects to delete.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></code> - Throws an exception if the server returns an error or is inaccessible.</dd></dl>
@@ -1407,7 +1407,7 @@ public final&nbsp;void&nbsp;refreshInBackground(<a href="../../com/parse/Refresh
 <pre>public static&nbsp;&lt;T extends <a href="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</a>&gt;&nbsp;void&nbsp;deleteAllInBackground(<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&nbsp;objects,
                                                  <a href="../../com/parse/DeleteCallback.html" title="interface in com.parse">DeleteCallback</a>&nbsp;callback)</pre>
 <div class="block">Deletes each object in the provided list. This is faster than deleting each object individually
- because it batches the requests.</div>
+ beslepse it batches the requests.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>objects</code> - The objects to delete.</dd><dd><code>callback</code> - The callback method to execute when completed.</dd></dl>
 </li>
 </ul>
@@ -1419,7 +1419,7 @@ public final&nbsp;void&nbsp;refreshInBackground(<a href="../../com/parse/Refresh
 <h4>deleteAllInBackground</h4>
 <pre>public static&nbsp;&lt;T extends <a href="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</a>&gt;&nbsp;<a href="http://boltsframework.github.io/docs/android/bolts/Task.html?is-external=true" title="class or interface in bolts">Task</a>&lt;<a href="http://developer.android.com/reference/java/lang/Void.html?is-external=true" title="class or interface in java.lang">Void</a>&gt;&nbsp;deleteAllInBackground(<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&nbsp;objects)</pre>
 <div class="block">Deletes each object in the provided list. This is faster than deleting each object individually
- because it batches the requests.</div>
+ beslepse it batches the requests.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>objects</code> - The objects to delete.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>A <a href="http://boltsframework.github.io/docs/android/bolts/Task.html?is-external=true" title="class or interface in bolts"><code>Task</code></a> that is resolved when deleteAll completes.</dd></dl>
 </li>
@@ -1433,7 +1433,7 @@ public final&nbsp;void&nbsp;refreshInBackground(<a href="../../com/parse/Refresh
 <pre>public static&nbsp;&lt;T extends <a href="../../com/parse/ParseObject.html" title="class in com.parse">ParseObject</a>&gt;&nbsp;void&nbsp;saveAll(<a href="http://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;T&gt;&nbsp;objects)
                     throws <a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></pre>
 <div class="block">Saves each object in the provided list. This is faster than saving each object individually
- because it batches the requests.</div>
+ beslepse it batches the requests.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>objects</code> - The objects to save.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></code> - Throws an exception if the server returns an error or is inaccessible.</dd></dl>

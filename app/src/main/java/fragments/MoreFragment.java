@@ -20,7 +20,7 @@ import com.parse.ParseQuery;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.cau.R;
+import mc.slep.R;
 import model.MeetingApp;
 import model.MobiFile;
 
@@ -84,7 +84,7 @@ public class MoreFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("type","material");
+        query.whereEqualTo("subtype","library");
         query.findInBackground(new FindCallback<MobiFile>() {
               @Override
               public void done(List<MobiFile> mobiFiles, ParseException e) {
