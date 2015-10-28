@@ -212,6 +212,21 @@ public class myApp extends Application {
         return rb0;
     }
 
+    public void setBooleanStatement (){
+        SharedPreferences prefs = mContext.getSharedPreferences("Statment", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putBoolean("statment",true);
+        editor.commit();
+        return;
+    }
+
+    public boolean getBooleanStatment (){
+        SharedPreferences prefs = mContext.getSharedPreferences("Statment", 0);
+        boolean rb0 = prefs.getBoolean("statment",false);
+        return rb0;
+    }
+
+
     public void setFavoriteAppTrue (String objectId){
         SharedPreferences prefs = mContext.getSharedPreferences("Favorite", 0);
         SharedPreferences.Editor editor = prefs.edit();

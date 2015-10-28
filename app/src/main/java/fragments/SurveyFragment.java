@@ -200,17 +200,26 @@ public class SurveyFragment extends Fragment {
 
         });
 
+
+
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 //Do something after 100ms
-                for(Question2Article question2Article:question2ArticleList){
-                    if(question2Article.getType().equals("statement")){
-                        Log.i("STATEMT",question2Article.getQuestion().getName().toString());
-                        statements.add(question2Article);
-                    }
+                if(statements.size()==20){
+
                 }
+                else {
+                    for(Question2Article question2Article:question2ArticleList){
+                        if(question2Article.getType().equals("statement")){
+                            Log.i("STATEMT",question2Article.getQuestion().getName().toString());
+                            statements.add(question2Article);
+                        }
+                    }
+
+                }
+
 
             }
         }, 2000);
