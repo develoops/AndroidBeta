@@ -105,6 +105,7 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     ParseObject object = (ParseObject)(listview.getItemAtPosition(position));
                     Person person = ParseObject.createWithoutData(Person.class, object.getObjectId());
+                    Log.i("OBJECPERON",object.getObjectId());
                     if(person.getActors()!=null){
                         for(Actor actor:person.getActors()){
 
