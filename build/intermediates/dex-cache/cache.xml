@@ -6,14 +6,14 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="2bfbcce5ae61bdd10676df8e89710693c1256024">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.1-61a06a18ae1de666a73242aefcdcfff5e680bf6e.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/ParseCrashReporting-1.9.1-61a06a18ae1de666a73242aefcdcfff5e680bf6e.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/Parse-1.9.1/bolts-android-1.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-0cc2fe50162c787bc3c0da929957c707341ee8d6.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0-0cc2fe50162c787bc3c0da929957c707341ee8d6.jar" />
     </item>
     <item
         jar="/Users/Alvaro/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/a60a5e993c98c864010053cb901b7eab25306568/gson-2.2.4.jar"
@@ -41,14 +41,14 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3-5bcd49208dab5279f45189dbe68905b9f98673e8.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/universal-image-loader-1.9.3-5bcd49208dab5279f45189dbe68905b9f98673e8.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-4effc80c683d8ab8b31590a5150dd1ad0a13908d.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/internal_impl-21.0.3-4effc80c683d8ab8b31590a5150dd1ad0a13908d.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/mobiCongress_Android/app/libs/universal-image-loader-1.9.3.jar"
@@ -62,7 +62,7 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="1b065010f3c9d441ede9078aca8eabcd1c81e647">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/Parse-1.9.1-17ec8228108bfa38989de71863d0f47bc4b8fe6b.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/Parse-1.9.1-17ec8228108bfa38989de71863d0f47bc4b8fe6b.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/mobiCongress_Android/app/libs/Parse-1.9.1/bolts-android-1.2.0.jar"
@@ -97,7 +97,7 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="0b98cf117d6ed838f776a7f0765c7f04191d7b8e">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0-javadoc-07f5a7441cc4f8da51198ec8024f2d70ebae3ef0.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/bolts-android-1.2.0-javadoc-07f5a7441cc4f8da51198ec8024f2d70ebae3ef0.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/exploded-aar/it.sephiroth.android.library.imagezoom/imagezoom/2.2.2/classes.jar"
@@ -111,21 +111,21 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="0ae6b077aa2e6de9fa3e754e5d55a5efcb43db52">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/classes-6e4e57880fbc6bd2d3030ff0b0ed665a9700f6ee.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/classes-6e4e57880fbc6bd2d3030ff0b0ed665a9700f6ee.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/classes-e2c8568c97d8495d81bb8d1d5af312e796e29271.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/classes-e2c8568c97d8495d81bb8d1d5af312e796e29271.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/classes-fe0e6f1028fde3fe986188f4ffc193eb133aa298.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/classes-fe0e6f1028fde3fe986188f4ffc193eb133aa298.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/mobiCongress_Android/app/libs/Parse-1.9.1/Parse-1.9.1.jar"
@@ -146,7 +146,7 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
-        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi-660cd3c46030d68708456643a2155834fd3a7e7c.jar" />
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/release/YouTubeAndroidPlayerApi-660cd3c46030d68708456643a2155834fd3a7e7c.jar" />
     </item>
     <item
         jar="/Users/Alvaro/Downloads/mobiCongress_Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
