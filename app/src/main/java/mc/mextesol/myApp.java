@@ -73,7 +73,6 @@ public class myApp extends Application {
         mContext = this;
         Parse.enableLocalDatastore(this);
         ParseCrashReporting.enable(this);
-        Parse.initialize(this, "NOT9JCi4qoZ9o8SVNPhcrsv2kAZlgosADiTABu27", "ODtYStNy9SrT1LEfsizvUiworVQVNR7DjvqOWbgH");
         //Parse.initialize(this, "4cxQOqEv89irqJxoqXY67SCelvOpRuPMoUazSi4b", "zpSulFdKyT4HVVESQr8iC2oLN6JGjI0v7nZN9bxL");
         // Parse.initialize(this, "pThOBYo97xXHKzeBn32O2shH398KvwFrnRcqze4m", "i9915R5ITUDpF8OOw6vd0yFSzKgc9M8JRkLoiPSC");
         //Parse.initialize(this, "PJniJghr5jqtMkkadDbRmFwnCk37T8bWqaBsJvm8", "FliRL0Wp4yJAoIn6CqoGDDJePKKNQjX0AcQ3pJLb");//Expomeetings
@@ -119,6 +118,7 @@ public class myApp extends Application {
         ParseObject.registerSubclass(View.class);
         ParseObject.registerSubclass(ViewUI.class);
         ParseObject.registerSubclass(Wall.class);
+        Parse.initialize(this, "NOT9JCi4qoZ9o8SVNPhcrsv2kAZlgosADiTABu27", "ODtYStNy9SrT1LEfsizvUiworVQVNR7DjvqOWbgH");
 
         //ParseObject.registerSubclass(File.class);
 

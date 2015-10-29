@@ -74,6 +74,17 @@ public class LoadDataFragment extends Fragment {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// Retain this fragment across configuration changes.
+
+        ParseQuery<Question2Article> queryQ = ParseQuery.getQuery(Question2Article.class);
+        queryQ.include("item");
+        queryQ.include("question");
+        queryQ.findInBackground(new FindCallback<Question2Article>() {
+            @Override
+            public void done(List<Question2Article> question2Articles, ParseException e) {
+                Question2Article.pinAllInBackground("questions",question2Articles);
+            }
+        });
+
 		setRetainInstance(true);
 		if (myapp.isFirstTime()) {
 			if (!myapp.checkConnection()) {
@@ -96,15 +107,7 @@ public class LoadDataFragment extends Fragment {
 		bar = (ProgressBar) RootView.findViewById(R.id.progressBar);
 		ImageView splash_first = (ImageView) RootView.findViewById(R.id.splash_first);
 		splash_first.setVisibility(View.VISIBLE);
-        ParseQuery<Question2Article> queryQ = ParseQuery.getQuery(Question2Article.class);
-        queryQ.include("item");
-        queryQ.include("question");
-        queryQ.findInBackground(new FindCallback<Question2Article>() {
-            @Override
-            public void done(List<Question2Article> question2Articles, ParseException e) {
-                Question2Article.pinAllInBackground("questions",question2Articles);
-            }
-        });
+
 		return RootView;
 	}
 

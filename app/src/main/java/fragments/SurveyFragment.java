@@ -57,8 +57,8 @@ public class SurveyFragment extends Fragment {
     ArrayList<MobiFile> mFiles = new ArrayList<>();
 
     ArrayList<Question> questionsA = new ArrayList<>();
-    public static List <Question2Article> question2ArticleList;
-    public static ArrayList<Question2Article> statements = new ArrayList<>();
+    public static List <Question2Article> statements;
+    //public static ArrayList<Question2Article> statements = new ArrayList<>();
     GridDocumentsAdapter adapter;
     public int currentindex = 0;
     public myApp myapp;
@@ -180,49 +180,31 @@ public class SurveyFragment extends Fragment {
         ParseQuery<Question2Article> queryQuestion2Article = ParseQuery.getQuery(Question2Article.class);
         queryQuestion2Article.include("item");
         queryQuestion2Article.include("question");
+        queryQuestion2Article.whereEqualTo("type","statement");
         queryQuestion2Article.fromLocalDatastore();
         // queryQuestion2Article.orderByAscending("question.name");
         queryQuestion2Article.findInBackground(new FindCallback<Question2Article>() {
             @Override
             public void done(List<Question2Article> question2Articles, ParseException e) {
 
+                if(question2Articles!=null){
+                    Collections.sort(question2Articles, new Comparator<Question2Article>() {
+                        @Override
+                        public int compare(Question2Article lhs, Question2Article rhs) {
+                            return lhs.getQuestion().getName().toString().compareTo(rhs.getQuestion().getName().toString());
+                        }
+                    });
 
+                    statements = question2Articles;
+                }
 
-                question2ArticleList = question2Articles;
-
-                Collections.sort(question2ArticleList, new Comparator<Question2Article>() {
-                    @Override
-                    public int compare(Question2Article lhs, Question2Article rhs) {
-                        return lhs.getQuestion().getName().toString().compareTo(rhs.getQuestion().getName().toString());
-                    }
-                });
             }
 
         });
 
 
 
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something after 100ms
-                if(statements.size()==20){
 
-                }
-                else {
-                    for(Question2Article question2Article:question2ArticleList){
-                        if(question2Article.getType().equals("statement")){
-                            Log.i("STATEMT",question2Article.getQuestion().getName().toString());
-                            statements.add(question2Article);
-                        }
-                    }
-
-                }
-
-
-            }
-        }, 2000);
 
 
         final Handler handler2 = new Handler();
@@ -267,10 +249,11 @@ public class SurveyFragment extends Fragment {
 
     private void getOptions(){
         ParseQuery<Question2Article> query = ParseQuery.getQuery(Question2Article.class);
+        query.include("item");
         query.whereEqualTo("question",statements.get(currentindex).getQuestion());
         query.whereEqualTo("type","option");
         query.fromLocalDatastore();
-        query.include("item");
+
         query.findInBackground(new FindCallback<Question2Article>() {
             @Override
             public void done(List<Question2Article> question2Articles, ParseException e) {

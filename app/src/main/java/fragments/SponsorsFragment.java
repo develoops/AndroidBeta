@@ -92,7 +92,7 @@ public class SponsorsFragment extends Fragment {
                         button.setText("Commercial Map");
                     }
                     else {
-                        button.setText("Mapa Comercial");
+                        button.setText("Commercial Map");
                     }
                 }
 
