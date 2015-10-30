@@ -68,13 +68,13 @@ public class LoadDataFragment extends Fragment {
 	public void onAttach(Activity activity) {
 		super.onAttach(activity);
 		this.myapp = (myApp) getActivity().getApplicationContext();
+
 	}
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// Retain this fragment across configuration changes.
-
         ParseQuery<Question2Article> queryQ = ParseQuery.getQuery(Question2Article.class);
         queryQ.include("item");
         queryQ.include("question");
@@ -84,6 +84,7 @@ public class LoadDataFragment extends Fragment {
                 Question2Article.pinAllInBackground("questions",question2Articles);
             }
         });
+
 
 		setRetainInstance(true);
 		if (myapp.isFirstTime()) {

@@ -181,13 +181,17 @@ public class SurveyFragment extends Fragment {
         queryQuestion2Article.include("item");
         queryQuestion2Article.include("question");
         queryQuestion2Article.whereEqualTo("type","statement");
+        queryQuestion2Article.fromPin("questions");
         queryQuestion2Article.fromLocalDatastore();
+
         // queryQuestion2Article.orderByAscending("question.name");
+
         queryQuestion2Article.findInBackground(new FindCallback<Question2Article>() {
             @Override
             public void done(List<Question2Article> question2Articles, ParseException e) {
 
                 if(question2Articles!=null){
+
                     Collections.sort(question2Articles, new Comparator<Question2Article>() {
                         @Override
                         public int compare(Question2Article lhs, Question2Article rhs) {
@@ -195,6 +199,8 @@ public class SurveyFragment extends Fragment {
                         }
                     });
 
+                    Log.i("PASEEE","PASEE");
+                    Log.i("QUESTION",question2Articles.get(0).getItem().getText());
                     statements = question2Articles;
                 }
 
@@ -252,6 +258,7 @@ public class SurveyFragment extends Fragment {
         query.include("item");
         query.whereEqualTo("question",statements.get(currentindex).getQuestion());
         query.whereEqualTo("type","option");
+        query.fromPin("questions");
         query.fromLocalDatastore();
 
         query.findInBackground(new FindCallback<Question2Article>() {

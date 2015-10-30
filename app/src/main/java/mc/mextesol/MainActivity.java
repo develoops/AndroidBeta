@@ -9,8 +9,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseQuery;
+
+import java.util.List;
+
 import fragments.LoadDataFragment;
 import model.CompanyApp;
+import model.Question2Article;
 import utils.MUtil;
 
 
@@ -28,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
         MUtil.startTimer();
         Bundle recieveParams = getIntent().getExtras();
         if (savedInstanceState == null) {
+
                 myapp.setSecondPass();
                 if(myapp.isFirstPass()){
                     if(myapp.checkConnection()){
