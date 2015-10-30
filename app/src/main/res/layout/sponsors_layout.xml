@@ -20,7 +20,8 @@
         android:paddingRight="10dp"
         android:layout_gravity="center"
         android:shadowColor="@android:color/holo_blue_light"
-        android:textColor="@android:color/white"/>
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
 
 
 
@@ -28,13 +29,52 @@
     <GridView
 
         android:id="@+id/gridView"
-        android:numColumns="1"
+        android:numColumns="2"
         android:clickable="false"
         android:layout_gravity="center"
-        android:layout_below="@id/acomodation"
+
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        />
+
+    <GridView
+
+        android:id="@+id/gridView1"
+        android:numColumns="2"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:layout_below="@id/gridView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+    <GridView
+
+        android:id="@+id/gridView2"
+        android:numColumns="1"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:layout_below="@id/gridView1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+    <GridView
+
+        android:id="@+id/gridView3"
+        android:numColumns="4"
+        android:clickable="false"
+        android:layout_gravity="center"
+        android:layout_below="@id/gridView2"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
         />
 

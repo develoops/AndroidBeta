@@ -77,8 +77,28 @@ public class GridImageAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height-200) - dpToPx(75);
-            holder.image.getLayoutParams().width = (width);
+            if(stands.get(position).getRole().equals("sponsorDiamond")){
+                holder.image.getLayoutParams().height = ((height/3)+50) - dpToPx(75);
+                holder.image.getLayoutParams().width = (width);
+            }
+
+            else if(stands.get(position).getRole().equals("sponsorPlatinum")){
+                holder.image.getLayoutParams().height = ((height/3)-50) - dpToPx(75);
+                holder.image.getLayoutParams().width = (width);
+            }
+
+            else if(stands.get(position).getRole().equals("sponsorGold")){
+                holder.image.getLayoutParams().height = ((height/4)-50) - dpToPx(75);
+                holder.image.getLayoutParams().width = (width);
+            }
+
+            else if(stands.get(position).getRole().equals("sponsorSilver")){
+                holder.image.getLayoutParams().height = ((height/4)-10) - dpToPx(75);
+                holder.image.getLayoutParams().width = (width/4);
+            }
+            else {
+
+            }
 
 
             view.setTag(holder);

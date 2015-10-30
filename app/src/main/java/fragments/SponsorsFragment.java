@@ -34,8 +34,8 @@ public class SponsorsFragment extends Fragment {
 
     public static MeetingApp mApp;
     public static MobiFile map;
-    public static GridView gridview;
-    public static Button button,acomodation;
+    public static GridView gridview,gridview1,gridview2,gridview3;
+    public static Button button;
 
 
     public static SponsorsFragment newInstance(MeetingApp meetingApp) {
@@ -65,8 +65,14 @@ public class SponsorsFragment extends Fragment {
         final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
 
          gridview = (GridView) RootView.findViewById(R.id.gridView);
-         //button = (Button) RootView.findViewById(R.id.comercialmap);
+         gridview1 = (GridView) RootView.findViewById(R.id.gridView1);
+         gridview2 = (GridView) RootView.findViewById(R.id.gridView2);
+         gridview3 = (GridView) RootView.findViewById(R.id.gridView3);
 
+
+        //button = (Button) RootView.findViewById(R.id.comercialmap);
+
+        /*
          acomodation = (Button) RootView.findViewById(R.id.acomodation);
          acomodation.setText(R.string.accomodation);
          acomodation.setOnClickListener(new View.OnClickListener() {
@@ -95,48 +101,102 @@ public class SponsorsFragment extends Fragment {
                 List<Facade> facades = mApp.getCompaniesFacade();
 
                 ArrayList<Facade> facade1 = new ArrayList<>();
+                ArrayList<Facade> facade2 = new ArrayList<>();
+                ArrayList<Facade> facade3 = new ArrayList<>();
+                ArrayList<Facade> facade4 = new ArrayList<>();
                 for(Facade facade:facades){
-                    if(!facade.getRole().equals("Organizadores")){
+                    if(facade.getRole().equals("sponsorDiamond")){
                         facade1.add(facade);
                     }
+                    else if(facade.getRole().equals("sponsorPlatinum")){
+                        facade2.add(facade);
+                    }
+                    else if(facade.getRole().equals("sponsorGold")){
+                        facade3.add(facade);
+                    }
+                    else if(facade.getRole().equals("sponsorSilver")){
+                        facade4.add(facade);
+                    }
+                    else {
+                        Log.i("BIRDMAN","BIRDAMN");
+                    }
+
                 }
                 Log.i("MAPP", String.valueOf(facade1));
                 gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
-
                 gridview.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
+
+
+
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
                     public void onItemClick(AdapterView<?> parent, View v,
                                             int position, long id) {
 
-
-
                         ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
-
-
                         Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-
                         String url = stand.getCompany().getWeb();
                         Intent i = new Intent(Intent.ACTION_VIEW);
                         i.setData(Uri.parse(url));
                         startActivity(i);
 
-                        /*
-                        if(stand.getCompany().getDetails()!=null){
-                            Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
-                            final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                            ft.replace(R.id.container,fragment);
-                            ft.addToBackStack(null);
-                            ft.commit();
-                        }
+                    }
 
-                        else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
 
-                        }
-                        else {
-                            Log.i("NADA","NADA");
-                        }
-*/
+                });
+
+                gridview1.setAdapter(new GridImageAdapter(getActivity(),facade2));
+                gridview1.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
+                gridview1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
+
+                        ParseObject object = (ParseObject)(gridview1.getItemAtPosition(position));
+                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                        String url = stand.getCompany().getWeb();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+
+                    }
+
+
+                });
+
+                gridview2.setAdapter(new GridImageAdapter(getActivity(),facade3));
+                gridview2.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
+                gridview2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
+
+                        ParseObject object = (ParseObject)(gridview2.getItemAtPosition(position));
+                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                        String url = stand.getCompany().getWeb();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+
+                    }
+
+
+                });
+
+                gridview3.setAdapter(new GridImageAdapter(getActivity(),facade4));
+                gridview3.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
+                gridview3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
+
+                        ParseObject object = (ParseObject)(gridview3.getItemAtPosition(position));
+                        Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
+                        String url = stand.getCompany().getWeb();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+
                     }
 
 

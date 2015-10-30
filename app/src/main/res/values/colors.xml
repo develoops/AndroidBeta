@@ -13,5 +13,10 @@
     <color name="gray">#D5DADE</color>
     <color name="negro">#000000</color>
     <color name="blanco">#FFF</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="gold">#FFBF00</color>
+    <color name="platinum">#e5e4e2</color>
+    <color name="diamond">#06FBCA</color>
+
 
 </resources>
