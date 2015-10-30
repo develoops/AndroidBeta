@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.slep.R;
+import mc.sleimpn.R;
 
 /**
  * Created by Alvaro on 3/3/15.

@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.sleimpn.R;
+import mc.sleimpn.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;
@@ -178,7 +178,7 @@ public class LoadDataFragment extends Fragment {
 						List<Facade> facades = company.getCompaniesFacade();
 
 						for (Facade facade1 : facades) {
-							if (facade1.getRole().equals("Organizacion") || facade1.getRole().equals("Organizadores")) {
+							if (facade1.getRole().equals("organizador") || facade1.getRole().equals("Organizadores")) {
 								com = facade1.getCompany();
                                 if(com.getheaderImage()!=null){
                                     com.getheaderImage().getParseFileV1().getDataInBackground();
@@ -322,7 +322,7 @@ public class LoadDataFragment extends Fragment {
 				List<Facade> facades = company.getCompaniesFacade();
 
 				for (Facade facade1 : facades) {
-					if (facade1.getRole().equals("Organizacion") || facade1.getRole().equals("Organizadores")) {
+					if (facade1.getRole().equals("organizador") || facade1.getRole().equals("Organizadores")) {
 						com = facade1.getCompany();
                         if(com.getheaderImage()!=null){
                             com.getheaderImage().getParseFileV1().getDataInBackground();

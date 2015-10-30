@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.sleimpn.R;
+import mc.sleimpn.myApp;
 
 
 /**

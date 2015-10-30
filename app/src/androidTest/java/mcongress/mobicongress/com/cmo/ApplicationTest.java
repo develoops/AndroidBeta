@@ -1,4 +1,4 @@
-package mc.slep;
+package mc.sleimpn;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

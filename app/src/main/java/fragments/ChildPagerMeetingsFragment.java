@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import adapters.ChildPagerMeetingsAdapter;
-import mc.slep.R;
+import mc.sleimpn.R;
 import model.Event;
 import model.MeetingApp;
 import utils.MUtil;

@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.sleimpn.R;
+import mc.sleimpn.myApp;
 import model.MeetingApp;
 
 /**

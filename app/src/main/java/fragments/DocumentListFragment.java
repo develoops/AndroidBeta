@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.slep.R;
+import mc.sleimpn.R;
 
 import model.MobiFile;
 

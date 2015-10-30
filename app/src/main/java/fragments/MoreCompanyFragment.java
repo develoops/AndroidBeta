@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridMediaAdapter;
-import mc.slep.R;
+import mc.sleimpn.R;
 import model.MobiFile;
 
 /**

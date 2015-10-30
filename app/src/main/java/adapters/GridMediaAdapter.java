@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.slep.R;
+import mc.sleimpn.R;
 import model.MobiFile;
 
 /**

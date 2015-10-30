@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.slep.MainActivity;
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.sleimpn.MainActivity;
+import mc.sleimpn.R;
+import mc.sleimpn.myApp;
 
 import model.MeetingApp;
 

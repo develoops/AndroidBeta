@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.sleimpn.R;
+import mc.sleimpn.myApp;
 import model.Actor;
 
 /**

@@ -24,7 +24,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.slep.myApp;
+import mc.sleimpn.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;
