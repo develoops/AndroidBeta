@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.MeetingApp;
 
 /**

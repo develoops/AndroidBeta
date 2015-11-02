@@ -21,8 +21,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import adapters.NewsListViewAdapter;
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.New;
 
 /**

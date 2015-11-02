@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.slep.MainActivity;
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.MainActivity;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

@@ -23,8 +23,8 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Rating;

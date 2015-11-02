@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

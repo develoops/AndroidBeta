@@ -1,4 +1,4 @@
-package mc.slep;
+package mc.ached;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

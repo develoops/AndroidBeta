@@ -18,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.Company;
 
 /**

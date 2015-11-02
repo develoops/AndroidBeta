@@ -16,7 +16,7 @@ import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.slep.R;
+import mc.ached.R;
 import model.Actor;
 import model.MeetingApp;
 

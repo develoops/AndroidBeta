@@ -53,9 +53,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.slep.BroadcastAlarma;
-import mc.slep.R;
-import mc.slep.myApp;
+import mc.ached.BroadcastAlarma;
+import mc.ached.R;
+import mc.ached.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

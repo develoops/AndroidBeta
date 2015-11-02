@@ -22,7 +22,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    "Legal Entity" shall mean the union of the acting entity and all
    other entities that control, are controlled by, or are under common
    control with that entity. For the purposes of this definition,
-   "control" means (i) the power, direct or indirect, to slepse the
+   "control" means (i) the power, direct or indirect, to achedse the
    direction or management of such entity, whether by contract or
    otherwise, or (ii) ownership of fifty percent (50%) or more of the
    outstanding shares, or (iii) beneficial ownership of such entity.
@@ -101,7 +101,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    (a) You must give any other recipients of the Work or
        Derivative Works a copy of this License; and
 
-   (b) You must slepse any modified files to carry prominent notices
+   (b) You must achedse any modified files to carry prominent notices
        stating that You changed the files; and
 
    (c) You must retain, in the Source form of any Derivative Works
@@ -229,7 +229,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    "Legal Entity" shall mean the union of the acting entity and all
    other entities that control, are controlled by, or are under common
    control with that entity. For the purposes of this definition,
-   "control" means (i) the power, direct or indirect, to slepse the
+   "control" means (i) the power, direct or indirect, to achedse the
    direction or management of such entity, whether by contract or
    otherwise, or (ii) ownership of fifty percent (50%) or more of the
    outstanding shares, or (iii) beneficial ownership of such entity.
@@ -308,7 +308,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    (a) You must give any other recipients of the Work or
        Derivative Works a copy of this License; and
 
-   (b) You must slepse any modified files to carry prominent notices
+   (b) You must achedse any modified files to carry prominent notices
        stating that You changed the files; and
 
    (c) You must retain, in the Source form of any Derivative Works
@@ -436,7 +436,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    "Legal Entity" shall mean the union of the acting entity and all
    other entities that control, are controlled by, or are under common
    control with that entity. For the purposes of this definition,
-   "control" means (i) the power, direct or indirect, to slepse the
+   "control" means (i) the power, direct or indirect, to achedse the
    direction or management of such entity, whether by contract or
    otherwise, or (ii) ownership of fifty percent (50%) or more of the
    outstanding shares, or (iii) beneficial ownership of such entity.
@@ -515,7 +515,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    (a) You must give any other recipients of the Work or
        Derivative Works a copy of this License; and
 
-   (b) You must slepse any modified files to carry prominent notices
+   (b) You must achedse any modified files to carry prominent notices
        stating that You changed the files; and
 
    (c) You must retain, in the Source form of any Derivative Works
@@ -698,7 +698,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    "Legal Entity" shall mean the union of the acting entity and all
    other entities that control, are controlled by, or are under common
    control with that entity. For the purposes of this definition,
-   "control" means (i) the power, direct or indirect, to slepse the
+   "control" means (i) the power, direct or indirect, to achedse the
    direction or management of such entity, whether by contract or
    otherwise, or (ii) ownership of fifty percent (50%) or more of the
    outstanding shares, or (iii) beneficial ownership of such entity.
@@ -777,7 +777,7 @@ TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
    (a) You must give any other recipients of the Work or
        Derivative Works a copy of this License; and
 
-   (b) You must slepse any modified files to carry prominent notices
+   (b) You must achedse any modified files to carry prominent notices
        stating that You changed the files; and
 
    (c) You must retain, in the Source form of any Derivative Works
