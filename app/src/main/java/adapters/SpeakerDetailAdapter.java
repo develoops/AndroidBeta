@@ -155,16 +155,8 @@ public class SpeakerDetailAdapter extends BaseAdapter  {
             holder.company_speaker.setTextColor(bgColor);
             holder.name_speaker.setTextColor(bgColor);
             holder.country_speaker.setVisibility(View.GONE);
-            if(Locale.getDefault().getLanguage().equals("es")){
-                holder.charge_speaker.setText(actorList.get(position).getRole());
-            }
-            else if(Locale.getDefault().getLanguage().equals("en")){
-                holder.charge_speaker.setText(actorList.get(position).getRole2());
-            }
+            holder.charge_speaker.setText(actorList.get(position).getRole());
 
-            else {
-                holder.charge_speaker.setText(actorList.get(position).getRole3());
-            }
 
 
             if(actorList.get(position).getCompanies()==null){

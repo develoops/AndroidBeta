@@ -117,9 +117,12 @@ public class SponsorsFragment extends Fragment {
                         Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
 
                         String url = stand.getCompany().getWeb();
-                        Intent i = new Intent(Intent.ACTION_VIEW);
-                        i.setData(Uri.parse(url));
-                        startActivity(i);
+                        if(url!=null){
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(Uri.parse(url));
+                            startActivity(i);
+
+                        }
 
                         /*
                         if(stand.getCompany().getDetails()!=null){

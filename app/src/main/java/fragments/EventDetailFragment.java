@@ -150,14 +150,14 @@ public class EventDetailFragment extends Fragment {
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
         if(Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle(selectedEvent.getTitle2());
+            toolbar.setTitle(selectedEvent.getTitle());
         }
 
         else if(Locale.getDefault().getLanguage().equals("es")){
             toolbar.setTitle(selectedEvent.getTitle());
         }
         else {
-            toolbar.setTitle(selectedEvent.getTitle3());
+            toolbar.setTitle(selectedEvent.getTitle());
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

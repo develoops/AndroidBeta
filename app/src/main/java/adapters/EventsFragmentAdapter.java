@@ -162,27 +162,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         } catch (NullPointerException e){
             Log.e("THANHNX now = true", e.toString());
         }
-        if(Locale.getDefault().getLanguage().equals("en")){
-            if(tabUIs.get(position).getTitleLg2()!=null && !tabUIs.get(position).getTitleLg2().isEmpty()){
-                return tabUIs.get(position).getTitleLg2();
-            }
-            else {
-                return tabUIs.get(position).getTitleLg2();
-            }
-        }
 
-        else if(Locale.getDefault().getLanguage().equals("pt")){
-
-            if(tabUIs.get(position).getTitleLg3()!=null && !tabUIs.get(position).getTitleLg3().isEmpty()){
-                return tabUIs.get(position).getTitleLg3();
-            }
-            else {
-                return tabUIs.get(position).getTitleLg3();
-            }
-
-        }
-
-        else {
 
             if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
                 return tabUIs.get(position).getTitle();
@@ -193,7 +173,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
 
         }
 
-    }
+
 
 
 

@@ -197,21 +197,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         holder.relativeLayout.setBackgroundColor(bgColor);
         //Log.i("NAME",String.valueOf(eventList.get(position).getTitle()));
         Log.i("NAME",String.valueOf(eventList.get(position).getObjectId()));
-        if(Locale.getDefault().getLanguage().equals("en")){
-            if(eventList.get(position).getTitle2()!=null && !eventList.get(position).getTitle2().isEmpty()){
-                holder.name.setText(eventList.get(position).getTitle2());
-            }
 
-        }
-
-        else if(Locale.getDefault().getLanguage().equals("pt")){
-            if(eventList.get(position).getTitle3()!=null && !eventList.get(position).getTitle3().isEmpty()){
-                holder.name.setText(eventList.get(position).getTitle3());
-            }
-        }
-        else {
             holder.name.setText(eventList.get(position).getTitle());
-        }
+
 
 
         //Generate date string

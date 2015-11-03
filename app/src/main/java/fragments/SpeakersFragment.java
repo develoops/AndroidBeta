@@ -85,6 +85,7 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
             List<Person> persons1 = persons;
             for(Person person:persons1){
                 Log.i("PERSONAA",String.valueOf(person.getObjectId()));
+               
             }
 
             Collections.sort(persons1,new Comparator<Person>() {

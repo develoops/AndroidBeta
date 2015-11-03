@@ -77,7 +77,7 @@ public class GridImageAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height-200) - dpToPx(75);
+            holder.image.getLayoutParams().height = (height-400) - dpToPx(75);
             holder.image.getLayoutParams().width = (width);
 
 

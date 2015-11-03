@@ -103,13 +103,13 @@ public class SpeakerDetailFragment extends Fragment {
                 }
 
                 else if(Locale.getDefault().getLanguage().equals("en")) {
-                    speaker_bio.setText(actorEvent.getPerson().getBio2());
+                    speaker_bio.setText(actorEvent.getPerson().getBio());
                     speaker_bio.setTextColor(getResources().getColor(R.color.negro));
                     Log.i("SPEAJrrrER","SP");
                 }
 
                 else {
-                    speaker_bio.setText(actorEvent.getPerson().getBio3());
+                    speaker_bio.setText(actorEvent.getPerson().getBio());
                     speaker_bio.setTextColor(getResources().getColor(R.color.negro));
                 }
 
