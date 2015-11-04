@@ -32,11 +32,10 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.ached.R;
+import mc.fmca.R;
 
 import model.Event;
 import model.MeetingApp;
-import model.New;
 import model.Person;
 
 
@@ -131,7 +130,7 @@ public class ProgramFragment extends Fragment {
         if(meetingApp!=null){
 
 
-
+/*
             mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
             // second argument is the default to use if the preference can't be found
@@ -154,7 +153,7 @@ public class ProgramFragment extends Fragment {
                       subtitle = news.get(i).getContent();
                    }
                 }
-                */
+
                                  //String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
                 //String whatsNewText = getResources().getString(R.string.whatsNewText);
                 new AlertDialog.Builder(getActivity()).setTitle(title).setMessage(subtitle).setPositiveButton(
@@ -167,7 +166,7 @@ public class ProgramFragment extends Fragment {
                 editor.putBoolean(welcomeScreenShownPref, true);
                 editor.commit(); // Very important to save the preference
             }
-
+*/
             eventList = staticMap.get(headerDay);
 
             List<Event> events= eventList;

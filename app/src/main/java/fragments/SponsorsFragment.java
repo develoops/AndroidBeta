@@ -14,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.RelativeLayout;
@@ -22,15 +21,13 @@ import android.widget.RelativeLayout;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import adapters.GridImageAdapter;
-import mc.ached.R;
+import mc.fmca.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
@@ -109,16 +106,20 @@ public class SponsorsFragment extends Fragment {
                 }
                 Log.i("MAPP", String.valueOf(facade1));
 
-                map = facade1.get(0).getCompany().getLogo();
-
-                TouchImageView mapadialog = (TouchImageView) RootView.findViewById(R.id.image_dialog);
-                mapadialog.setMaxZoom(2f);
-                mapadialog.setMinZoom(1f);
-                if (map!= null) {
-                    ImageLoader imageLoader = ImageLoader.getInstance();
-                    //Load the image from the url into the ImageView.
-                    imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+                if(facade1!=null && !facade1.isEmpty()){
+                    map = facade1.get(0).getCompany().getLogo();
+                    TouchImageView mapadialog = (TouchImageView) RootView.findViewById(R.id.image_dialog);
+                    mapadialog.setMaxZoom(2f);
+                    mapadialog.setMinZoom(1f);
+                    if (map!= null) {
+                        ImageLoader imageLoader = ImageLoader.getInstance();
+                        //Load the image from the url into the ImageView.
+                        imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+                    }
                 }
+
+
+
 
             }
 

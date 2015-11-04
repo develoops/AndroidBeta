@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.ached.R;
+import mc.fmca.R;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

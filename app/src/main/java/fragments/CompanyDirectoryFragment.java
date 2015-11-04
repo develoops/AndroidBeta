@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.ached.R;
-import mc.ached.MainActivity;
+import mc.fmca.R;
+import mc.fmca.MainActivity;
 import model.Company;
 import model.MeetingApp;
 
@@ -198,18 +198,21 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            if(Locale.getDefault().getLanguage().equals("es")){
-                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-            }
-            else if(Locale.getDefault().getLanguage().equals("en")){
-                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+            if(com.getDetails()!=null){
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                }
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                }
+
+                else {
+                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                }
+
+                description.setMovementMethod(new ScrollingMovementMethod());
             }
 
-            else {
-                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-            }
-
-            description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
@@ -366,7 +369,7 @@ public class CompanyDirectoryFragment extends Fragment{
         }
 
         else{
-            Log.i("LOG","LOG");
+            Log.i("LOG", "LOG");
         }
 
 

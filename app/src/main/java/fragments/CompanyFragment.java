@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.ached.MainActivity;
-import mc.ached.R;
+import mc.fmca.MainActivity;
+import mc.fmca.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;

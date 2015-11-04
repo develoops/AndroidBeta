@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import mc.ached.R;
-import mc.ached.myApp;
+import mc.fmca.R;
+import mc.fmca.myApp;
 
 
 /**

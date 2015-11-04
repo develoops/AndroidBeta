@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.ached.MainActivity;
-import mc.ached.R;
-import mc.ached.myApp;
+import mc.fmca.MainActivity;
+import mc.fmca.R;
+import mc.fmca.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

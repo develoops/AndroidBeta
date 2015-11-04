@@ -18,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.ached.R;
-import mc.ached.myApp;
+import mc.fmca.R;
+import mc.fmca.myApp;
 import model.Company;
 
 /**

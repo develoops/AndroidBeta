@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.ached.R;
-import mc.ached.myApp;
+import mc.fmca.R;
+import mc.fmca.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

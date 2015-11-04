@@ -21,8 +21,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import adapters.NewsListViewAdapter;
-import mc.ached.R;
-import mc.ached.myApp;
+import mc.fmca.R;
+import mc.fmca.myApp;
 import model.New;
 
 /**

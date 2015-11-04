@@ -433,7 +433,7 @@ public static&nbsp;void&nbsp;subscribe(<a href="http://developer.android.com/ref
  <a href="../../com/parse/ParsePushBroadcastReceiver.html" title="class in com.parse"><code>ParsePushBroadcastReceiver</code></a> instead.</i></div>
 <div class="block">Helper function to subscribe to push notifications with the default application icon.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - This is used to access local storage to cache the subscription, so it must currently
-          be a viable context.</dd><dd><code>channel</code> - A string identifier that determines which messages will achedse a push notification to
+          be a viable context.</dd><dd><code>channel</code> - A string identifier that determines which messages will fmcase a push notification to
           be sent to this client. The channel name must start with a letter and contain only
           letters, numbers, dashes, and underscores.</dd><dd><code>cls</code> - This should be a subclass of Activity. An instance of this Activity is started when
           the user responds to this push notification. If you are not sure what to use here,
@@ -459,12 +459,12 @@ public static&nbsp;void&nbsp;subscribe(<a href="http://developer.android.com/ref
 <div class="block">Call this function when the user should be subscribed to a new push channel. When push
  notifications are sent out on this channel subsequently, this device will display a "toast"
  notification in the system tray. This function returns immediately, even when there is no
- internet access. In that case the subscription is cached and when internet access is next
+ internet access. In that case the subscription is cfmca and when internet access is next
  available the client will inform the server of its subscription. This starts a PushService
  running in the background that will not permanently terminate as long as the user is subscribed
  to some channel, unless the application is uninstalled.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - This is used to access local storage to cache the subscription, so it must currently
-          be a viable context.</dd><dd><code>channel</code> - A string identifier that determines which messages will achedse a push notification to
+          be a viable context.</dd><dd><code>channel</code> - A string identifier that determines which messages will fmcase a push notification to
           be sent to this client. The channel name must start with a letter and contain only
           letters, numbers, dashes, and underscores.</dd><dd><code>cls</code> - This should be a subclass of Activity. An instance of this Activity is started when
           the user responds to this push notification. If you are not sure what to use here,

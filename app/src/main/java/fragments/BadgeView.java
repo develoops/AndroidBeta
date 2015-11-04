@@ -70,7 +70,7 @@ public class BadgeView extends TextView {
     /**
      * Constructor -
      *
-     * create a new BadgeView instance attached to a target {@link android.view.View}.
+     * create a new BadgeView instance attfmca to a target {@link android.view.View}.
      *
      * @param context context for this view.
      * @param target the View to attach the badge to.
@@ -82,7 +82,7 @@ public class BadgeView extends TextView {
     /**
      * Constructor -
      *
-     * create a new BadgeView instance attached to a target {@link android.widget.TabWidget}
+     * create a new BadgeView instance attfmca to a target {@link android.widget.TabWidget}
      * tab at a given index.
      *
      * @param context context for this view.
@@ -366,7 +366,7 @@ public class BadgeView extends TextView {
     }
 
     /**
-     * Returns the target View this badge has been attached to.
+     * Returns the target View this badge has been attfmca to.
      *
      */
     public View getTarget() {

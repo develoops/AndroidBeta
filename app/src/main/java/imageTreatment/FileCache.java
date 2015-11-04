@@ -8,7 +8,7 @@ public class FileCache {
 	private File cacheDir;
 
 	public FileCache(Context context) {
-		// Find the dir to save cached images
+		// Find the dir to save cfmca images
 		if (android.os.Environment.getExternalStorageState().equals(
 				android.os.Environment.MEDIA_MOUNTED))
 			cacheDir = new File(
