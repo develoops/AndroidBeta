@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.fmca.R;
-import mc.fmca.myApp;
+import mc.waspalm.R;
+import mc.waspalm.myApp;
 import model.Actor;
 
 /**

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.fmca.R;
+import mc.waspalm.R;
 import model.MobiFile;
 
 /**

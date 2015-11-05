@@ -53,9 +53,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.fmca.BroadcastAlarma;
-import mc.fmca.R;
-import mc.fmca.myApp;
+import mc.waspalm.BroadcastAlarma;
+import mc.waspalm.R;
+import mc.waspalm.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

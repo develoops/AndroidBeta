@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FMCA</string>
+    <string name="app_name">WASPALM</string>
     <string name="start">Carregando..</string>
     <string name="action_settings">Configurações</string>
     <string name="rate">Avaliação enviado</string>

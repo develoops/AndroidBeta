@@ -16,7 +16,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.fmca.R;
+import mc.waspalm.R;
 import model.Facade;
 
 /**

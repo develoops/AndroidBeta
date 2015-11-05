@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridMediaAdapter;
-import mc.fmca.R;
+import mc.waspalm.R;
 import model.MobiFile;
 
 /**

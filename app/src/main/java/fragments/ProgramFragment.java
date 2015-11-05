@@ -1,11 +1,8 @@
 package fragments;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
@@ -32,7 +29,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.fmca.R;
+import mc.waspalm.R;
 
 import model.Event;
 import model.MeetingApp;
@@ -236,12 +233,15 @@ public class ProgramFragment extends Fragment {
 
             //startLoading();
             Log.e(getClass().getName(), "onCreateView end" + "header: " + headerDay);
-            for(Person person: meetingApp.getPersons()){
-                if(person.getImage()!=null){
-                    person.getImage().getParseFileV1().getDataInBackground();
-                }
+            if(meetingApp.getPersons()!=null){
+                for(Person person: meetingApp.getPersons()){
+                    if(person.getImage()!=null){
+                        person.getImage().getParseFileV1().getDataInBackground();
+                    }
 
+                }
             }
+
         }
         else {
 

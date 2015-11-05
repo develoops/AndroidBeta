@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.fmca.R;
-import mc.fmca.MainActivity;
+import mc.waspalm.R;
+import mc.waspalm.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

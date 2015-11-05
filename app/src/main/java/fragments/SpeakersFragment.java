@@ -22,7 +22,7 @@ import java.util.List;
 
 import adapters.SpeakersListViewAdapter;
 
-import mc.fmca.R;
+import mc.waspalm.R;
 import model.Actor;
 import model.MeetingApp;
 import model.Person;
@@ -83,11 +83,12 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
 
         if(persons!=null){
             List<Person> persons1 = persons;
+            /*
             for(Person person:persons1){
                 Log.i("PERSONAA",String.valueOf(person.getObjectId()));
                
             }
-
+*/
             Collections.sort(persons1,new Comparator<Person>() {
                 @Override
                 public int compare(Person lhs, Person rhs) {

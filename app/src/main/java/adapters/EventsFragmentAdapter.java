@@ -24,7 +24,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.fmca.myApp;
+import mc.waspalm.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;

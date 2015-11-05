@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.fmca.R;
+import mc.waspalm.R;
 
 /**
  * Created by Alvaro on 3/3/15.

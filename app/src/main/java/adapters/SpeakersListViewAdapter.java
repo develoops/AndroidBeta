@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.fmca.R;
-import mc.fmca.myApp;
+import mc.waspalm.R;
+import mc.waspalm.myApp;
 import model.MeetingApp;
 import model.Person;
 

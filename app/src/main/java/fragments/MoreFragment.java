@@ -20,7 +20,7 @@ import com.parse.ParseQuery;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.fmca.R;
+import mc.waspalm.R;
 import model.MeetingApp;
 import model.MobiFile;
 

@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.fmca.R;
-import mc.fmca.myApp;
+import mc.waspalm.R;
+import mc.waspalm.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

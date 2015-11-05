@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.fmca.MainActivity;
-import mc.fmca.R;
-import mc.fmca.myApp;
+import mc.waspalm.MainActivity;
+import mc.waspalm.R;
+import mc.waspalm.myApp;
 
 import model.MeetingApp;
 
