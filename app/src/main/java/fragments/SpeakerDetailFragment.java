@@ -85,7 +85,7 @@ public class SpeakerDetailFragment extends Fragment {
         RelativeLayout footer = (RelativeLayout)RootView.findViewById(R.id.footer);
         //RoundedImageView image = (RoundedImageView) RootView.findViewById(R.id.image_speaker);
         final ListView eventsofSpeaker = (ListView)RootView.findViewById(R.id.events_list_view);
-        Log.i("ASD",String.valueOf(actorEvent));
+        Log.i("ASD",String.valueOf(actorEvent.getObjectId()));
         //speaker_name.setText(actorEvent.getPerson().getSalutation() + " " + actorEvent.getPerson().getFirstName() + " " + actorEvent.getPerson().getLastName());
         //institution.setText(actorEvent.getCompany().getName());
         footer.setVisibility(View.GONE);

@@ -170,7 +170,6 @@ public class CompanyDirectoryFragment extends Fragment{
 */
 
 
-
         if (com != null) {
 
             if(com.getheaderImage()!=null){
@@ -198,18 +197,22 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            if(Locale.getDefault().getLanguage().equals("es")){
-                description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-            }
-            else if(Locale.getDefault().getLanguage().equals("en")){
-                description.setText(com.getDetails2()+"\n"+"\n"+"\n"+"\n");
+            if(com.getDetails()!=null){
+                if(Locale.getDefault().getLanguage().equals("es")){
+                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                }
+                else if(Locale.getDefault().getLanguage().equals("en")){
+                    description.setText(com.getDetails2()+"\n"+"\n"+"\n"+"\n");
+                }
+
+                else {
+                    description.setText(com.getDetails3()+"\n"+"\n"+"\n"+"\n");
+                }
+
+                description.setMovementMethod(new ScrollingMovementMethod());
             }
 
-            else {
-                description.setText(com.getDetails3()+"\n"+"\n"+"\n"+"\n");
-            }
 
-            description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
@@ -366,7 +369,7 @@ public class CompanyDirectoryFragment extends Fragment{
         }
 
         else{
-            Log.i("LOG","LOG");
+            Log.i("LOG", "LOG");
         }
 
 

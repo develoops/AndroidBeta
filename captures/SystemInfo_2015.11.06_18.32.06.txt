@@ -1,0 +1,65 @@
+Activity Resolver Table:
+  Schemes:
+      mailto:
+        5390a8f0 mc.cau/.MainActivity filter 53867b38
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        5390a8f0 mc.cau/.MainActivity filter 5390a998
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      com.google.android.c2dm.intent.RECEIVE:
+        539a9b94 mc.cau/com.parse.GcmBroadcastReceiver filter 53a14488
+      com.parse.push.intent.DELETE:
+        538f5cf0 mc.cau/utils.Receiver filter 538f5d6c
+      android.intent.action.BOOT_COMPLETED:
+        53996fb4 mc.cau/com.parse.ParseBroadcastReceiver filter 539a9aac
+      com.google.android.c2dm.intent.REGISTRATION:
+        539a9b94 mc.cau/com.parse.GcmBroadcastReceiver filter 53a14488
+      com.parse.push.intent.OPEN:
+        538f5cf0 mc.cau/utils.Receiver filter 538f5d6c
+      android.intent.action.USER_PRESENT:
+        53996fb4 mc.cau/com.parse.ParseBroadcastReceiver filter 539a9aac
+      com.parse.push.intent.RECEIVE:
+        538f5cf0 mc.cau/utils.Receiver filter 538f5d6c
+ 
+Permissions:
+  Permission [mc.cau.permission.C2D_MESSAGE] (536b3554):
+    sourcePackage=mc.cau
+    uid=10084 gids=[] type=0 prot=signature
+    packageSetting=PackageSetting{536c1a74 mc.cau/10084}
+    perm=Permission{539707ec mc.cau.permission.C2D_MESSAGE}
+ 
+Packages:
+  Package [mc.cau] (536c1a74):
+    userId=10084 gids=[3003]
+    sharedUser=null
+    pkg=Package{539a38f8 mc.cau}
+    codePath=/data/app/mc.cau-2.apk
+    resourcePath=/data/app/mc.cau-2.apk
+    nativeLibraryPath=/data/data/mc.cau/lib
+    versionCode=17
+    applicationInfo=ApplicationInfo{539a3944 mc.cau}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP LARGE_HEAP ]
+    versionName=2.7
+    dataDir=/data/data/mc.cau
+    targetSdk=21
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2015-11-06 01:26:12
+    firstInstallTime=2015-11-02 19:06:25
+    lastUpdateTime=2015-11-06 01:26:12
+    signatures=PackageSignatures{536b1bac [536bed74]}
+    permissionsFixed=true haveGids=true
+    pkgFlags=0x0 installStatus=1 User 0:  stopped=false enabled=0
+    grantedPermissions:
+      android.permission.READ_PHONE_STATE
+      mc.cau.permission.C2D_MESSAGE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      android.permission.INTERNET
+      android.permission.VIBRATE
+      android.permission.CALL_PHONE
+      android.permission.GET_ACCOUNTS
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      com.google.android.c2dm.permission.RECEIVE

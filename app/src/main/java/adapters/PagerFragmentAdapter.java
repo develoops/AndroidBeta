@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Locale;
 
 import fragments.CompanyDirectoryFragment;
+import fragments.CompanyDirectoryFragment2;
 import fragments.CompanyFragment;
 
 
@@ -63,15 +64,32 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
         if(tabUIs.get(position).getnameView().equals("navMeeting")){
             return MeetingsFragment.newInstance(LoadDataFragment.meetingApps);
         }
-        else if(tabUIs.get(position).getnameView().equals("navCompany")){
-            return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
+        else if(tabUIs.get(position).getnameView().equals("navCompany") ){
+            Log.i("SAUX",tabUIs.get(position).getsortingAux().toString());
+            Log.i("NAME",tabUIs.get(position).getObjectId().toString());
+            if((tabUIs.get(position).getsortingAux())==2){
+                return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
+            }
+            else {
+                return CompanyDirectoryFragment.newInstance(LoadDataFragment.com2, false);
+            }
+
+
+
         }
+        else if(tabUIs.get(position).getnameView().equals("navCompany") && ((tabUIs.get(position).getsortingAux())==4)){
+
+            return CompanyDirectoryFragment.newInstance(LoadDataFragment.com2, false);
+        }
+
         else if(tabUIs.get(position).getnameView().equals("navStaff")){
             return DirectiveFragment.newInstance(LoadDataFragment.staff);
         }
         else if(tabUIs.get(position).getnameView().equals("navAbout")){
             return mCongressFragment.newInstance(LoadDataFragment.mobiCongress);
         }
+
+
         else {
             return MoreCompanyFragment.newInstance(LoadDataFragment.files);
         }

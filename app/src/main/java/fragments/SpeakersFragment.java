@@ -24,6 +24,7 @@ import adapters.SpeakersListViewAdapter;
 
 import mc.cau.R;
 import model.Actor;
+import model.Event;
 import model.MeetingApp;
 import model.Person;
 
@@ -85,6 +86,16 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
             List<Person> persons1 = persons;
             for(Person person:persons1){
                 Log.i("PERSONAA",String.valueOf(person.getObjectId()));
+                for(Actor actor:person.getActors()){
+                    Log.i("ACTOR",actor.getObjectId());
+                    Log.i("ACTOR",actor.getRole());
+                    if(actor.getEvents()!=null){
+                        for(Event event:actor.getEvents()){
+                            Log.i("EVENT",event.getTitle());
+                        }
+                    }
+
+                }
             }
 
             Collections.sort(persons1,new Comparator<Person>() {

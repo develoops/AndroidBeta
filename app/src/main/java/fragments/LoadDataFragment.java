@@ -50,7 +50,7 @@ public class LoadDataFragment extends Fragment {
 	public static ProgressBar bar;
 	public static Boolean flag = false;
 	public static View RootView;
-	public static Company com, mobiCongress;
+	public static Company com, mobiCongress,com2;
 	public static Facade facade;
 
 	public static LoadDataFragment newInstance() {
@@ -175,10 +175,11 @@ public class LoadDataFragment extends Fragment {
 						if (e != null && companyApps != null && companyApps.size() > 0)
 							return;
 						company = companyApps.get(0);
+
 						List<Facade> facades = company.getCompaniesFacade();
 
 						for (Facade facade1 : facades) {
-							if (facade1.getRole().equals("Organizacion") || facade1.getRole().equals("Organizadores")) {
+							if (facade1.getRole().equals("Organizacion") && facade1.getCompany().getObjectId().equals("yEIg0hbRx9")) {
 								com = facade1.getCompany();
                                 if(com.getheaderImage()!=null){
                                     com.getheaderImage().getParseFileV1().getDataInBackground();
@@ -192,6 +193,9 @@ public class LoadDataFragment extends Fragment {
 									staff = com.getActors();
 								}
 							}
+                            else {
+                                com2 = facade1.getCompany();
+                            }
 
                             /*
 							if (facade1.getRole().equals("mCongress")) {
