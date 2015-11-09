@@ -71,7 +71,7 @@ public class MeetingAppViewPagerFragment extends Fragment {
                 ft.commitAllowingStateLoss();
             }
         });
-        toolbar.setBackgroundColor(getResources().getColor(R.color.companySecundario));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.eventoTerciario));
         toolbar.inflateMenu(R.menu.menuprogram);
         View target = v.findViewById(R.id.news);
 

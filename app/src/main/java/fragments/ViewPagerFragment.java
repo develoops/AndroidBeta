@@ -49,7 +49,7 @@ public class ViewPagerFragment extends Fragment {
         mSlidingTabLayout = (SlidingTabLayout) v.findViewById(R.id.tabs);
         Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         toolbar.setTitleTextColor(Color.WHITE);
-        toolbar.setBackgroundColor(getResources().getColor(R.color.companySecundario));
+        toolbar.setBackgroundColor(getResources().getColor(R.color.eventoTerciario));
 
         ((ActionBarActivity)getActivity()).setSupportActionBar(toolbar);
 

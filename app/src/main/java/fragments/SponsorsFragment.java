@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -79,7 +80,7 @@ public class SponsorsFragment extends Fragment {
         }
 
         acomodation = (Button) RootView.findViewById(R.id.acomodation);
-        acomodation.setText(R.string.accomodation);
+        acomodation.setText("Alojamiento");
         acomodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,6 +108,9 @@ public class SponsorsFragment extends Fragment {
                 Log.i("MAPP", String.valueOf(facade1));
 
                 if(facade1!=null && !facade1.isEmpty()){
+                    DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+                    int width = displayMetrics.widthPixels;
+                    int height = displayMetrics.heightPixels;
                     map = facade1.get(0).getCompany().getLogo();
                     TouchImageView mapadialog = (TouchImageView) RootView.findViewById(R.id.image_dialog);
                     mapadialog.setMaxZoom(2f);
@@ -115,6 +119,8 @@ public class SponsorsFragment extends Fragment {
                         ImageLoader imageLoader = ImageLoader.getInstance();
                         //Load the image from the url into the ImageView.
                         imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+                        mapadialog.getLayoutParams().height = height- dpToPx(150);
+                        mapadialog.getLayoutParams().width = width;
                     }
                 }
 
@@ -243,16 +249,16 @@ public class SponsorsFragment extends Fragment {
                 dialogo.setContentView(R.layout.map_box_layout);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("title","PlanoStands");
+                query.whereEqualTo("title", "PlanoStands");
                 query.getFirstInBackground(new GetCallback<MobiFile>() {
                     @Override
                     public void done(MobiFile mobiFile, ParseException e) {
-                        map=mobiFile;
+                        map = mobiFile;
                         final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
                         TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
                         mapadialog.setMaxZoom(3f);
                         mapadialog.setMinZoom(1f);
-                        if (map!= null) {
+                        if (map != null) {
                             ImageLoader imageLoader = ImageLoader.getInstance();
                             //Load the image from the url into the ImageView.
                             imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
@@ -295,6 +301,12 @@ public class SponsorsFragment extends Fragment {
 
         });
 
+    }
+
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return px;
     }
 
 }
