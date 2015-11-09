@@ -69,7 +69,7 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
             return CompanyDirectoryFragment.newInstance(LoadDataFragment.com, false);
         }
 
-        else if(tabUIs.get(position).getnameView().equals("navOther") ){
+        else if(tabUIs.get(position).getnameView().equals("navOther")|| (tabUIs.get(position).getnameView().equals("navCompany2"))){
             return CompanyDirectoryFragment2.newInstance(LoadDataFragment.com2, false);
         }
         else if(tabUIs.get(position).getnameView().equals("navStaff")){
