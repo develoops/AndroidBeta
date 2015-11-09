@@ -195,6 +195,7 @@ public class LoadDataFragment extends Fragment {
 							}
                             else {
                                 com2 = facade1.getCompany();
+
                             }
 
                             /*
