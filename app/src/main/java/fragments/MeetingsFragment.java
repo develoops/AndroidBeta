@@ -86,7 +86,7 @@ public class MeetingsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View RootView = inflater.inflate(R.layout.common_list_layout, container, false);
+        final View RootView = inflater.inflate(R.layout.meeting_listview, container, false);
         listview = (ListView) RootView.findViewById(R.id.commonListView);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview.setOnTouchListener(swipeDetector);
