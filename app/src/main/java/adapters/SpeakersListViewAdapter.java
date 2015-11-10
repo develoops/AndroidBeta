@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sochinut.R;
+import mc.sochinut.myApp;
 import model.MeetingApp;
 import model.Person;
 

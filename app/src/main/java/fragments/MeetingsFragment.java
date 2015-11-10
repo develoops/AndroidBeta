@@ -24,9 +24,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.waspalm.MainActivity;
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sochinut.MainActivity;
+import mc.sochinut.R;
+import mc.sochinut.myApp;
 
 import model.MeetingApp;
 
@@ -39,7 +39,7 @@ public class MeetingsFragment extends Fragment {
     ListView listview;
     public myApp myapp;
     MeetingAppsListViewAdapter adapter;
-    public ParseImageView hdr;
+    //public ParseImageView hdr;
     public static List<MeetingApp> meetingAppList;
 
 
@@ -93,7 +93,7 @@ public class MeetingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.meeting_listview, container, false);
         listview = (ListView) RootView.findViewById(R.id.commonListView);
-        hdr = (ParseImageView) RootView.findViewById(R.id.headerMeeting);
+        //hdr = (ParseImageView) RootView.findViewById(R.id.headerMeeting);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview.setOnTouchListener(swipeDetector);
         return RootView;
@@ -120,7 +120,7 @@ public class MeetingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
+/*
         if(meetingAppList.get(0).getIcon()!=null){
             ParseFile header  = meetingAppList.get(0).getIcon().getParseFileV1();
             if (header != null) {
@@ -146,7 +146,7 @@ public class MeetingsFragment extends Fragment {
             //hdr.setImageDrawable(null);
             Log.i("NO HAY HEADER0","LOG");
         }
-
+*/
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

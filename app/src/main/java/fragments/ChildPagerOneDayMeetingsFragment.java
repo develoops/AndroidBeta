@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.waspalm.R;
+import mc.sochinut.R;
 import model.Event;
 
 /**

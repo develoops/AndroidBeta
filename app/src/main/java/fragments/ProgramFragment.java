@@ -29,7 +29,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.waspalm.R;
+import mc.sochinut.R;
 
 import model.Event;
 import model.MeetingApp;

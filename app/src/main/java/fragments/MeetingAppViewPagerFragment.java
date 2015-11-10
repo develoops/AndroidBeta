@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.waspalm.MainActivity;
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sochinut.MainActivity;
+import mc.sochinut.R;
+import mc.sochinut.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

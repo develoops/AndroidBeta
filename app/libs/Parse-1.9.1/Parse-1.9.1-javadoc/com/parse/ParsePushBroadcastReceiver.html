@@ -103,7 +103,7 @@ extends <a href="http://developer.android.com/reference/android/content/Broadcas
 <div class="block">A <a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> for rendering and reacting to to Notifications.
  <p/>
  This <a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> must be registered in order to use the <a href="../../com/parse/ParsePush.html" title="class in com.parse"><code>ParsePush</code></a>
- subscription methods. As a security prewaspalmtion, the intent filters for this
+ subscription methods. As a security presochinuttion, the intent filters for this
  <a href="http://developer.android.com/reference/android/content/BroadcastReceiver.html?is-external=true" title="class or interface in android.content"><code>BroadcastReceiver</code></a> must not be exported. Add the following lines to your
  <code>AndroidManifest.xml</code> file, inside the &lt;application&gt; element to properly register the
  <code>ParsePushBroadcastReceiver</code>:
@@ -539,7 +539,7 @@ extends <a href="http://developer.android.com/reference/android/content/Broadcas
 <div class="block">Retrieves the large icon to be used in a <a href="http://developer.android.com/reference/android/app/Notification.html?is-external=true" title="class or interface in android.app"><code>Notification</code></a>. This <code>Bitmap</code> should be
  used to provide special context for a particular <a href="http://developer.android.com/reference/android/app/Notification.html?is-external=true" title="class or interface in android.app"><code>Notification</code></a>, such as the avatar of
  user who generated the <a href="http://developer.android.com/reference/android/app/Notification.html?is-external=true" title="class or interface in android.app"><code>Notification</code></a>. The default implementation returns <code>null</code>,
- waspalmsing the <a href="http://developer.android.com/reference/android/app/Notification.html?is-external=true" title="class or interface in android.app"><code>Notification</code></a> to display only the small icon.</div>
+ sochinutsing the <a href="http://developer.android.com/reference/android/app/Notification.html?is-external=true" title="class or interface in android.app"><code>Notification</code></a> to display only the small icon.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The <code>Context</code> in which the receiver is running.</dd><dd><code>intent</code> - An <code>Intent</code> containing the channel and data of the current push notification.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>Bitmap of the default large icon for the package</dd><dt><span class="strong">See Also:</span></dt><dd><a href="http://developer.android.com/guide/topics/ui/notifiers/notifications.html#NotificationUI">Android Notification UI Overview</a></dd></dl>
 </li>
@@ -557,7 +557,7 @@ extends <a href="http://developer.android.com/reference/android/content/Broadcas
  than 38 characters long, the style of the notification will be set to
  <a href="http://developer.android.com/reference/android/app/Notification.BigTextStyle.html?is-external=true" title="class or interface in android.app"><code>Notification.BigTextStyle</code></a>.
  <p/>
- As a security prewaspalmtion, developers overriding this method should be sure to set the package
+ As a security presochinuttion, developers overriding this method should be sure to set the package
  on notification <code>Intent</code>s to avoid leaking information to other apps.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>context</code> - The <code>Context</code> in which the receiver is running.</dd><dd><code>intent</code> - An <code>Intent</code> containing the channel and data of the current push notification.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>The notification to be displayed.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../com/parse/ParsePushBroadcastReceiver.html#onPushReceive(android.content.Context,%20android.content.Intent)"><code>ParsePushBroadcastReceiver.onPushReceive(Context, Intent)</code></a></dd></dl>

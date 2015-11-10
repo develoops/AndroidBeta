@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sochinut.R;
+import mc.sochinut.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

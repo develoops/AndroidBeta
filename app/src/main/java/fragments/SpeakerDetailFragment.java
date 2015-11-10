@@ -28,7 +28,7 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.waspalm.R;
+import mc.sochinut.R;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

@@ -18,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sochinut.R;
+import mc.sochinut.myApp;
 import model.Company;
 
 /**
