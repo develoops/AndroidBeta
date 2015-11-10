@@ -98,6 +98,9 @@ public class ChildPagerMeetingsFragment extends Fragment implements View.OnClick
                         anidateEvents.add(event1);
                     }
                 }
+                if(event.getheaderImage()!=null){
+                    event.getheaderImage().getParseFileV1().getDataInBackground();
+                }
             }
 
             if(anidateEvents!=null){

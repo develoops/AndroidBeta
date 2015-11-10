@@ -89,12 +89,14 @@ public class EventDetailFragment extends Fragment {
 
         EventDetailFragment fragment = new EventDetailFragment();
         selectedEvent = event;
+        /*
         selectedEvent.fetchFromLocalDatastoreInBackground(new GetCallback<ParseObject>() {
             @Override
             public void done(ParseObject parseObject, ParseException e) {
 
             }
         });
+        */
         mApp = meetingApp; //para Alfonso
         fragment.setRetainInstance(true);
         return fragment;
