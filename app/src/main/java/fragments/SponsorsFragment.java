@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -70,6 +72,7 @@ public class SponsorsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View RootView = inflater.inflate(R.layout.sponsors_layout, container , false);
+        /*
         button = (Button) RootView.findViewById(R.id.comercialmap);
         if (Locale.getDefault().getLanguage().equals("en")) {
             button.setText("Commercial Map");
@@ -79,7 +82,7 @@ public class SponsorsFragment extends Fragment {
         }
 
         acomodation = (Button) RootView.findViewById(R.id.acomodation);
-        acomodation.setText(R.string.accomodation);
+        acomodation.setText("Alojamiento");
         acomodation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,36 +95,41 @@ public class SponsorsFragment extends Fragment {
 
             }
         });
-
+*/
         if(mApp!=null) {
-            if (mApp.getCompaniesFacade() != null) {
 
-                List<Facade> facades = mApp.getCompaniesFacade();
 
-                ArrayList<Facade> facade1 = new ArrayList<>();
-                for (Facade facade : facades) {
-                    if (!facade.getRole().equals("Organizadores")) {
-                        facade1.add(facade);
-                    }
-                }
-                Log.i("MAPP", String.valueOf(facade1));
-
-                if(facade1!=null && !facade1.isEmpty()){
-                    map = facade1.get(0).getCompany().getLogo();
+            ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
+            query.whereEqualTo("title", "mapcomercial");
+            query.getFirstInBackground(new GetCallback<MobiFile>() {
+                @Override
+                public void done(MobiFile mobiFile, ParseException e) {
+                    DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+                    int width = displayMetrics.widthPixels;
+                    int height = displayMetrics.heightPixels;
+                    map = mobiFile;
                     TouchImageView mapadialog = (TouchImageView) RootView.findViewById(R.id.image_dialog);
-                    mapadialog.setMaxZoom(2f);
+                    mapadialog.setScaleType(ImageView.ScaleType.CENTER_CROP);
+                    mapadialog.setMaxZoom(4f);
                     mapadialog.setMinZoom(1f);
-                    if (map!= null) {
+                    if (map != null) {
                         ImageLoader imageLoader = ImageLoader.getInstance();
                         //Load the image from the url into the ImageView.
                         imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+
+                        mapadialog.getLayoutParams().height = height - dpToPx(130);
+                        mapadialog.getLayoutParams().width = width;
                     }
                 }
+            });
 
 
 
 
-            }
+
+
+
+
 
 
         }
@@ -129,7 +137,6 @@ public class SponsorsFragment extends Fragment {
 /*
          gridview = (GridView) RootView.findViewById(R.id.gridView);
          //button = (Button) RootView.findViewById(R.id.comercialmap);
-
          acomodation = (Button) RootView.findViewById(R.id.acomodation);
          acomodation.setText(R.string.accomodation);
          acomodation.setOnClickListener(new View.OnClickListener() {
@@ -141,7 +148,6 @@ public class SponsorsFragment extends Fragment {
                      i.setData(Uri.parse(url));
                      startActivity(i);
                  }
-
              }
          });
         /*
@@ -151,12 +157,9 @@ public class SponsorsFragment extends Fragment {
         else {
             button.setText("Mapa Comercial");
         }
-
         if(mApp!=null){
             if(mApp.getCompaniesFacade()!=null){
-
                 List<Facade> facades = mApp.getCompaniesFacade();
-
                 ArrayList<Facade> facade1 = new ArrayList<>();
                 for(Facade facade:facades){
                     if(!facade.getRole().equals("Organizadores")){
@@ -165,28 +168,18 @@ public class SponsorsFragment extends Fragment {
                 }
                 Log.i("MAPP", String.valueOf(facade1));
                 gridview.setAdapter(new GridImageAdapter(getActivity(),facade1));
-
                 gridview.setStretchMode( GridView.STRETCH_COLUMN_WIDTH );
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                     public void onItemClick(AdapterView<?> parent, View v,
                                             int position, long id) {
-
-
-
                         ParseObject object = (ParseObject)(gridview.getItemAtPosition(position));
-
-
                         Facade stand = ParseObject.createWithoutData(Facade.class, object.getObjectId());
-
                         String url = stand.getCompany().getWeb();
                         if(url!=null){
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(Uri.parse(url));
                             startActivity(i);
-
                         }
-
                         /*
                         if(stand.getCompany().getDetails()!=null){
                             Fragment fragment = CompanyFragment.newInstance(stand,mApp,true);
@@ -195,22 +188,15 @@ public class SponsorsFragment extends Fragment {
                             ft.addToBackStack(null);
                             ft.commit();
                         }
-
                         else if(stand.getCompany().getWeb()!=null && stand.getCompany().getDetails()==null){
-
                         }
                         else {
                             Log.i("NADA","NADA");
                         }
-
                     }
-
-
                 });
             }
         }
-
-
 */
 
         return RootView;
@@ -228,7 +214,7 @@ public class SponsorsFragment extends Fragment {
 
 
 
-
+/*
 
 
 
@@ -243,16 +229,16 @@ public class SponsorsFragment extends Fragment {
                 dialogo.setContentView(R.layout.map_box_layout);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("title","PlanoStands");
+                query.whereEqualTo("title", "mapcomercial");
                 query.getFirstInBackground(new GetCallback<MobiFile>() {
                     @Override
                     public void done(MobiFile mobiFile, ParseException e) {
-                        map=mobiFile;
+                        map = mobiFile;
                         final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
                         TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
                         mapadialog.setMaxZoom(3f);
                         mapadialog.setMinZoom(1f);
-                        if (map!= null) {
+                        if (map != null) {
                             ImageLoader imageLoader = ImageLoader.getInstance();
                             //Load the image from the url into the ImageView.
                             imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
@@ -277,7 +263,7 @@ public class SponsorsFragment extends Fragment {
         });
 
 
-
+*/
         getView().setFocusableInTouchMode(true);
         getView().requestFocus();
         getView().setOnKeyListener(new View.OnKeyListener() {
@@ -296,5 +282,12 @@ public class SponsorsFragment extends Fragment {
         });
 
     }
+
+    public int dpToPx(int dp) {
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
+        return px;
+    }
+
 
 }
