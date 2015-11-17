@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.MeetingApp;
 
 /**

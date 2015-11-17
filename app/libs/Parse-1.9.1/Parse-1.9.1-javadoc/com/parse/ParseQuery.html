@@ -148,7 +148,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
  }
  </pre>
  <p/>
- Using the callback methods is usually preferred bewaspalmse the network operation will not block the
+ Using the callback methods is usually preferred besmsse the network operation will not block the
  calling thread. However, in some cases it may be easier to use the <a href="../../com/parse/ParseQuery.html#find()"><code>ParseQuery.find()</code></a>,
  <a href="../../com/parse/ParseQuery.html#get(java.lang.String)"><code>ParseQuery.get(String)</code></a> or <a href="../../com/parse/ParseQuery.html#count()"><code>ParseQuery.count()</code></a> calls, which do block the calling thread. For example,
  if your application has already spawned a background task to perform work, that background task
@@ -237,14 +237,14 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#clearAllCwaspalmResults()">clearAllCwaspalmResults</a></strong>()</code>
-<div class="block">Clears the cwaspalm result for all queries.</div>
+<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#clearAllCsmsResults()">clearAllCsmsResults</a></strong>()</code>
+<div class="block">Clears the csms result for all queries.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#clearCwaspalmResult()">clearCwaspalmResult</a></strong>()</code>
-<div class="block">Removes the previously cwaspalm result for this query, forcing the next find() to hit the
+<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#clearCsmsResult()">clearCsmsResult</a></strong>()</code>
+<div class="block">Removes the previously csms result for this query, forcing the next find() to hit the
  network.</div>
 </td>
 </tr>
@@ -364,7 +364,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 <tr class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#getMaxCacheAge()">getMaxCacheAge</a></strong>()</code>
-<div class="block">Gets the maximum age of cwaspalm data that will be considered in this query.</div>
+<div class="block">Gets the maximum age of csms data that will be considered in this query.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -395,8 +395,8 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#hasCwaspalmResult()">hasCwaspalmResult</a></strong>()</code>
-<div class="block">Returns whether or not this query has a cwaspalm result.</div>
+<td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#hasCsmsResult()">hasCsmsResult</a></strong>()</code>
+<div class="block">Returns whether or not this query has a csms result.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -450,7 +450,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</a>&lt;<a href="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../com/parse/ParseQuery.html#setMaxCacheAge(long)">setMaxCacheAge</a></strong>(long&nbsp;maxAgeInMilliseconds)</code>
-<div class="block">Sets the maximum age of cwaspalm data that will be considered in this query.</div>
+<div class="block">Sets the maximum age of csms data that will be considered in this query.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -896,7 +896,7 @@ public static&nbsp;<a href="../../com/parse/ParseQuery.html" title="class in com
 <li class="blockList">
 <h4>setMaxCacheAge</h4>
 <pre>public&nbsp;<a href="../../com/parse/ParseQuery.html" title="class in com.parse">ParseQuery</a>&lt;<a href="../../com/parse/ParseQuery.html" title="type parameter in ParseQuery">T</a>&gt;&nbsp;setMaxCacheAge(long&nbsp;maxAgeInMilliseconds)</pre>
-<div class="block">Sets the maximum age of cwaspalm data that will be considered in this query.</div>
+<div class="block">Sets the maximum age of csms data that will be considered in this query.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>this, so you can chain this call.</dd></dl>
 </li>
 </ul>
@@ -907,7 +907,7 @@ public static&nbsp;<a href="../../com/parse/ParseQuery.html" title="class in com
 <li class="blockList">
 <h4>getMaxCacheAge</h4>
 <pre>public&nbsp;long&nbsp;getMaxCacheAge()</pre>
-<div class="block">Gets the maximum age of cwaspalm data that will be considered in this query. The returned value
+<div class="block">Gets the maximum age of csms data that will be considered in this query. The returned value
  is in milliseconds</div>
 </li>
 </ul>
@@ -1029,35 +1029,35 @@ public static&nbsp;<a href="../../com/parse/ParseQuery.html" title="class in com
            fails.</dd><dt><span class="strong">See Also:</span></dt><dd><a href="../../com/parse/ParseException.html#OBJECT_NOT_FOUND"><code>ParseException.OBJECT_NOT_FOUND</code></a></dd></dl>
 </li>
 </ul>
-<a name="hasCwaspalmResult()">
+<a name="hasCsmsResult()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>hasCwaspalmResult</h4>
-<pre>public&nbsp;boolean&nbsp;hasCwaspalmResult()</pre>
-<div class="block">Returns whether or not this query has a cwaspalm result.</div>
+<h4>hasCsmsResult</h4>
+<pre>public&nbsp;boolean&nbsp;hasCsmsResult()</pre>
+<div class="block">Returns whether or not this query has a csms result.</div>
 </li>
 </ul>
-<a name="clearCwaspalmResult()">
+<a name="clearCsmsResult()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>clearCwaspalmResult</h4>
-<pre>public&nbsp;void&nbsp;clearCwaspalmResult()</pre>
-<div class="block">Removes the previously cwaspalm result for this query, forcing the next find() to hit the
- network. If there is no cwaspalm result for this query, then this is a no-op.</div>
+<h4>clearCsmsResult</h4>
+<pre>public&nbsp;void&nbsp;clearCsmsResult()</pre>
+<div class="block">Removes the previously csms result for this query, forcing the next find() to hit the
+ network. If there is no csms result for this query, then this is a no-op.</div>
 </li>
 </ul>
-<a name="clearAllCwaspalmResults()">
+<a name="clearAllCsmsResults()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>clearAllCwaspalmResults</h4>
-<pre>public static&nbsp;void&nbsp;clearAllCwaspalmResults()</pre>
-<div class="block">Clears the cwaspalm result for all queries.</div>
+<h4>clearAllCsmsResults</h4>
+<pre>public static&nbsp;void&nbsp;clearAllCsmsResults()</pre>
+<div class="block">Clears the csms result for all queries.</div>
 </li>
 </ul>
 <a name="getInBackground(java.lang.String)">

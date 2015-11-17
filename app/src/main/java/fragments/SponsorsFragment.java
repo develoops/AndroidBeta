@@ -2,35 +2,23 @@ package fragments;
 
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
-import mc.waspalm.R;
-import model.Facade;
+import mc.sms.R;
 import model.MeetingApp;
 import model.MobiFile;
 import utils.TouchImageView;

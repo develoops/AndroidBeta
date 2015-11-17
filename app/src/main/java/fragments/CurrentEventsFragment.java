@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sms.R;
+import mc.sms.myApp;
 import model.Event;
 import model.MeetingApp;
 

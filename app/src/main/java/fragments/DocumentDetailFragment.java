@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import mc.waspalm.R;
+import mc.sms.R;
 import model.MobiFile;
 
 /**

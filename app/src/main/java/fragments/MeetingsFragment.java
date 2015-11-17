@@ -24,9 +24,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.waspalm.MainActivity;
-import mc.waspalm.R;
-import mc.waspalm.myApp;
+import mc.sms.MainActivity;
+import mc.sms.R;
+import mc.sms.myApp;
 
 import model.MeetingApp;
 

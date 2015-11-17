@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import adapters.ChildPagerMeetingsAdapter;
-import mc.waspalm.R;
+import mc.sms.R;
 import model.Event;
 import model.MeetingApp;
 import utils.MUtil;
