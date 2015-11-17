@@ -203,7 +203,7 @@ public class CompanyDirectoryFragment extends Fragment{
                     description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
                 }
                 else if(Locale.getDefault().getLanguage().equals("en")){
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+                    description.setText(com.getDetails2()+"\n"+"\n"+"\n"+"\n");
                 }
 
                 else {

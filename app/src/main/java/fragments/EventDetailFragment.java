@@ -150,7 +150,7 @@ public class EventDetailFragment extends Fragment {
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
         if(Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle(selectedEvent.getTitle());
+            toolbar.setTitle(selectedEvent.getTitle2());
         }
 
         else if(Locale.getDefault().getLanguage().equals("es")){
@@ -420,9 +420,7 @@ public class EventDetailFragment extends Fragment {
                     makeFavourite.setText("Hacer Favorito");
                 }
 
-                else {
-                    makeFavourite.setText("Fazer Favorito");
-                }
+
             }
 
 
@@ -646,9 +644,7 @@ public class EventDetailFragment extends Fragment {
                     else if(Locale.getDefault().getLanguage().equals("es")){
                         makeFavourite.setText("Hacer Favorito");
                     }
-                    if(Locale.getDefault().getLanguage().equals("pt")){
-                        makeFavourite.setText("Fazer Favorito");
-                    }
+
                     deleteFavorite();
                     cancelarAlarmaEvento(selectedEvent.getTitle());
 

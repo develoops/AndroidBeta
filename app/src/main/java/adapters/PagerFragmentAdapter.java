@@ -82,24 +82,15 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
     @Override
     public String getPageTitle(int position) {
        if(Locale.getDefault().getLanguage().equals("en")){
-           if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
-               return tabUIs.get(position).getTitle();
+           if(tabUIs.get(position).getTitleLg2()!=null && !tabUIs.get(position).getTitleLg2().isEmpty()){
+               return tabUIs.get(position).getTitleLg2();
            }
            else {
-               return tabUIs.get(position).getTitle();
+               return tabUIs.get(position).getTitleLg2();
            }
        }
 
-       else if(Locale.getDefault().getLanguage().equals("pt")){
 
-           if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
-               return tabUIs.get(position).getTitle();
-           }
-           else {
-               return tabUIs.get(position).getTitle();
-           }
-
-       }
 
        else {
 

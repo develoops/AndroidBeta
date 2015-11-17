@@ -58,7 +58,7 @@ public class CurrentEventsFragment extends Fragment {
             toolbar.setTitle("Current events");
         }
         else {
-            toolbar.setTitle("Current events");
+            toolbar.setTitle("En este momento");
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

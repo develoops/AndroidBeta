@@ -99,7 +99,19 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.name.setText(meetingAppList.get(position).getName());
+
+        if(Locale.getDefault().getLanguage().equals("en")){
+            if(meetingAppList.get(position).getName2()!=null && !meetingAppList.get(position).getName2().isEmpty()){
+                holder.name.setText(meetingAppList.get(position).getName2());
+            }
+
+
+        }
+
+
+        else{
+            holder.name.setText(meetingAppList.get(position).getName());
+        }
         /*
         if(Locale.getDefault().getLanguage().equals("en")){
             if(meetingAppList.get(position).getName2()!=null && !meetingAppList.get(position).getName2().isEmpty()){
@@ -121,6 +133,22 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
 */
         //THIS LINE
 
+        if(meetingAppList.get(position).getPlaceParse()!=null){
+
+            if(Locale.getDefault().getLanguage().equals("en")){
+                if(meetingAppList.get(position).getPlaceParse().getName2()!=null ||
+                        !meetingAppList.get(position).getPlaceParse().getName2().isEmpty()){
+                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName2());
+                }
+                else{
+                    Log.i("LOG","LOG");
+                }
+
+            }
+
+
+
+            else {
                 if(meetingAppList.get(position).getPlaceParse().getName()!=null ||
                         !meetingAppList.get(position).getPlaceParse().getName().isEmpty()){
                     holder.place.setText(meetingAppList.get(position).getPlaceParse().getName());
@@ -128,8 +156,15 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
                 else{
                     Log.i("LOG","LOG");
                 }
+            }
 
 
+
+
+        }
+        else{
+            Log.i("LOG","LOG");
+        }
 
 
 

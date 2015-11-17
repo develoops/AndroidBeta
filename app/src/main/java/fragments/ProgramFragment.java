@@ -219,6 +219,8 @@ public class ProgramFragment extends Fragment {
 
 
 
+
+
             day_program.setText(headerDay);
             //Llama al adaptador con boolean true para mostrar celda como deberia salir en el Programa
             // (no viene de evento detalle), en el adaptador se configura la celda

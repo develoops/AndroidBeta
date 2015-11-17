@@ -17,6 +17,7 @@ import android.widget.SearchView;
 import com.parse.ParseObject;
 
 import java.util.List;
+import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 import mc.waspalm.R;
@@ -52,7 +53,12 @@ public class SearchViewFragment extends Fragment implements SearchView.OnQueryTe
 
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.searchtoolbar);
-        toolbar.setTitle("Búsqueda");
+        if(Locale.getDefault().getLanguage().equals("en")){
+            toolbar.setTitle("Search");
+        }
+        else {
+            toolbar.setTitle("Búsqueda");
+        }
         toolbar.setNavigationIcon(R.drawable.left);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
