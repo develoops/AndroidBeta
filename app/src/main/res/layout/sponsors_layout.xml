@@ -19,7 +19,7 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_gravity="center"
-
+        android:visibility="gone"
         android:shadowColor="@android:color/holo_blue_light"
         android:textColor="@android:color/white"/>
 
@@ -41,7 +41,7 @@
         android:layout_width="768dp"
         android:layout_height="wrap_content"
         android:id="@+id/comercialmap"
-
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:background="@color/eventoTerciario"
         android:paddingLeft="10dp"
