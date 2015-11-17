@@ -209,10 +209,10 @@ public class SpeakersListViewAdapter extends BaseAdapter implements Filterable {
 
                 else if(Locale.getDefault().getLanguage().equals("en")){
                     if(personList.get(position).getCompany()!=null &&
-                            !personList.get(position).getCompany().getName2().isEmpty() ){
+                            !personList.get(position).getCompany().getName().isEmpty() ){
 
 
-                        holder.company_speaker.setText(personList.get(position).getCompany().getName2());
+                        holder.company_speaker.setText(personList.get(position).getCompany().getName());
                     }
 
 

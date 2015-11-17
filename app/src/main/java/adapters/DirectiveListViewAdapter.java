@@ -183,11 +183,11 @@ public class DirectiveListViewAdapter extends BaseAdapter  {
                     holder.charge_speaker.setText(actorList.get(position).getRole());
                 }
                 else if(Locale.getDefault().getLanguage().equals("en")){
-                    holder.charge_speaker.setText(actorList.get(position).getRole2());
+                    holder.charge_speaker.setText(actorList.get(position).getRole());
                 }
 
                 else {
-                    holder.charge_speaker.setText(actorList.get(position).getRole3());
+                    holder.charge_speaker.setText(actorList.get(position).getRole());
                 }
 
 

@@ -120,7 +120,7 @@ public class MeetingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
+/*
         if(meetingAppList.get(0).getIcon()!=null){
             ParseFile header  = meetingAppList.get(0).getIcon().getParseFileV1();
             if (header != null) {
@@ -147,7 +147,7 @@ public class MeetingsFragment extends Fragment {
             Log.i("NO HAY HEADER0","LOG");
         }
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+   */     listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject object = (ParseObject) (listview.getItemAtPosition(position));

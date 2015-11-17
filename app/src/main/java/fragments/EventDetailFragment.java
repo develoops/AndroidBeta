@@ -150,7 +150,7 @@ public class EventDetailFragment extends Fragment {
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
         if(Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle(selectedEvent.getTitle2());
+            toolbar.setTitle(selectedEvent.getTitle());
         }
 
         else if(Locale.getDefault().getLanguage().equals("es")){
@@ -257,10 +257,10 @@ public class EventDetailFragment extends Fragment {
             }
 
             else if(Locale.getDefault().getLanguage().equals("en")){
-                description.setText(selectedEvent.getDetails2());
+                description.setText(selectedEvent.getDetails());
             }
             else {
-                description.setText(selectedEvent.getDetails3());
+                description.setText(selectedEvent.getDetails());
             }
 
 

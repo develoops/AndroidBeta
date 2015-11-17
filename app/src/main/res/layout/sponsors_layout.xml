@@ -3,53 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/blanco"
 
     >
 
 
+    <ImageView
+        android:id="@+id/mapa"
 
-    <Button
-
-        android:layout_width="768dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/acomodation"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@color/eventoTerciario"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_gravity="center"
-        android:visibility="gone"
-        android:shadowColor="@android:color/holo_blue_light"
-        android:textColor="@android:color/white"/>
 
-    <utils.TouchImageView
-        android:id="@+id/image_dialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/acomodation"
-        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:layout_weight="1"
+
+
+
 
 
         />
-
-
-
-
-    <Button
-
-        android:layout_width="768dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/comercialmap"
-        android:visibility="gone"
-        android:layout_centerHorizontal="true"
-        android:background="@color/eventoTerciario"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_gravity="center"
-        android:layout_below="@id/image_dialog"
-        android:shadowColor="@android:color/holo_blue_light"
-        android:textColor="@android:color/white"/>
-
 
 </LinearLayout>

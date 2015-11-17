@@ -101,8 +101,8 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
 
 
         if(Locale.getDefault().getLanguage().equals("en")){
-            if(meetingAppList.get(position).getName2()!=null && !meetingAppList.get(position).getName2().isEmpty()){
-                holder.name.setText(meetingAppList.get(position).getName2());
+            if(meetingAppList.get(position).getName()!=null && !meetingAppList.get(position).getName().isEmpty()){
+                holder.name.setText(meetingAppList.get(position).getName());
             }
 
 
@@ -136,9 +136,9 @@ public class MeetingAppsListViewAdapter extends BaseAdapter {
         if(meetingAppList.get(position).getPlaceParse()!=null){
 
             if(Locale.getDefault().getLanguage().equals("en")){
-                if(meetingAppList.get(position).getPlaceParse().getName2()!=null ||
-                        !meetingAppList.get(position).getPlaceParse().getName2().isEmpty()){
-                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName2());
+                if(meetingAppList.get(position).getPlaceParse().getName()!=null ||
+                        !meetingAppList.get(position).getPlaceParse().getName().isEmpty()){
+                    holder.place.setText(meetingAppList.get(position).getPlaceParse().getName());
                 }
                 else{
                     Log.i("LOG","LOG");

@@ -86,28 +86,36 @@ public class SponsorsFragment extends Fragment {
 */
         if(mApp!=null) {
 
-
             ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-            query.whereEqualTo("title", "mapcomercial");
+            query.whereEqualTo("title","sponsor");
             query.getFirstInBackground(new GetCallback<MobiFile>() {
                 @Override
                 public void done(MobiFile mobiFile, ParseException e) {
-                    DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
-                    int width = displayMetrics.widthPixels;
-                    int height = displayMetrics.heightPixels;
-                    map = mobiFile;
-                    TouchImageView mapadialog = (TouchImageView) RootView.findViewById(R.id.image_dialog);
-                    mapadialog.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                    mapadialog.setMaxZoom(4f);
-                    mapadialog.setMinZoom(1f);
-                    if (map != null) {
+                    map=mobiFile;
+                    ImageView touchImageView = (ImageView) RootView.findViewById(R.id.mapa);
+
+
+                    //touchImageView.setImageMatrix();
+                    if (map!= null) {
                         ImageLoader imageLoader = ImageLoader.getInstance();
                         //Load the image from the url into the ImageView.
-                        imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
-
-                        mapadialog.getLayoutParams().height = height - dpToPx(130);
-                        mapadialog.getLayoutParams().width = width;
+                        imageLoader.displayImage(map.getParseFileV1().getUrl(), touchImageView);
                     }
+
+                /*
+                touchImageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String url = "http://www.astrazeneca.com";
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
+                    }
+                });
+*/
+
+
+
                 }
             });
 

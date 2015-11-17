@@ -1,8 +1,11 @@
 package fragments;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
@@ -33,6 +36,7 @@ import mc.sms.R;
 
 import model.Event;
 import model.MeetingApp;
+import model.New;
 import model.Person;
 
 
@@ -127,7 +131,7 @@ public class ProgramFragment extends Fragment {
         if(meetingApp!=null){
 
 
-/*
+
             mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
             // second argument is the default to use if the preference can't be found
@@ -142,6 +146,7 @@ public class ProgramFragment extends Fragment {
                     subtitle = meetingApp.getDetails();
                 }
 
+
                 /*
                         List <New> news =  meetingApp.getWalls().get(0).getNews();
                 for (int i=0; i<news.size(); i++) {
@@ -150,7 +155,7 @@ public class ProgramFragment extends Fragment {
                       subtitle = news.get(i).getContent();
                    }
                 }
-
+*/
                                  //String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
                 //String whatsNewText = getResources().getString(R.string.whatsNewText);
                 new AlertDialog.Builder(getActivity()).setTitle(title).setMessage(subtitle).setPositiveButton(
@@ -163,7 +168,7 @@ public class ProgramFragment extends Fragment {
                 editor.putBoolean(welcomeScreenShownPref, true);
                 editor.commit(); // Very important to save the preference
             }
-*/
+
             eventList = staticMap.get(headerDay);
 
             List<Event> events= eventList;

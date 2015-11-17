@@ -277,11 +277,11 @@ public class CompanyFragment extends Fragment{
                     description.setText(company.getDetails()+"\n"+"\n"+"\n"+"\n");
                 }
                 else if(Locale.getDefault().getLanguage().equals("en")){
-                    description.setText(company.getDetails2()+"\n"+"\n"+"\n"+"\n");
+                    description.setText(company.getDetails()+"\n"+"\n"+"\n"+"\n");
                 }
 
                 else {
-                    description.setText(company.getDetails3()+"\n"+"\n"+"\n"+"\n");
+                    description.setText(company.getDetails()+"\n"+"\n"+"\n"+"\n");
                 }
                 description.setMovementMethod(new ScrollingMovementMethod());
                 //companyName.setText(company.getCompany().getName());
