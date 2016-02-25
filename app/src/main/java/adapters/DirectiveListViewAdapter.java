@@ -17,8 +17,8 @@ import java.util.List;
 import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.endosur.R;
+import mc.endosur.myApp;
 import model.Actor;
 
 /**

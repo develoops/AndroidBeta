@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.sms.MainActivity;
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.endosur.MainActivity;
+import mc.endosur.R;
+import mc.endosur.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

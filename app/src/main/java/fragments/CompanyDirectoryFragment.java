@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.sms.R;
-import mc.sms.MainActivity;
+import mc.endosur.R;
+import mc.endosur.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

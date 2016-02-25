@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.sms.R;
+import mc.endosur.R;
 import model.MobiFile;
 
 /**

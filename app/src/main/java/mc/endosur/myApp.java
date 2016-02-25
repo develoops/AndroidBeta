@@ -1,4 +1,4 @@
-package mc.sms;
+package mc.endosur;
 
 import android.app.Application;
 import android.content.Context;
@@ -66,7 +66,7 @@ public class myApp extends Application {
         mContext = this;
         Parse.enableLocalDatastore(this);
         ParseCrashReporting.enable(this);
-        Parse.initialize(this, "zSdho7ohlASOfpWIIXlD6Mazm5KFW4K0ZHKnbzqU", "nEAWwKmeajdLlRRy1TGIGmT0xk87csGI4zjetX0j");
+        Parse.initialize(this, "V98QM0lTqgKlua0iL7FY77rGSRA0Zx2Xg2mlvZOP", "otmS9ux8VEOjz9VyQbd0nc62ZlqTqNidVUjIwTVz");
         //Parse.initialize(this, "4cxQOqEv89irqJxoqXY67SCelvOpRuPMoUazSi4b", "zpSulFdKyT4HVVESQr8iC2oLN6JGjI0v7nZN9bxL");
         // Parse.initialize(this, "pThOBYo97xXHKzeBn32O2shH398KvwFrnRcqze4m", "i9915R5ITUDpF8OOw6vd0yFSzKgc9M8JRkLoiPSC");
         //Parse.initialize(this, "PJniJghr5jqtMkkadDbRmFwnCk37T8bWqaBsJvm8", "FliRL0Wp4yJAoIn6CqoGDDJePKKNQjX0AcQ3pJLb");//Expomeetings
@@ -124,7 +124,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("sms", new SaveCallback() {
+        ParsePush.subscribeInBackground("endosur", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

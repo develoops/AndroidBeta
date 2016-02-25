@@ -15,8 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.annotation.Nullable;
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.parse.ParseFile;
 import com.parse.ParseImageView;
 import com.parse.ParseObject;
 
@@ -24,9 +22,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.sms.MainActivity;
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.endosur.MainActivity;
+import mc.endosur.R;
+import mc.endosur.myApp;
 
 import model.MeetingApp;
 

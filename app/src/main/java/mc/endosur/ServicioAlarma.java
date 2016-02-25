@@ -1,4 +1,4 @@
-package mc.sms;
+package mc.endosur;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

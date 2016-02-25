@@ -32,11 +32,10 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.sms.R;
+import mc.endosur.R;
 
 import model.Event;
 import model.MeetingApp;
-import model.New;
 import model.Person;
 
 

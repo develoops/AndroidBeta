@@ -18,10 +18,9 @@ import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
-import mc.sms.R;
+import mc.endosur.R;
 import model.MeetingApp;
 import model.MobiFile;
-import utils.TouchImageView;
 
 /**
  * Created by Alvaro on 2/25/15.

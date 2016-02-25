@@ -1,4 +1,4 @@
-package mc.sms;
+package mc.endosur;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

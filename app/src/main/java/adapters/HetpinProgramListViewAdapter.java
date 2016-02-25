@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.sms.R;
-import mc.sms.myApp;
+import mc.endosur.R;
+import mc.endosur.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

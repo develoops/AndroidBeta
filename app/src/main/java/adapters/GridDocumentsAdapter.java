@@ -17,7 +17,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.sms.R;
+import mc.endosur.R;
 
 import model.MobiFile;
 

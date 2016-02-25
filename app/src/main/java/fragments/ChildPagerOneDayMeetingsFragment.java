@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.sms.R;
+import mc.endosur.R;
 import model.Event;
 
 /**
