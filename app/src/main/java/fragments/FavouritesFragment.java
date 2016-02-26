@@ -23,8 +23,8 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Rating;

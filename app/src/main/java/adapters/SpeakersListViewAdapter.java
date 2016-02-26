@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.MeetingApp;
 import model.Person;
 

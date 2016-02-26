@@ -18,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.Company;
 
 /**

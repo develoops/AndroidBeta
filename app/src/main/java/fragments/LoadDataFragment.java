@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

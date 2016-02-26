@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 import model.MobiFile;
 
 /**

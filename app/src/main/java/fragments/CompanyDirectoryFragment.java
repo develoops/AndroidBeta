@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.endosur.R;
-import mc.endosur.MainActivity;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

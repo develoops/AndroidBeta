@@ -18,7 +18,7 @@ import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 import model.MeetingApp;
 import model.MobiFile;
 

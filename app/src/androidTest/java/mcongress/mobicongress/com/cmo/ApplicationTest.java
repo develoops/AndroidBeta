@@ -1,4 +1,4 @@
-package mc.endosur;
+package mc.peoplemarketing;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

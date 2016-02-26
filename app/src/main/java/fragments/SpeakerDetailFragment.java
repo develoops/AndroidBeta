@@ -28,7 +28,7 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

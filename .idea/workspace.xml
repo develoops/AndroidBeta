@@ -35,108 +35,7 @@
     <favorites_list name="AndroidBeta" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="ParseQueryAdapter.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQueryAdapter.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0588236">
-              <caret line="695" column="102" selection-start-line="695" selection-start-column="102" selection-end-line="695" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PushService.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/PushService.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="101.26923">
-              <caret line="466" column="118" selection-start-line="466" selection-start-column="118" selection-end-line="466" selection-end-column="118" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseException.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseException.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3921568">
-              <caret line="356" column="16" selection-start-line="356" selection-start-column="16" selection-end-line="356" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseQuery.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseQuery.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3921568">
-              <caret line="214" column="44" selection-start-line="214" selection-start-column="44" selection-end-line="214" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-all.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/index-all.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0588236">
-              <caret line="2007" column="44" selection-start-line="2007" selection-start-column="44" selection-end-line="2007" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ParseFacebookUtils.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/ParseFacebookUtilsV3-1.9.1-javadoc/com/parse/ParseFacebookUtils.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0588236">
-              <caret line="899" column="3" selection-start-line="899" selection-start-column="3" selection-end-line="899" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="third_party_licenses.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/third_party_licenses.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.185185">
-              <caret line="779" column="16" selection-start-line="779" selection-start-column="16" selection-end-line="779" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="manifest-merger-release-report.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/manifest-merger-release-report.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.185185">
-              <caret line="156" column="100" selection-start-line="156" selection-start-column="100" selection-end-line="156" selection-end-column="100" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BadgeView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/BadgeView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.185185">
-              <caret line="368" column="54" selection-start-line="368" selection-start-column="54" selection-end-line="368" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FileCache.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/imageTreatment/FileCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.38586956">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -1706,19 +1605,26 @@
         <option value="$PROJECT_DIR$/app/src/main/java/model/Actor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fragments/MeetingsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/model/MobiFile.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/mc/sms/test/BuildConfig.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/mc/endosur/BuildConfig.java" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/mc/endosur/R.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mc/endosur/myApp.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/mc/peoplemarketing/test/BuildConfig.java" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/mc/peoplemarketing/BuildConfig.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/mc/sms/BuildConfig.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/buildConfig/test/debug/mc/sms/test/BuildConfig.java" />
-        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/mc/endosur/R.java" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/mc/peoplemarketing/Manifest.java" />
+        <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/mc/peoplemarketing/R.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/Manifest.java" />
         <option value="$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/R.java" />
         <option value="$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/mc/endosur/myApp.java" />
         <option value="$PROJECT_DIR$/app/manifest-merger-release-report.txt" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/mc/peoplemarketing/myApp.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml" />
       </list>
     </option>
   </component>
@@ -1753,6 +1659,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
@@ -1797,28 +1706,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="strings.xml" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidBeta" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1848,7 +1735,7 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="peoplemarketing" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1862,29 +1749,12 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="endosur" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AndroidBeta" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2082,18 +1952,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="706" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.11954766" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -2106,14 +1974,16 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.315832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.315832" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32845187" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32719547" sideWeight="0.88045233" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -2135,27 +2005,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/meeting_listview.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/adapters/MeetingAppsListViewAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2639296">
-          <caret line="35" column="20" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/ViewPagerFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.17595308">
@@ -2184,61 +2033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="70" column="32" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#303#304#0" expanded="false" />
-            <element signature="e#346#347#0" expanded="false" />
-            <element signature="e#384#385#0" expanded="false" />
-            <element signature="e#424#425#0" expanded="false" />
-            <element signature="e#465#466#0" expanded="false" />
-            <element signature="e#506#507#0" expanded="false" />
-            <element signature="e#539#540#0" expanded="false" />
-            <element signature="e#582#583#0" expanded="false" />
-            <element signature="e#616#617#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#696#697#0" expanded="false" />
-            <element signature="e#742#743#0" expanded="false" />
-            <element signature="e#776#777#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#861#862#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#940#941#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1029#1030#0" expanded="false" />
-            <element signature="e#1080#1081#0" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1407#1408#0" expanded="false" />
-            <element signature="e#1447#1448#0" expanded="false" />
-            <element signature="e#1477#1478#0" expanded="false" />
-            <element signature="e#1517#1518#0" expanded="false" />
-            <element signature="e#1548#1549#0" expanded="false" />
-            <element signature="e#1591#1592#0" expanded="false" />
-            <element signature="e#1622#1623#0" expanded="false" />
-            <element signature="e#1665#1666#0" expanded="false" />
-            <element signature="e#1696#1697#0" expanded="false" />
-            <element signature="e#1739#1740#0" expanded="false" />
-            <element signature="e#1897#1898#0" expanded="false" />
-            <element signature="e#1941#1942#0" expanded="false" />
-            <element signature="e#1976#1977#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="false" />
-            <element signature="e#2058#2059#0" expanded="false" />
-            <element signature="e#2105#2106#0" expanded="false" />
-            <element signature="e#2136#2137#0" expanded="false" />
-            <element signature="e#2177#2178#0" expanded="false" />
-            <element signature="e#2209#2210#0" expanded="false" />
-            <element signature="e#2253#2254#0" expanded="false" />
-            <element signature="e#2285#2286#0" expanded="false" />
-            <element signature="e#2329#2330#0" expanded="false" />
-            <element signature="e#2362#2363#0" expanded="false" />
-            <element signature="e#2405#2406#0" expanded="false" />
-            <element signature="e#2435#2436#0" expanded="false" />
-            <element signature="e#2475#2476#0" expanded="false" />
-            <element signature="e#2504#2505#0" expanded="false" />
-            <element signature="e#2547#2548#0" expanded="false" />
-            <element signature="e#3513#3514#0" expanded="false" />
-            <element signature="e#3570#3571#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2267,7 +2061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2275,65 +2068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#324#325#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#405#406#0" expanded="false" />
-            <element signature="e#445#446#0" expanded="false" />
-            <element signature="e#490#491#0" expanded="false" />
-            <element signature="e#537#538#0" expanded="false" />
-            <element signature="e#578#579#0" expanded="false" />
-            <element signature="e#619#620#0" expanded="false" />
-            <element signature="e#661#662#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-            <element signature="e#737#738#0" expanded="false" />
-            <element signature="e#780#781#0" expanded="false" />
-            <element signature="e#814#815#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="false" />
-            <element signature="e#894#895#0" expanded="false" />
-            <element signature="e#940#941#0" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
-            <element signature="e#1012#1013#0" expanded="false" />
-            <element signature="e#1053#1054#0" expanded="false" />
-            <element signature="e#1094#1095#0" expanded="false" />
-            <element signature="e#1132#1133#0" expanded="false" />
-            <element signature="e#1183#1184#0" expanded="false" />
-            <element signature="e#1221#1222#0" expanded="false" />
-            <element signature="e#1272#1273#0" expanded="false" />
-            <element signature="e#1320#1321#0" expanded="false" />
-            <element signature="e#1372#1373#0" expanded="false" />
-            <element signature="e#1403#1404#0" expanded="false" />
-            <element signature="e#1447#1448#0" expanded="false" />
-            <element signature="e#1491#1492#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1576#1577#0" expanded="false" />
-            <element signature="e#1627#1628#0" expanded="false" />
-            <element signature="e#1657#1658#0" expanded="false" />
-            <element signature="e#1699#1700#0" expanded="false" />
-            <element signature="e#1736#1737#0" expanded="false" />
-            <element signature="e#1779#1780#0" expanded="false" />
-            <element signature="e#1814#1815#0" expanded="false" />
-            <element signature="e#1860#1861#0" expanded="false" />
-            <element signature="e#1893#1894#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1966#1967#0" expanded="false" />
-            <element signature="e#2006#2007#0" expanded="false" />
-            <element signature="e#2037#2038#0" expanded="false" />
-            <element signature="e#2080#2081#0" expanded="false" />
-            <element signature="e#2111#2112#0" expanded="false" />
-            <element signature="e#2154#2155#0" expanded="false" />
-            <element signature="e#2185#2186#0" expanded="false" />
-            <element signature="e#2226#2227#0" expanded="false" />
-            <element signature="e#2258#2259#0" expanded="false" />
-            <element signature="e#2302#2303#0" expanded="false" />
-            <element signature="e#2334#2335#0" expanded="false" />
-            <element signature="e#2378#2379#0" expanded="false" />
-            <element signature="e#2408#2409#0" expanded="false" />
-            <element signature="e#2448#2449#0" expanded="false" />
-            <element signature="e#3260#3261#0" expanded="false" />
-            <element signature="e#3315#3316#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2353,7 +2087,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/endosur/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/peoplemarketing/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="65" selection-end-column="53" />
@@ -2362,21 +2096,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.6551723">
           <caret line="9" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/model/Image.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2384,7 +2117,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2400,25 +2132,176 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#324#325#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseCloud.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3921568">
+          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseException.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="1016" column="81" selection-start-line="1016" selection-start-column="81" selection-end-line="1016" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseFile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3921568">
+          <caret line="318" column="26" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseImageView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="247.03847">
+          <caret line="339" column="177" selection-start-line="339" selection-start-column="177" selection-end-line="339" selection-end-column="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseObject.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="1435" column="3" selection-start-line="1435" selection-start-column="3" selection-end-line="1435" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParsePush.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="574" column="16" selection-start-line="574" selection-start-column="16" selection-end-line="574" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParsePushBroadcastReceiver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="559" column="18" selection-start-line="559" selection-start-column="18" selection-end-line="559" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQuery.CachePolicy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="293" column="53" selection-start-line="293" selection-start-column="53" selection-end-line="293" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQuery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0588236">
+          <caret line="1059" column="31" selection-start-line="1059" selection-start-column="31" selection-end-line="1059" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQueryAdapter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="695" column="102" selection-start-line="695" selection-start-column="102" selection-end-line="695" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-es/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/PushService.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.6666665">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="466" column="118" selection-start-line="466" selection-start-column="118" selection-end-line="466" selection-end-column="118" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseException.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="356" column="16" selection-start-line="356" selection-start-column="16" selection-end-line="356" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseQuery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="214" column="44" selection-start-line="214" selection-start-column="44" selection-end-line="214" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/index-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2007" column="44" selection-start-line="2007" selection-start-column="44" selection-end-line="2007" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/ParseFacebookUtilsV3-1.9.1-javadoc/com/parse/ParseFacebookUtils.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="899" column="3" selection-start-line="899" selection-start-column="3" selection-end-line="899" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/third_party_licenses.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="779" column="16" selection-start-line="779" selection-start-column="16" selection-end-line="779" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/BadgeView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="368" column="54" selection-start-line="368" selection-start-column="54" selection-end-line="368" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#5673#5674#0" expanded="false" />
+            <element signature="e#5706#5707#0" expanded="false" />
+            <element signature="e#5878#5879#0" expanded="false" />
+            <element signature="e#5915#5916#0" expanded="false" />
+            <element signature="e#6088#6089#0" expanded="false" />
+            <element signature="e#6120#6121#0" expanded="false" />
+            <element signature="e#6214#6215#0" expanded="false" />
+            <element signature="e#6247#6248#0" expanded="false" />
+            <element signature="e#6424#6425#0" expanded="false" />
+            <element signature="e#6462#6463#0" expanded="false" />
+            <element signature="e#6643#6644#0" expanded="false" />
+            <element signature="e#6675#6676#0" expanded="false" />
+            <element signature="e#6772#6773#0" expanded="false" />
+            <element signature="e#6813#6814#0" expanded="false" />
+            <element signature="e#6996#6997#0" expanded="false" />
+            <element signature="e#7044#7045#0" expanded="false" />
+            <element signature="e#7323#7324#0" expanded="false" />
+            <element signature="e#7368#7369#0" expanded="false" />
+            <element signature="e#9114#9115#0" expanded="false" />
+            <element signature="e#9155#9156#0" expanded="false" />
+            <element signature="e#10824#10825#0" expanded="false" />
+            <element signature="e#10853#10854#0" expanded="false" />
+            <element signature="e#10972#10973#0" expanded="false" />
+            <element signature="e#11002#11003#0" expanded="false" />
+            <element signature="e#11229#11230#0" expanded="false" />
+            <element signature="e#11265#11266#0" expanded="false" />
+            <element signature="e#11529#11530#0" expanded="false" />
+            <element signature="e#11580#11581#0" expanded="false" />
+            <element signature="e#11737#11738#0" expanded="false" />
+            <element signature="e#11772#11773#0" expanded="false" />
+            <element signature="e#11925#11926#0" expanded="false" />
+            <element signature="e#11960#11961#0" expanded="false" />
+            <element signature="e#12736#12737#0" expanded="false" />
+            <element signature="e#12769#12770#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/imageTreatment/FileCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -2431,7 +2314,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/mc/endosur/BuildConfig.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/debug/mc/peoplemarketing/test/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3888888">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/mc/peoplemarketing/BuildConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3888888">
           <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
@@ -2455,15 +2346,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/mc/endosur/R.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.925926">
-          <caret line="2462" column="24" selection-start-line="2462" selection-start-column="24" selection-end-line="2462" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/Manifest.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/mc/peoplemarketing/Manifest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6666666">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
@@ -2471,377 +2354,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/R.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-pt/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2592592">
-          <caret line="1911" column="57" selection-start-line="1911" selection-start-column="57" selection-end-line="1911" selection-end-column="57" />
-          <folding>
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1456436905000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-          </folding>
+        <state vertical-scroll-proportion="0.08858268">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-es/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5925925">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.08858268">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/peoplemarketing/myApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47663552">
+          <caret line="68" column="116" selection-start-line="68" selection-start-column="116" selection-end-line="68" selection-end-column="116" />
+          <folding>
+            <element signature="e#4516#4887#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5185184">
-          <caret line="76" column="43" selection-start-line="76" selection-start-column="43" selection-end-line="76" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/mc/endosur/myApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5185184">
-          <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
-          <folding>
-            <element signature="e#4500#4871#0" expanded="true" />
-            <element signature="e#4870#4871#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseCloud.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3921568">
-          <caret line="114" column="51" selection-start-line="114" selection-start-column="51" selection-end-line="114" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseException.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="1016" column="81" selection-start-line="1016" selection-start-column="81" selection-end-line="1016" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseFile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3921568">
-          <caret line="318" column="26" selection-start-line="318" selection-start-column="26" selection-end-line="318" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseImageView.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="247.03847">
-          <caret line="339" column="177" selection-start-line="339" selection-start-column="177" selection-end-line="339" selection-end-column="177" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseObject.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="1435" column="3" selection-start-line="1435" selection-start-column="3" selection-end-line="1435" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParsePush.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="574" column="16" selection-start-line="574" selection-start-column="16" selection-end-line="574" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParsePushBroadcastReceiver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="559" column="18" selection-start-line="559" selection-start-column="18" selection-end-line="559" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQuery.CachePolicy.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="293" column="53" selection-start-line="293" selection-start-column="53" selection-end-line="293" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQuery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="1059" column="31" selection-start-line="1059" selection-start-column="31" selection-end-line="1059" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/ParseQueryAdapter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="695" column="102" selection-start-line="695" selection-start-column="102" selection-end-line="695" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/PushService.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="101.26923">
-          <caret line="466" column="118" selection-start-line="466" selection-start-column="118" selection-end-line="466" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseException.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3921568">
-          <caret line="356" column="16" selection-start-line="356" selection-start-column="16" selection-end-line="356" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/com/parse/class-use/ParseQuery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3921568">
-          <caret line="214" column="44" selection-start-line="214" selection-start-column="44" selection-end-line="214" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/Parse-1.9.1-javadoc/index-all.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="2007" column="44" selection-start-line="2007" selection-start-column="44" selection-end-line="2007" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/ParseFacebookUtilsV3-1.9.1-javadoc/com/parse/ParseFacebookUtils.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0588236">
-          <caret line="899" column="3" selection-start-line="899" selection-start-column="3" selection-end-line="899" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/libs/Parse-1.9.1/third_party_licenses.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.185185">
-          <caret line="779" column="16" selection-start-line="779" selection-start-column="16" selection-end-line="779" selection-end-column="16" />
+        <state vertical-scroll-proportion="-1.4392524">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/manifest-merger-release-report.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.185185">
-          <caret line="156" column="100" selection-start-line="156" selection-start-column="100" selection-end-line="156" selection-end-column="100" />
+        <state vertical-scroll-proportion="0.22803739">
+          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fragments/BadgeView.java">
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/debug/mc/peoplemarketing/R.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.185185">
-          <caret line="368" column="54" selection-start-line="368" selection-start-column="54" selection-end-line="368" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.24015749">
+          <caret line="1911" column="57" selection-start-line="1911" selection-start-column="57" selection-end-line="1911" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/imageTreatment/FileCache.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.38586956">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.08858268">
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/Manifest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17716536">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/r/release/mc/sms/R.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24015749">
+          <caret line="1911" column="57" selection-start-line="1911" selection-start-column="57" selection-end-line="1911" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/intermediates/manifest/androidTest/debug/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32480314">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding />
         </state>
       </provider>

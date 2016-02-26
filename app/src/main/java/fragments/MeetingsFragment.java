@@ -22,9 +22,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.endosur.MainActivity;
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.MainActivity;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 
 import model.MeetingApp;
 

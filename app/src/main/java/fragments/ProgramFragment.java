@@ -32,7 +32,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 
 import model.Event;
 import model.MeetingApp;

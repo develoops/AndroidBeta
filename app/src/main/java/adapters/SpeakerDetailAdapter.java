@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.Actor;
 
 /**

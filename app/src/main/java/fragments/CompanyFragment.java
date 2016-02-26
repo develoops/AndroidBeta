@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.endosur.MainActivity;
-import mc.endosur.R;
+import mc.peoplemarketing.MainActivity;
+import mc.peoplemarketing.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;

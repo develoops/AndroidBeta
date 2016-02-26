@@ -20,7 +20,7 @@ import com.parse.ParseQuery;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 import model.MeetingApp;
 import model.MobiFile;
 

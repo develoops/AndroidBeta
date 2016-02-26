@@ -53,9 +53,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.endosur.BroadcastAlarma;
-import mc.endosur.R;
-import mc.endosur.myApp;
+import mc.peoplemarketing.BroadcastAlarma;
+import mc.peoplemarketing.R;
+import mc.peoplemarketing.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

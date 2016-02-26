@@ -16,7 +16,7 @@ import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.endosur.R;
+import mc.peoplemarketing.R;
 import model.Actor;
 import model.MeetingApp;
 

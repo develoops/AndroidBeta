@@ -24,7 +24,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.endosur.myApp;
+import mc.peoplemarketing.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;
