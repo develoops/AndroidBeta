@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
-import mc.endosur.MainActivity;
+import mc.peoplemarketing.MainActivity;
 
 /**
  * Created by alvaro on 05-11-14.
