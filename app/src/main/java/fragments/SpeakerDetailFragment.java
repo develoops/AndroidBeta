@@ -24,11 +24,10 @@ import android.widget.TextView;
 import com.parse.ParseObject;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.peoplemarketing.R;
+import mc.soched.R;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -96,23 +95,9 @@ public class SpeakerDetailFragment extends Fragment {
 
             }
             else {
-                if(Locale.getDefault().getLanguage().equals("es")){
-                    speaker_bio.setText(actorEvent.getPerson().getBio());
-                    speaker_bio.setTextColor(getResources().getColor(R.color.negro));
-                    Log.i("SPEAJrrrER","SP");
-                }
-
-                else if(Locale.getDefault().getLanguage().equals("en")) {
-                    speaker_bio.setText(actorEvent.getPerson().getBio());
-                    speaker_bio.setTextColor(getResources().getColor(R.color.negro));
-                    Log.i("SPEAJrrrER","SP");
-                }
-
-                else {
-                    speaker_bio.setText(actorEvent.getPerson().getBio());
-                    speaker_bio.setTextColor(getResources().getColor(R.color.negro));
-                }
-
+                speaker_bio.setText(actorEvent.getPerson().getBio());
+                speaker_bio.setTextColor(getResources().getColor(R.color.negro));
+                Log.i("SPEAJrrrER","SP");
             }
         }
 

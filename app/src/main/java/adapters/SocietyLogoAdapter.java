@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -18,8 +17,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Company;
 
 /**
@@ -100,9 +99,6 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.name = (TextView) view.findViewById(R.id.time);
             holder.name.setTextSize(14);
             holder.name.setTextColor(Color.parseColor("#000000"));
-            RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-            params3.setMargins(25, 35, 0, 0);
-            holder.name.setLayoutParams(params3);
 
             holder.eventSpeakers = (TextView) view.findViewById(R.id.eventSpeakers);
             holder.name_event = (TextView) view.findViewById(R.id.name_event);
@@ -119,19 +115,12 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
             holder.infoLayout = (RelativeLayout) view.findViewById(R.id.info);
             holder.infoLayout.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
-
             holder.icon = (ParseImageView) view.findViewById(R.id.icon_event);
-            holder.icon.getLayoutParams().height = 130;
-            holder.icon.getLayoutParams().width = 130;
-            holder.icon.setBackgroundColor(context.getResources().getColor(R.color.blanco));
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0, 0, 0, 0);
-            holder.relativeLayout.setLayoutParams(params);
-
-            RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(130, 130);
-            params2.setMargins(0, 0, 0, 0);
-
-            holder.icon.setLayoutParams(params2);
+            holder.icon.getLayoutParams().height = 150;
+            holder.icon.getLayoutParams().width = 150;
+          //  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+           // params.setMargins(0, 0, 0, 0);
+            //holder.icon.setLayoutParams(params);
 
 
             view.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));

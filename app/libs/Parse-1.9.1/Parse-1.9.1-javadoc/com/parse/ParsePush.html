@@ -147,7 +147,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../com/parse/ParsePush.html#send()">send</a></strong>()</code>
 <div class="block">Sends this push notification while blocking this thread until the push notification has
- successfully resms the Parse servers.</div>
+ successfully reached the Parse servers.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -478,7 +478,7 @@ extends <a href="http://developer.android.com/reference/java/lang/Object.html?is
 <pre>public&nbsp;void&nbsp;setExpirationTime(long&nbsp;time)</pre>
 <div class="block">Sets a UNIX epoch timestamp at which this notification should expire, in seconds (UTC). This
  notification will be sent to devices which are either online at the time the notification is
- sent, or which come online before the expiration time is resms. Besmsse device clocks are not
+ sent, or which come online before the expiration time is reached. Because device clocks are not
  guaranteed to be accurate, most applications should instead use
  <a href="../../com/parse/ParsePush.html#setExpirationTimeInterval(long)"><code>ParsePush.setExpirationTimeInterval(long)</code></a>.</div>
 </li>
@@ -572,7 +572,7 @@ public&nbsp;void&nbsp;setPushToAndroid(boolean&nbsp;pushToAndroid)</pre>
 <pre>public&nbsp;void&nbsp;send()
           throws <a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></pre>
 <div class="block">Sends this push notification while blocking this thread until the push notification has
- successfully resms the Parse servers. Typically, you should use <a href="../../com/parse/ParsePush.html#sendInBackground()"><code>ParsePush.sendInBackground()</code></a>
+ successfully reached the Parse servers. Typically, you should use <a href="../../com/parse/ParsePush.html#sendInBackground()"><code>ParsePush.sendInBackground()</code></a>
  instead of this, unless you are managing your own threading.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../com/parse/ParseException.html" title="class in com.parse">ParseException</a></code> - Throws an exception if the server is inaccessible.</dd></dl>

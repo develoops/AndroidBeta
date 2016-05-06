@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -15,16 +14,15 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.support.annotation.Nullable;
 
-import com.parse.ParseImageView;
 import com.parse.ParseObject;
 
 import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.peoplemarketing.MainActivity;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.MainActivity;
+import mc.soched.R;
+import mc.soched.myApp;
 
 import model.MeetingApp;
 
@@ -37,7 +35,6 @@ public class MeetingsFragment extends Fragment {
     ListView listview;
     public myApp myapp;
     MeetingAppsListViewAdapter adapter;
-    public ParseImageView hdr;
     public static List<MeetingApp> meetingAppList;
 
 
@@ -89,9 +86,8 @@ public class MeetingsFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View RootView = inflater.inflate(R.layout.meeting_listview, container, false);
+        final View RootView = inflater.inflate(R.layout.common_list_layout, container, false);
         listview = (ListView) RootView.findViewById(R.id.commonListView);
-        hdr = (ParseImageView) RootView.findViewById(R.id.headerMeeting);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview.setOnTouchListener(swipeDetector);
         return RootView;
@@ -118,34 +114,9 @@ public class MeetingsFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-/*
-        if(meetingAppList.get(0).getIcon()!=null){
-            ParseFile header  = meetingAppList.get(0).getIcon().getParseFileV1();
-            if (header != null) {
-                //Get singleton instance of ImageLoader
-                ImageLoader imageLoader = ImageLoader.getInstance();
-                //Load the image from the url into the ImageView.
-                imageLoader.displayImage(header.getUrl(), hdr);
-            }
-            else{
-                Log.i("NO HAY HEADER1","LOG");
-                Log.i("LOG","LOG");
-            }
 
-            DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
 
-            int height = displayMetrics.heightPixels;
-
-            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
-        }
-
-        else{
-            hdr.setVisibility(View.GONE);
-            //hdr.setImageDrawable(null);
-            Log.i("NO HAY HEADER0","LOG");
-        }
-
-   */     listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ParseObject object = (ParseObject) (listview.getItemAtPosition(position));
@@ -195,12 +166,6 @@ public class MeetingsFragment extends Fragment {
         super.onSaveInstanceState(outState);
         outState.putBoolean("true", true);
 
-    }
-
-    public int dpToPx(int dp) {
-        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
-        int px = Math.round(dp * (displayMetrics.xdpi / DisplayMetrics.DENSITY_DEFAULT));
-        return px;
     }
 
 

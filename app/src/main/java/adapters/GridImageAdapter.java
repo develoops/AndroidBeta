@@ -16,8 +16,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.peoplemarketing.R;
-import model.Facade;
+import mc.soched.R;
+import model.MobiFile;
 
 /**
  * Created by Alvaro on 2/21/15.
@@ -28,11 +28,11 @@ public class GridImageAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
 
-    private List<Facade> stands= null;
-    private ArrayList<Facade> arraylist;
+    private List<MobiFile> stands= null;
+    private ArrayList<MobiFile> arraylist;
 
     public GridImageAdapter(Context context,
-                            List<Facade> standsapp) {
+                                      List<MobiFile> standsapp) {
         this.context = context;
         this.stands= standsapp;
         inflater = LayoutInflater.from(context);
@@ -77,7 +77,7 @@ public class GridImageAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height-100) - dpToPx(75);
+            holder.image.getLayoutParams().height = (height-200) - dpToPx(75);
             holder.image.getLayoutParams().width = (width);
 
 
@@ -92,15 +92,15 @@ public class GridImageAdapter extends BaseAdapter {
 
 
 
-        if(stands.get(position).getCompany().getLogo().getParseFileV1()!=null){
-            final ParseFile photoFile = stands.get(position).getCompany().getLogo().getParseFileV1();
-            holder.image.setParseFile(photoFile);
-            holder.image.loadInBackground();
-        }
+                if(stands.get(position).getParseFileV1()!=null){
+                    final ParseFile photoFile = stands.get(position).getParseFileV1();
+                    holder.image.setParseFile(photoFile);
+                    holder.image.loadInBackground();
+                }
 
-        else{
-            Log.i("LOG","LOG");
-        }
+                else{
+                    Log.i("LOG","LOG");
+                }
 
 
 

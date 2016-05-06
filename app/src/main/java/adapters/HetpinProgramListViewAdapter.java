@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -160,7 +160,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         Log.e("THANH", "getView " + position);
         final ViewHolder holder;
 
-        Log.i("ZONA HORARIA", String.valueOf(timeZone()));
+        Log.i("ZONA HORARIA",String.valueOf(timeZone()));
         if (view == null) {
 
             holder = new ViewHolder();
@@ -196,18 +196,19 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
         holder.relativeLayout.setBackgroundColor(bgColor);
         //Log.i("NAME",String.valueOf(eventList.get(position).getTitle()));
+        Log.i("NAME",String.valueOf(eventList.get(position).getObjectId()));
         if(Locale.getDefault().getLanguage().equals("en")){
-            if(eventList.get(position).getTitle()!=null && !eventList.get(position).getTitle().isEmpty()){
+            if(eventList.get(position).getTitle2()!=null && !eventList.get(position).getTitle2().isEmpty()){
+                holder.name.setText(eventList.get(position).getTitle());
+            }
+            else {
                 holder.name.setText(eventList.get(position).getTitle());
             }
 
         }
-
-
         else {
             holder.name.setText(eventList.get(position).getTitle());
         }
-
 
 
         //Generate date string
@@ -314,12 +315,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -339,9 +336,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         lp.width = 120;
                         lp.height = 120;
                         lp.setMargins(0,5,20,0);
-                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                        view.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                        view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         if (photoFile != null) {
                             //Get singleton instance of ImageLoader
                             ImageLoader imageLoader = ImageLoader.getInstance();
@@ -377,9 +374,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
                         holder.icon.setLayoutParams(lp);
                         lp.setMargins(0,5,20,0);
-                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                        holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                        view.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                        view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         if (photoFile != null) {
                             //Get singleton instance of ImageLoader
                             ImageLoader imageLoader = ImageLoader.getInstance();
@@ -392,9 +389,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         }
                     }
 
-                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                     //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                    view.setBackgroundColor(context.getResources().getColor(R.color.brk));
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
 
                 }
                 else {
@@ -406,9 +403,6 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         holder.fav.setImageResource(R.drawable.favorite);
                         holder.fav.setVisibility(View.VISIBLE);
                     }
-                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
-                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
-                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                 }
                 List <Actor> actors = eventList.get(position).getActors();
                 if(actors!=null){
@@ -468,12 +462,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.place.setText(eventList.get(position).getPlace().getName());
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -495,12 +485,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -547,7 +533,32 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         else if (eventType.equals("curso")||
                 eventType.equals("Curso")||
                 eventType.equals("modulo")||
-                eventType.equals("Modulo")){
+                eventType.equals("Modulo")||
+                eventType.equals("Trabajos Libres")){
+
+            if(eventList.get(position).getIcon()!=null){
+
+                holder.icon.setVisibility(View.VISIBLE);
+                final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
+                RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                holder.icon.setLayoutParams(lp);
+                lp.width = 120;
+                lp.height = 120;
+                lp.setMargins(0,5,20,0);
+                holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.modulo));
+                //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                view.setBackgroundColor(context.getResources().getColor(R.color.modulo));
+                if (photoFile != null) {
+                    //Get singleton instance of ImageLoader
+                    ImageLoader imageLoader = ImageLoader.getInstance();
+                    //Load the image from the url into the ImageView.
+                    imageLoader.displayImage(photoFile.getUrl(), holder.icon);
+                }
+
+                else {
+
+                }
+            }
 
             if(b&&!det){
                 holder.speakers.setVisibility(View.VISIBLE);
@@ -615,12 +626,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -648,16 +655,12 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG,spanish);
                 }
                 int day = cal.get(Calendar.DAY_OF_MONTH);
                 holder.date.setText(month +" "+day+", "+ year);
@@ -775,12 +778,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setVisibility(View.VISIBLE);
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");
@@ -823,12 +822,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
                 int year = cal.get(Calendar.YEAR);
                 if(Locale.getDefault().getLanguage().equals("en")){
-
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, Locale.ENGLISH);
-                }
-                else if(Locale.getDefault().getLanguage().equals("pt")){
-                    Locale portuguese = new Locale("pt", "PT");
-                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, portuguese);
+                    Locale spanish = new Locale("es", "ES");
+                    month = cal.getDisplayName(Calendar.MONTH,Calendar.LONG, spanish);
                 }
                 else {
                     Locale spanish = new Locale("es", "ES");

@@ -23,8 +23,8 @@ import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Rating;

@@ -5,11 +5,11 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "mc.peoplemarketing"
-        minSdkVersion 16
+        applicationId "mc.soched"
+        minSdkVersion 15
         targetSdkVersion 21
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "2.1"
     }
     buildTypes {
         release {
@@ -22,8 +22,6 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
-
-
     compile files('libs/universal-image-loader-1.9.3.jar')
     compile files('libs/YouTubeAndroidPlayerApi.jar')
     compile files('libs/picasso-2.5.0.jar')
@@ -33,6 +31,4 @@ dependencies {
     compile files('libs/Parse-1.9.1/bolts-android-1.2.0-javadoc.jar')
     compile files('libs/Parse-1.9.1/bolts-android-1.2.0.jar')
     compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
-    compile 'com.davemorrissey.labs:subsampling-scale-image-view:3.4.1'
-
 }

@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.MainActivity;
+import mc.soched.R;
+import mc.soched.MainActivity;
 import model.Company;
 import model.MeetingApp;
 
@@ -198,30 +198,17 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            if(com.getDetails()!=null){
-                if(Locale.getDefault().getLanguage().equals("es")){
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-                else if(Locale.getDefault().getLanguage().equals("en")){
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-
-                else {
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-
-                description.setMovementMethod(new ScrollingMovementMethod());
-            }
-
+            description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+            description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
 
-            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
+            hdr.getLayoutParams().height = (height / 3) - dpToPx(55);
 
-            footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
+            footer.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
 
 
             call.setTextColor(Color.WHITE);
@@ -235,22 +222,14 @@ public class CompanyDirectoryFragment extends Fragment{
                 call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-
-
-            }
-            else if(Locale.getDefault().getLanguage().equals("es")){
-                call.setText("Llamar");
-                web.setText("Web");
-                mail.setText("Mail");
-
+            //    map.setText("Map");
 
             }
-
             else {
-                call.setText("Chamada");
+                call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-
+                //map.setText("Map");
 
             }
             makeFavourite.setVisibility(View.GONE);
@@ -369,7 +348,7 @@ public class CompanyDirectoryFragment extends Fragment{
         }
 
         else{
-            Log.i("LOG", "LOG");
+            Log.i("LOG","LOG");
         }
 
 

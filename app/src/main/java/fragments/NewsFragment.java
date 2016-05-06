@@ -19,11 +19,10 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import java.util.List;
-import java.util.Locale;
 
 import adapters.NewsListViewAdapter;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.New;
 
 /**
@@ -96,13 +95,7 @@ public class NewsFragment extends Fragment {
         Toolbar toolbar = (Toolbar)v.findViewById(R.id.toolbars);
         toolbar.setNavigationIcon(R.drawable.left);
         toolbar.setTitleTextColor(Color.WHITE);
-        if(Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle("News");
-        }
-        else {
-            toolbar.setTitle("Noticias");
-        }
-
+        toolbar.setTitle("News");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

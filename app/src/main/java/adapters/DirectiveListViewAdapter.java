@@ -14,11 +14,10 @@ import com.parse.ParseFile;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 
 /**
@@ -165,11 +164,7 @@ public class DirectiveListViewAdapter extends BaseAdapter  {
         //directiva es que en directiva solo se muestra el cargo.
         if(bool){
             if(actorList.get(position).getRole()!=null){
-
-
-                    holder.charge_speaker.setText(actorList.get(position).getRole());
-
-
+                holder.charge_speaker.setText(actorList.get(position).getRole());
             }
             else{
                 Log.i("LOG","LOG");
@@ -179,18 +174,7 @@ public class DirectiveListViewAdapter extends BaseAdapter  {
         else{
             holder.country_speaker.setVisibility(View.GONE);
             if(actorList.get(position).getRole()!=null){
-                if(Locale.getDefault().getLanguage().equals("es")){
-                    holder.charge_speaker.setText(actorList.get(position).getRole());
-                }
-                else if(Locale.getDefault().getLanguage().equals("en")){
-                    holder.charge_speaker.setText(actorList.get(position).getRole());
-                }
-
-                else {
-                    holder.charge_speaker.setText(actorList.get(position).getRole());
-                }
-
-
+                holder.charge_speaker.setText(actorList.get(position).getRole());
             }
             else{
                 Log.i("LOG","LOG");

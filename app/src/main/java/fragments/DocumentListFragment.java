@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.peoplemarketing.R;
+import mc.soched.R;
 
 import model.MobiFile;
 

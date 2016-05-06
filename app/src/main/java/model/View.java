@@ -16,9 +16,6 @@ public class View extends ParseObject {
     public String getTitleLg2() {
         return getString("titleLg2");
     }
-    public String getTitleLg3() {
-        return getString("titleLg3");
-    }
     public String getnameView() {
         return getString("nameView");
     }

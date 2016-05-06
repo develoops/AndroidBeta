@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.peoplemarketing.R;
+import mc.soched.R;
 import model.Event;
 
 /**

@@ -24,7 +24,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.peoplemarketing.myApp;
+import mc.soched.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;
@@ -163,28 +163,33 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             Log.e("THANHNX now = true", e.toString());
         }
         if(Locale.getDefault().getLanguage().equals("en")){
+
+
+            Log.i("SI","SI");
             if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
                 return tabUIs.get(position).getTitle();
             }
             else {
                 return tabUIs.get(position).getTitle();
             }
+
+
+
+
+
         }
-
-
-
         else {
 
-            if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
-                return tabUIs.get(position).getTitle();
-            }
-            else {
-                return tabUIs.get(position).getTitle();
-            }
+
+            return tabUIs.get(position).getTitle();
+
 
         }
 
     }
+
+
+
 
 
     public static String timeZone()

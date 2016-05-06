@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 
 /**
@@ -155,8 +155,6 @@ public class SpeakerDetailAdapter extends BaseAdapter  {
             holder.name_speaker.setTextColor(bgColor);
             holder.country_speaker.setVisibility(View.GONE);
             holder.charge_speaker.setText(actorList.get(position).getRole());
-
-
 
             if(actorList.get(position).getCompanies()==null){
 

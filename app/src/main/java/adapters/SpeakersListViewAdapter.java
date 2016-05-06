@@ -15,11 +15,10 @@ import com.parse.ParseFile;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import imageTreatment.RoundedImageView;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.MeetingApp;
 import model.Person;
 
@@ -191,53 +190,18 @@ public class SpeakersListViewAdapter extends BaseAdapter implements Filterable {
 
             else{
                 //Log.i("Objectid",personList.get(position).getCompany().getObjectId());
-
-                if(Locale.getDefault().getLanguage().equals("es")){
-                    if(personList.get(position).getCompany()!=null &&
-                            !personList.get(position).getCompany().getName().isEmpty() ){
+                if(personList.get(position).getCompany()!=null &&
+                        !personList.get(position).getCompany().getName().isEmpty() ){
 
 
-                        holder.company_speaker.setText(personList.get(position).getCompany().getName());
-                    }
-
-
-                    else {
-                        Log.i("NA","EMPTU");
-                    }
-
+                    holder.company_speaker.setText(personList.get(position).getCompany().getName());
                 }
 
-                else if(Locale.getDefault().getLanguage().equals("en")){
-                    if(personList.get(position).getCompany()!=null &&
-                            !personList.get(position).getCompany().getName().isEmpty() ){
 
-
-                        holder.company_speaker.setText(personList.get(position).getCompany().getName());
-                    }
-
-
-                    else {
-                        Log.i("NA","EMPTU");
-                    }
-
-                }
                 else {
-
-                    if(personList.get(position).getCompany()!=null &&
-                            !personList.get(position).getCompany().getName().isEmpty() ){
-
-
-                        holder.company_speaker.setText(personList.get(position).getCompany().getName());
-                    }
-
-
-                    else {
-                        Log.i("NA","EMPTU");
-                    }
-
+                    Log.i("NA","EMPTU");
                 }
-
-
+                Log.i("LOG","LOG");
             }
         }
 

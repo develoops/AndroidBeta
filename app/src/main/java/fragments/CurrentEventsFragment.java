@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Event;
 import model.MeetingApp;
 
@@ -58,7 +58,7 @@ public class CurrentEventsFragment extends Fragment {
             toolbar.setTitle("Current events");
         }
         else {
-            toolbar.setTitle("En este momento");
+            toolbar.setTitle("Current events");
         }
 
         toolbar.setTitleTextColor(Color.WHITE);

@@ -26,16 +26,16 @@ import com.parse.ParseObject;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 import java.util.Map;
 
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.peoplemarketing.R;
+import mc.soched.R;
 
 import model.Event;
 import model.MeetingApp;
+import model.New;
 import model.Person;
 
 
@@ -129,8 +129,6 @@ public class ProgramFragment extends Fragment {
         super.onResume();
         if(meetingApp!=null){
 
-
-
             mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
             // second argument is the default to use if the preference can't be found
@@ -139,14 +137,9 @@ public class ProgramFragment extends Fragment {
             if (!welcomeScreenShown) {
                 // here you can launch another activity if you like
                 // the code below will display a popup
-                String title ="Bienvenida";
+                String title ="";
                 String subtitle="";
-                if (meetingApp.getDetails()!=null){
-                    subtitle = meetingApp.getDetails();
-                }
 
-
-                /*
                         List <New> news =  meetingApp.getWalls().get(0).getNews();
                 for (int i=0; i<news.size(); i++) {
                    if(news.get(i).getTitle().equals("Bienvenida")){
@@ -154,7 +147,6 @@ public class ProgramFragment extends Fragment {
                       subtitle = news.get(i).getContent();
                    }
                 }
-*/
                                  //String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
                 //String whatsNewText = getResources().getString(R.string.whatsNewText);
                 new AlertDialog.Builder(getActivity()).setTitle(title).setMessage(subtitle).setPositiveButton(
@@ -207,22 +199,10 @@ public class ProgramFragment extends Fragment {
                 }
             });
 
-
 */
 
-            if(Locale.getDefault().getLanguage().equals("es")){
-                headerDay = headerDay.replace("November", "Noviembre");
 
-            }
-
-            if(Locale.getDefault().getLanguage().equals("pt")){
-                headerDay = headerDay.replace("November", "Novembro");
-
-            }
-
-
-
-
+            headerDay = headerDay.replace("October", "Octubre");
 
 
             day_program.setText(headerDay);
@@ -239,15 +219,12 @@ public class ProgramFragment extends Fragment {
 
             //startLoading();
             Log.e(getClass().getName(), "onCreateView end" + "header: " + headerDay);
-            if(meetingApp.getPersons()!=null){
-                for(Person person: meetingApp.getPersons()){
-                    if(person.getImage()!=null){
-                        person.getImage().getParseFileV1().getDataInBackground();
-                    }
-
+            for(Person person: meetingApp.getPersons()){
+                if(person.getImage()!=null){
+                    person.getImage().getParseFileV1().getDataInBackground();
                 }
-            }
 
+            }
         }
         else {
 

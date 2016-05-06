@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.peoplemarketing.MainActivity;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.MainActivity;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

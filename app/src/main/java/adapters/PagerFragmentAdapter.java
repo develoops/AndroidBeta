@@ -89,17 +89,9 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
                return tabUIs.get(position).getTitle();
            }
        }
-
-
-
        else {
 
-           if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
                return tabUIs.get(position).getTitle();
-           }
-           else {
-               return tabUIs.get(position).getTitle();
-           }
 
        }
 

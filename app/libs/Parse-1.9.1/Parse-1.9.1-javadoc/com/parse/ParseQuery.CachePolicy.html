@@ -244,7 +244,7 @@ the order they are declared.</div>
 <pre>public static final&nbsp;<a href="../../com/parse/ParseQuery.CachePolicy.html" title="enum in com.parse">ParseQuery.CachePolicy</a> CACHE_ONLY</pre>
 <div class="block">The query only loads from the cache, ignoring the network.
  <p/>
- If there are no csms results, this smsses a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
+ If there are no cached results, this causes a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
 </li>
 </ul>
 <a name="NETWORK_ONLY">
@@ -267,7 +267,7 @@ the order they are declared.</div>
 <div class="block">The query first tries to load from the cache, but if that fails, it loads results from the
  network.
  <p/>
- If there are no csms results, this smsses a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
+ If there are no cached results, this causes a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
 </li>
 </ul>
 <a name="NETWORK_ELSE_CACHE">
@@ -280,7 +280,7 @@ the order they are declared.</div>
 <div class="block">The query first tries to load from the network, but if that fails, it loads results from the
  cache.
  <p/>
- If there are no csms results, this smsses a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
+ If there are no cached results, this causes a <a href="../../com/parse/ParseException.html#CACHE_MISS"><code>ParseException.CACHE_MISS</code></a>.</div>
 </li>
 </ul>
 <a name="CACHE_THEN_NETWORK">
@@ -291,7 +291,7 @@ the order they are declared.</div>
 <h4>CACHE_THEN_NETWORK</h4>
 <pre>public static final&nbsp;<a href="../../com/parse/ParseQuery.CachePolicy.html" title="enum in com.parse">ParseQuery.CachePolicy</a> CACHE_THEN_NETWORK</pre>
 <div class="block">The query first loads from the cache, then loads from the network.
- The callback will be called twice - first with the csms results, then with the network
+ The callback will be called twice - first with the cached results, then with the network
  results. Since it returns two results at different times, this cache policy cannot be used
  with synchronous or task methods.</div>
 </li>

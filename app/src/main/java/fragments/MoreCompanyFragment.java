@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridMediaAdapter;
-import mc.peoplemarketing.R;
+import mc.soched.R;
 import model.MobiFile;
 
 /**

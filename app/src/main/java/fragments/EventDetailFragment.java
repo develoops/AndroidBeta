@@ -13,7 +13,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.method.ScrollingMovementMethod;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -53,9 +52,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.peoplemarketing.BroadcastAlarma;
-import mc.peoplemarketing.R;
-import mc.peoplemarketing.myApp;
+import mc.soched.BroadcastAlarma;
+import mc.soched.R;
+import mc.soched.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -74,7 +73,7 @@ public class EventDetailFragment extends Fragment {
     private RatingBar ratingBar;
     RelativeLayout footer;
     DirectiveListViewAdapter speaker_adapter;
-    Button makeFavourite,rate,ask,map,checkin;
+    Button makeFavourite,rate,ask,map,checkin,resumenes;
     public static List <Event> events;
     public myApp myapp;
     public static MeetingApp mApp;
@@ -129,6 +128,7 @@ public class EventDetailFragment extends Fragment {
         ask = (Button) RootView.findViewById(R.id.ask);
         map = (Button) RootView.findViewById(R.id.map);
         checkin = (Button) RootView.findViewById(R.id.checkin);
+        resumenes = (Button) RootView.findViewById(R.id.resumenes);
         this.myapp = (myApp) getActivity().getApplicationContext();
         listview = (ListView)RootView.findViewById(R.id.commonListView);
         fileslistview = (ListView)RootView.findViewById(R.id.filesListView);
@@ -143,6 +143,11 @@ public class EventDetailFragment extends Fragment {
 
         }
         else {
+            if(selectedEvent.getAnidateEvents().get(0).getType().equals("Trabajos Libres")){
+                resumenes.setVisibility(View.VISIBLE);
+
+            }
+
             footer.setVisibility(View.GONE);
         }
 
@@ -150,10 +155,6 @@ public class EventDetailFragment extends Fragment {
 
         Toolbar toolbar = (Toolbar) RootView.findViewById(R.id.event_detail_toolbar);
         if(Locale.getDefault().getLanguage().equals("en")){
-            toolbar.setTitle(selectedEvent.getTitle());
-        }
-
-        else if(Locale.getDefault().getLanguage().equals("es")){
             toolbar.setTitle(selectedEvent.getTitle());
         }
         else {
@@ -251,19 +252,7 @@ public class EventDetailFragment extends Fragment {
 
         TextView description = (TextView) RootView.findViewById(R.id.content);
         if(selectedEvent.getDetails()!=null){
-            description.setMovementMethod(new ScrollingMovementMethod());
-            if(Locale.getDefault().getLanguage().equals("es")){
-                description.setText(selectedEvent.getDetails());
-            }
-
-            else if(Locale.getDefault().getLanguage().equals("en")){
-                description.setText(selectedEvent.getDetails());
-            }
-            else {
-                description.setText(selectedEvent.getDetails());
-            }
-
-
+            description.setText(selectedEvent.getDetails());
         }
         else {
             description.setVisibility(View.GONE);
@@ -404,23 +393,19 @@ public class EventDetailFragment extends Fragment {
 
             if(myapp.getFavoriteApp(selectedEvent.getObjectId())){
                 if(Locale.getDefault().getLanguage().equals("en") ){
-                    makeFavourite.setText("Cancel Favorite");
+                    makeFavourite.setText("Cancelar Favorito");
                 }
-
                 else {
                     makeFavourite.setText("Cancelar Favorito");
                 }
             }
             else {
                 if(Locale.getDefault().getLanguage().equals("en") ){
-                    makeFavourite.setText("Make Favorite");
-                }
-
-                else if(Locale.getDefault().getLanguage().equals("es") ){
                     makeFavourite.setText("Hacer Favorito");
                 }
-
-
+                else {
+                    makeFavourite.setText("Hacer Favorito");
+                }
             }
 
 
@@ -432,8 +417,9 @@ public class EventDetailFragment extends Fragment {
             Log.i("HOLAEVENT","HOLA");
         }
 
-        rate.setText(R.string.Rate);
-        map.setText(R.string.map);
+
+
+
 
         rate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -450,8 +436,8 @@ public class EventDetailFragment extends Fragment {
                 TextView textView = (TextView)dialogo.findViewById(R.id.durationTitle);
 
                 if(Locale.getDefault().getLanguage().equals("en")){
-                    btn_Cancel.setText("Cancel");
-                    textView.setText("Rate");
+                    btn_Cancel.setText("Cancelar");
+                    textView.setText("Evaluar");
                 }
                 else {
                     btn_Cancel.setText("Cancelar");
@@ -594,8 +580,7 @@ public class EventDetailFragment extends Fragment {
 
 
 
-                if(makeFavourite.getText().equals("Hacer Favorito")||makeFavourite.getText().equals("Make Favorite")
-                        ||makeFavourite.getText().equals("Fazer Favorito")){
+                if(makeFavourite.getText().equals("Hacer Favorito")){
                     Calendar cal = Calendar.getInstance();
 
                     if(selectedEvent.getStartDate().getTime()<=cal.getTimeInMillis()){
@@ -619,12 +604,11 @@ public class EventDetailFragment extends Fragment {
                             SetAlarmaEvento(selectedEvent.getStartDate().getTime() - 900000, selectedEvent.getTitle());
 
                             if(Locale.getDefault().getLanguage().equals("en")){
-                                makeFavourite.setText("Cancel Favorite");
+                                makeFavourite.setText("Cancelar Favorito");
 
                             }
                             else {
                                 makeFavourite.setText("Cancelar Favorito");
-
                             }
                         }
 
@@ -636,15 +620,14 @@ public class EventDetailFragment extends Fragment {
 
                 }
 
-                else if (makeFavourite.getText().equals("Cancel Favorite")||
+                else if (makeFavourite.getText().equals("Cancelar Favorito")||
                         makeFavourite.getText().equals("Cancelar Favorito")){
                     if(Locale.getDefault().getLanguage().equals("en")){
-                        makeFavourite.setText("Make Favorite");
-                    }
-                    else if(Locale.getDefault().getLanguage().equals("es")){
                         makeFavourite.setText("Hacer Favorito");
                     }
-
+                    else {
+                        makeFavourite.setText("Hacer Favorito");
+                    }
                     deleteFavorite();
                     cancelarAlarmaEvento(selectedEvent.getTitle());
 
