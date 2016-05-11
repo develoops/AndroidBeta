@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.gastronomicon.R;
+import mc.gastronomicon.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

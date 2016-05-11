@@ -16,7 +16,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.soched.R;
+import mc.gastronomicon.R;
 import model.MobiFile;
 
 /**
@@ -65,7 +65,7 @@ public class GridGalleryAdapter extends BaseAdapter {
         final ViewHolder holder;
         if (view == null) {
             holder = new ViewHolder();
-            view = inflater.inflate(R.layout.cell_gridimage, null);
+            view = inflater.inflate(R.layout.cell_gridgallery, null);
             // Locate the TextViews in listview_item.xml
 
             DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
@@ -77,8 +77,8 @@ public class GridGalleryAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height/2) - dpToPx(75);
-            holder.image.getLayoutParams().width = (width/2);
+            holder.image.getLayoutParams().height = (height - dpToPx(55)) / 3;
+            holder.image.getLayoutParams().width = width / 3;
 
 
             view.setTag(holder);

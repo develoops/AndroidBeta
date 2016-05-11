@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.soched.R;
+import mc.gastronomicon.R;
 
 import model.MobiFile;
 

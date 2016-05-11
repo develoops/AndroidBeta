@@ -27,7 +27,7 @@ import java.util.ArrayList;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.SpeakerDetailAdapter;
-import mc.soched.R;
+import mc.gastronomicon.R;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

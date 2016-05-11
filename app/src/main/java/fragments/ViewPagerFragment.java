@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import adapters.PagerFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.soched.R;
+import mc.gastronomicon.R;
 
 /**
  * Created by Alvaro on 3/3/15.

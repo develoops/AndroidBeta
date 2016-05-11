@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">SOCHED</string>
+    <string name="app_name">Gastronomicon</string>
     <string name="start">Cargando..</string>
     <string name="action_settings">Configuración</string>
     <string name="rate">Evaluacion Enviada</string>

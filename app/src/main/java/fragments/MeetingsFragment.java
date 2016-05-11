@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.soched.MainActivity;
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.gastronomicon.MainActivity;
+import mc.gastronomicon.R;
+import mc.gastronomicon.myApp;
 
 import model.MeetingApp;
 

@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import android.view.ViewGroup.LayoutParams;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.gastronomicon.R;
+import mc.gastronomicon.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -187,10 +187,24 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
             holder.date.setVisibility(View.GONE);//date
             holder.speakers.setText("");
             //icon
+
             holder.relativeLayout.setBackgroundColor(bgColor);
 
             holder.fav.setImageResource(android.R.color.transparent);
             holder.fav.setImageDrawable(null);
+
+            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+            holder.icon.setLayoutParams(lp);
+            lp.width = dpToPx(0);
+            lp.height = dpToPx(0);
+            lp.setMargins(0,0,0,0);
+            holder.icon.setVisibility(View.VISIBLE);
+            holder.icon.setImageResource(R.drawable.cafe);
+            holder.icon.setImageDrawable(null);
+
+
+
+
             //holder.infoLayout.setBackgroundColor(Color.WHITE);
         }
 
@@ -327,6 +341,8 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 holder.date.setText(month +" "+day+", "+ year);
 
                 if (eventList.get(position).getType().equals("Social")){
+
+
                     if(eventList.get(position).getIcon()!=null){
 
                         holder.icon.setVisibility(View.VISIBLE);
@@ -360,8 +376,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 if(eventList.get(position).getType().equals("Break")){
                     holder.icon.setVisibility(View.VISIBLE);
                     holder.icon.setImageResource(R.drawable.cafe);
-                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
-                    lp.setMargins(0,0,20,0);
+
                     holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
                     //holder.infoLayout.setBackgroundColor(Color.WHITE);
                     view.setBackgroundColor(context.getResources().getColor(R.color.brk));
@@ -399,6 +414,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 }
 
                 if(eventList.get(position).getType().equals("Desconocido")){
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                     if(myapp.getFavoriteApp(eventList.get(position).getObjectId())){
                         holder.fav.setImageResource(R.drawable.favorite);
                         holder.fav.setVisibility(View.VISIBLE);
@@ -542,9 +560,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
                 RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
                 holder.icon.setLayoutParams(lp);
-                lp.width = 120;
-                lp.height = 120;
-                lp.setMargins(0,5,20,0);
+                lp.width = dpToPx(50);
+                lp.height = dpToPx(75);
+                lp.setMargins(0,5,10,0);
                 holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.modulo));
                 //holder.infoLayout.setBackgroundColor(Color.WHITE);
                 view.setBackgroundColor(context.getResources().getColor(R.color.modulo));
@@ -713,7 +731,30 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         else if(eventType.equals("conferencia") ||
                 eventType.equals("Conferencia") ) {
 
+
+
             if(b&&!det){
+                if(eventList.get(position).getIcon()!=null) {
+                    holder.icon.setVisibility(View.VISIBLE);
+                    final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
+                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                    holder.icon.setLayoutParams(lp);
+                    lp.setMargins(0, 5, 10, 0);
+                    lp.height = dpToPx(75);
+                    lp.width = dpToPx(50);
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    if (photoFile != null) {
+                        //Get singleton instance of ImageLoader
+                        ImageLoader imageLoader = ImageLoader.getInstance();
+                        //Load the image from the url into the ImageView.
+                        imageLoader.displayImage(photoFile.getUrl(), holder.icon);
+                    } else {
+
+                    }
+                }
+
                 holder.speakers.setVisibility(View.VISIBLE);
                 if(myapp.getFavoriteApp(eventList.get(position).getObjectId())){
                     holder.fav.setImageResource(R.drawable.favorite);

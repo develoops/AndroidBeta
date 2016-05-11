@@ -5,8 +5,8 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "mc.soched"
-        minSdkVersion 15
+        applicationId "mc.gastronomicon"
+        minSdkVersion 16
         targetSdkVersion 21
         versionCode 11
         versionName "2.1"
@@ -24,7 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile files('libs/universal-image-loader-1.9.3.jar')
     compile files('libs/YouTubeAndroidPlayerApi.jar')
-    compile files('libs/picasso-2.5.0.jar')
     compile 'com.google.code.gson:gson:2.2.4'
     compile files('libs/Parse-1.9.1/Parse-1.9.1.jar')
     compile files('libs/Parse-1.9.1/ParseCrashReporting-1.9.1.jar')

@@ -17,7 +17,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.soched.R;
+import mc.gastronomicon.R;
 
 import model.MobiFile;
 

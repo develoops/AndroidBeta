@@ -20,11 +20,13 @@ import fragments.ChildPagerMeetingsFragment;
 
 import fragments.CurrentEventsFragment;
 import fragments.FavouritesFragment;
+import fragments.GalleryFragment;
 import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.soched.myApp;
+import fragments.SponsorsFragment2;
+import mc.gastronomicon.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;
@@ -137,9 +139,19 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         else if(tabUIs.get(position).getnameView().equals("navFavorites")){
             return FavouritesFragment.newInstance(mApp);
         }
-        else if(tabUIs.get(position).getnameView().equals("navSponsors")){
-            return  SponsorsFragment.newInstance(mApp);
+
+        else if(tabUIs.get(position).getnameView().equals("navSponsors")&& tabUIs.get(position).getTitle().equals("Desayunando con:")){
+            return SponsorsFragment2.newInstance(mApp);
         }
+
+        else if(tabUIs.get(position).getnameView().equals("navSponsors")&& tabUIs.get(position).getTitle().equals("Patrocinadores")){
+            return SponsorsFragment.newInstance(mApp);
+        }
+
+        else if(tabUIs.get(position).getnameView().equals("navGallery")){
+            return GalleryFragment.newInstance(mApp);
+        }
+
         else {
             return MoreFragment.newInstance(mApp);
         }

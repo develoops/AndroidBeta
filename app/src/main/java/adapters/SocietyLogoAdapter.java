@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import android.widget.RelativeLayout.LayoutParams;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -17,8 +18,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.gastronomicon.R;
+import mc.gastronomicon.myApp;
 import model.Company;
 
 /**
@@ -116,6 +117,14 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.infoLayout = (RelativeLayout) view.findViewById(R.id.info);
             holder.infoLayout.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
             holder.icon = (ParseImageView) view.findViewById(R.id.icon_event);
+            LayoutParams lp2 = new LayoutParams(holder.name.getLayoutParams());
+            holder.name.setLayoutParams(lp2);
+            lp2.setMargins(dpToPx(5), dpToPx(30), 0, 0);
+            LayoutParams lp = new LayoutParams(holder.icon.getLayoutParams());
+            holder.icon.setLayoutParams(lp);
+            lp.width = dpToPx(40);
+            lp.height = dpToPx(80);
+            lp.setMargins(10, 5, 10, 0);
             holder.icon.getLayoutParams().height = 150;
             holder.icon.getLayoutParams().width = 150;
           //  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);

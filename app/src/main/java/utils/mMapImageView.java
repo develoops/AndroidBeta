@@ -10,8 +10,8 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.widget.ImageView;
 
-import mc.soched.R;
-import mc.soched.myApp;
+import mc.gastronomicon.R;
+import mc.gastronomicon.myApp;
 
 
 /**

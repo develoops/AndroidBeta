@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.R;
-import mc.soched.MainActivity;
+import mc.gastronomicon.R;
+import mc.gastronomicon.MainActivity;
 import model.Company;
 import model.MeetingApp;
 
@@ -226,14 +226,14 @@ public class CompanyDirectoryFragment extends Fragment{
 
             }
             else {
-                call.setText("Call");
+                call.setText("Llamar");
                 web.setText("Web");
                 mail.setText("Mail");
                 //map.setText("Map");
 
             }
             makeFavourite.setVisibility(View.GONE);
-            call.setVisibility(View.GONE);
+            //call.setVisibility(View.GONE);
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
             mail.getLayoutParams().width = (width / 4);

@@ -31,7 +31,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.soched.R;
+import mc.gastronomicon.R;
 
 import model.Event;
 import model.MeetingApp;
@@ -129,36 +129,7 @@ public class ProgramFragment extends Fragment {
         super.onResume();
         if(meetingApp!=null){
 
-            mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
-            // second argument is the default to use if the preference can't be found
-            Boolean welcomeScreenShown = mPrefs.getBoolean(welcomeScreenShownPref, false);
-
-            if (!welcomeScreenShown) {
-                // here you can launch another activity if you like
-                // the code below will display a popup
-                String title ="";
-                String subtitle="";
-
-                        List <New> news =  meetingApp.getWalls().get(0).getNews();
-                for (int i=0; i<news.size(); i++) {
-                   if(news.get(i).getTitle().equals("Bienvenida")){
-                      title = news.get(i).getTitle();
-                      subtitle = news.get(i).getContent();
-                   }
-                }
-                                 //String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
-                //String whatsNewText = getResources().getString(R.string.whatsNewText);
-                new AlertDialog.Builder(getActivity()).setTitle(title).setMessage(subtitle).setPositiveButton(
-                        "OK", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        }).show();
-                SharedPreferences.Editor editor = mPrefs.edit();
-                editor.putBoolean(welcomeScreenShownPref, true);
-                editor.commit(); // Very important to save the preference
-            }
 
             eventList = staticMap.get(headerDay);
 

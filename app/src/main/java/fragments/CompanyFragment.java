@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.soched.MainActivity;
-import mc.soched.R;
+import mc.gastronomicon.MainActivity;
+import mc.gastronomicon.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;

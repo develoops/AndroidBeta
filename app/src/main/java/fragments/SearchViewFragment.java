@@ -19,7 +19,7 @@ import com.parse.ParseObject;
 import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
-import mc.soched.R;
+import mc.gastronomicon.R;
 import model.Event;
 import model.MeetingApp;
 
