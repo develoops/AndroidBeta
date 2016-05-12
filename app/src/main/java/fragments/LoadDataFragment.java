@@ -154,6 +154,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.persons.actors");
 		query.include("meetingApps.persons.actors.companies");
         query.include("meetingApps.persons.actors.person");
+		query.include("meetingApps.persons.actors.events");
         query.include("meetingApps.persons.company");
         query.include("meetingApps.persons.company.location");
         query.include("meetingApps.persons.company.location.country");
@@ -298,6 +299,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.persons");
 		query.include("meetingApps.persons.actors");
         query.include("meetingApps.persons.actors.person");
+		query.include("meetingApps.persons.actors.events");
 		query.include("meetingApps.persons.actors.companies");
         query.include("meetingApps.persons.company");
         query.include("meetingApps.persons.company.location");

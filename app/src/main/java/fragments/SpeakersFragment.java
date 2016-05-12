@@ -110,8 +110,9 @@ public class SpeakersFragment extends Fragment implements SearchView.OnQueryText
 
                                 actorEvent = actor;
 
-
+                                Log.i("ACTORSPEAK",String.valueOf(actorEvent.getObjectId()));
                         }
+
 
                         Fragment fragment = SpeakerDetailFragment.newInstance(actorEvent, mApp, true);
                         final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();

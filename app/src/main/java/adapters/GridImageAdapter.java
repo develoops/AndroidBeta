@@ -7,17 +7,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.parse.FindCallback;
+import com.parse.GetCallback;
+import com.parse.GetDataCallback;
+import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
+import com.parse.ParseQuery;
 
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+
 
 import mc.gastronomicon.R;
-import model.MobiFile;
+import model.Facade;
+import model.MeetingApp;
+import model.Stand;
 
 /**
  * Created by Alvaro on 2/21/15.
@@ -28,11 +42,11 @@ public class GridImageAdapter extends BaseAdapter {
     Context context;
     LayoutInflater inflater;
 
-    private List<MobiFile> stands= null;
-    private ArrayList<MobiFile> arraylist;
+    private List<Facade> stands= null;
+    private ArrayList<Facade> arraylist;
 
     public GridImageAdapter(Context context,
-                                      List<MobiFile> standsapp) {
+                            ArrayList<Facade> standsapp) {
         this.context = context;
         this.stands= standsapp;
         inflater = LayoutInflater.from(context);
@@ -72,14 +86,10 @@ public class GridImageAdapter extends BaseAdapter {
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
 
-            Log.i("WIDTH",String.valueOf(width));
-            Log.i("HEIGHT",String.valueOf(height));
-
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height-200) - dpToPx(75);
-            holder.image.getLayoutParams().width = (width);
-
+            holder.image.getLayoutParams().height = (height/ 3) - dpToPx(70);
+            holder.image.getLayoutParams().width = (width / 3);
 
             view.setTag(holder);
 
@@ -90,18 +100,11 @@ public class GridImageAdapter extends BaseAdapter {
 
 
 
-
-
-                if(stands.get(position).getParseFileV1()!=null){
-                    final ParseFile photoFile = stands.get(position).getParseFileV1();
-                    holder.image.setParseFile(photoFile);
-                    holder.image.loadInBackground();
-                }
-
-                else{
-                    Log.i("LOG","LOG");
-                }
-
+        if(stands.get(position).getCompany()!=null){
+            final ParseFile photoFile = stands.get(position).getCompany().getLogo().getParseFileV1();
+            holder.image.setParseFile(photoFile);
+            holder.image.loadInBackground();
+        }
 
 
 

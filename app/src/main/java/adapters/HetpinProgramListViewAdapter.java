@@ -193,14 +193,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
             holder.fav.setImageResource(android.R.color.transparent);
             holder.fav.setImageDrawable(null);
 
-            RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
-            holder.icon.setLayoutParams(lp);
-            lp.width = dpToPx(0);
-            lp.height = dpToPx(0);
-            lp.setMargins(0,0,0,0);
-            holder.icon.setVisibility(View.VISIBLE);
-            holder.icon.setImageResource(R.drawable.cafe);
-            holder.icon.setImageDrawable(null);
+
 
 
 
@@ -212,7 +205,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         //Log.i("NAME",String.valueOf(eventList.get(position).getTitle()));
         Log.i("NAME",String.valueOf(eventList.get(position).getObjectId()));
         if(Locale.getDefault().getLanguage().equals("en")){
-            if(eventList.get(position).getTitle2()!=null && !eventList.get(position).getTitle2().isEmpty()){
+            if(eventList.get(position).getTitle()!=null && !eventList.get(position).getTitle().isEmpty()){
                 holder.name.setText(eventList.get(position).getTitle());
             }
             else {
@@ -349,9 +342,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
                         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
                         holder.icon.setLayoutParams(lp);
-                        lp.width = 120;
-                        lp.height = 120;
-                        lp.setMargins(0,5,20,0);
+                        lp.width = 90;
+                        lp.height = 90;
+                        lp.setMargins(0,5,10,0);
                         holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
                         view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
@@ -376,6 +369,11 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                 if(eventList.get(position).getType().equals("Break")){
                     holder.icon.setVisibility(View.VISIBLE);
                     holder.icon.setImageResource(R.drawable.cafe);
+                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                    holder.icon.setLayoutParams(lp);
+                    lp.setMargins(0,5,10,0);
+                    lp.width = 90;
+                    lp.height = 90;
 
                     holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.brk));
                     //holder.infoLayout.setBackgroundColor(Color.WHITE);
@@ -388,7 +386,9 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
                         final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
                         RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
                         holder.icon.setLayoutParams(lp);
-                        lp.setMargins(0,5,20,0);
+                        lp.setMargins(0,5,10,0);
+                        lp.width = 90;
+                        lp.height = 90;
                         holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
                         //holder.infoLayout.setBackgroundColor(Color.WHITE);
                         view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
@@ -814,6 +814,26 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
 
             if(!b&&!det){
 
+                if(eventList.get(position).getIcon()!=null) {
+                    holder.icon.setVisibility(View.VISIBLE);
+                    final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
+                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                    holder.icon.setLayoutParams(lp);
+                    lp.setMargins(0, 5, 10, 0);
+                    lp.height = dpToPx(75);
+                    lp.width = dpToPx(50);
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    if (photoFile != null) {
+                        //Get singleton instance of ImageLoader
+                        ImageLoader imageLoader = ImageLoader.getInstance();
+                        //Load the image from the url into the ImageView.
+                        imageLoader.displayImage(photoFile.getUrl(), holder.icon);
+                    } else {
+
+                    }
+                }
 
                 holder.speakers.setVisibility(View.GONE);
                 holder.date.setVisibility(View.VISIBLE);
@@ -854,6 +874,26 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
             }
 
             if(!b&&det){
+                if(eventList.get(position).getIcon()!=null) {
+                    holder.icon.setVisibility(View.VISIBLE);
+                    final ParseFile photoFile = eventList.get(position).getIcon().getParseFileV1();
+                    RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(holder.icon.getLayoutParams());
+                    holder.icon.setLayoutParams(lp);
+                    lp.setMargins(0, 5, 10, 0);
+                    lp.height = dpToPx(75);
+                    lp.width = dpToPx(50);
+                    holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    //holder.infoLayout.setBackgroundColor(Color.WHITE);
+                    view.setBackgroundColor(context.getResources().getColor(R.color.conferencia));
+                    if (photoFile != null) {
+                        //Get singleton instance of ImageLoader
+                        ImageLoader imageLoader = ImageLoader.getInstance();
+                        //Load the image from the url into the ImageView.
+                        imageLoader.displayImage(photoFile.getUrl(), holder.icon);
+                    } else {
+
+                    }
+                }
                 if(eventList.get(position).getPlace()!=null){
                     holder.place.setText(eventList.get(position).getPlace().getName());
                 }

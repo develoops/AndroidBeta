@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -97,6 +98,7 @@ public class SpeakerDetailFragment extends Fragment {
             else {
                 speaker_bio.setText(actorEvent.getPerson().getBio());
                 speaker_bio.setTextColor(getResources().getColor(R.color.negro));
+                speaker_bio.setMovementMethod(new ScrollingMovementMethod());
                 Log.i("SPEAJrrrER","SP");
             }
         }
@@ -108,6 +110,10 @@ public class SpeakerDetailFragment extends Fragment {
         //image.setParseFile(photoFile);
         //image.loadInBackground();
         if(actorEvent.getEvents()!=null){
+            for(Event event:actorEvent.getEvents()){
+                Log.i("EVENTSP",event.getObjectId());
+                Log.i("NAMEEVE",event.getType());
+            }
             if(actorEvent.getEvents().size()>0){
                 HetpinProgramListViewAdapter adapter = new HetpinProgramListViewAdapter(getActivity(),actorEvent.getEvents(),meetingApp,false,true);
                 eventsofSpeaker.setAdapter(adapter);

@@ -2,6 +2,8 @@ package fragments;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -84,7 +86,7 @@ public class MoreFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("type","material");
+        query.whereEqualTo("subtype","web");
         query.findInBackground(new FindCallback<MobiFile>() {
               @Override
               public void done(List<MobiFile> mobiFiles, ParseException e) {
@@ -97,11 +99,11 @@ public class MoreFragment extends Fragment {
                       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                           ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
                           MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
-                          Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-                          final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                          ft.replace(R.id.container,fragment);
-                          ft.addToBackStack(null);
-                          ft.commit();
+                          String url = mobiFile.geturlFile();
+                          Intent i = new Intent(Intent.ACTION_VIEW);
+                          i.setData(Uri.parse(url));
+                          startActivity(i);
+
                       }
                   });
 
