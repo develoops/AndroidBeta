@@ -20,6 +20,7 @@ import fragments.ChildPagerMeetingsFragment;
 
 import fragments.CurrentEventsFragment;
 import fragments.FavouritesFragment;
+import fragments.GalleryFragment;
 import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
@@ -44,6 +45,7 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
 
     List<model.View> tabUIs; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
+
 
     public EventsFragmentAdapter(FragmentManager fm, List<model.View> mTitles, int mNumbOfTabsumb, MeetingApp meetingApp, CustomViewPager pager, myApp app) {
         super(fm);
@@ -137,9 +139,17 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
         else if(tabUIs.get(position).getnameView().equals("navFavorites")){
             return FavouritesFragment.newInstance(mApp);
         }
-        else if(tabUIs.get(position).getnameView().equals("navSponsors")){
-            return  SponsorsFragment.newInstance(mApp);
+
+
+
+        else if(tabUIs.get(position).getnameView().equals("navSponsors")&& tabUIs.get(position).getTitle().equals("Patrocinadores")){
+            return SponsorsFragment.newInstance(mApp);
         }
+
+        else if(tabUIs.get(position).getnameView().equals("navGallery")){
+            return GalleryFragment.newInstance(mApp);
+        }
+
         else {
             return MoreFragment.newInstance(mApp);
         }
@@ -163,28 +173,33 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             Log.e("THANHNX now = true", e.toString());
         }
         if(Locale.getDefault().getLanguage().equals("en")){
+
+
+            Log.i("SI","SI");
             if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
                 return tabUIs.get(position).getTitle();
             }
             else {
                 return tabUIs.get(position).getTitle();
             }
+
+
+
+
+
         }
-
-
-
         else {
 
-            if(tabUIs.get(position).getTitle()!=null && !tabUIs.get(position).getTitle().isEmpty()){
-                return tabUIs.get(position).getTitle();
-            }
-            else {
-                return tabUIs.get(position).getTitle();
-            }
+
+            return tabUIs.get(position).getTitle();
+
 
         }
 
     }
+
+
+
 
 
     public static String timeZone()

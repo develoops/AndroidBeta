@@ -164,9 +164,6 @@ public class CompanyDirectoryFragment extends Fragment{
         /*
         View v = mTabHost.getTabWidget().getChildAt(0);
         v.setBackgroundResource(R.drawable.programa);
-
-
-
 */
 
 
@@ -198,36 +195,23 @@ public class CompanyDirectoryFragment extends Fragment{
             //lgo.setParseFile(logo);
             //lgo.loadInBackground();
 
-            if(com.getDetails()!=null){
-                if(Locale.getDefault().getLanguage().equals("es")){
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-                else if(Locale.getDefault().getLanguage().equals("en")){
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-
-                else {
-                    description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
-                }
-
-                description.setMovementMethod(new ScrollingMovementMethod());
-            }
-
+            description.setText(com.getDetails()+"\n"+"\n"+"\n"+"\n");
+            description.setMovementMethod(new ScrollingMovementMethod());
             //companyName.setText(company.getCompany().getName());
 
             DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
             int width = displayMetrics.widthPixels;
             int height = displayMetrics.heightPixels;
 
-            hdr.getLayoutParams().height = (height / 4) - dpToPx(55);
+            hdr.getLayoutParams().height = (height / 3) - dpToPx(55);
 
-            footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
+            footer.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
 
 
             call.setTextColor(Color.WHITE);
             web.setTextColor(Color.WHITE);
             mail.setTextColor(Color.WHITE);
-           // map.setTextColor(Color.WHITE);
+            // map.setTextColor(Color.WHITE);
             makeFavourite.setTextColor(Color.WHITE);
 
 
@@ -235,30 +219,22 @@ public class CompanyDirectoryFragment extends Fragment{
                 call.setText("Call");
                 web.setText("Web");
                 mail.setText("Mail");
-
+                //    map.setText("Map");
 
             }
-            else if(Locale.getDefault().getLanguage().equals("es")){
+            else {
                 call.setText("Llamar");
                 web.setText("Web");
                 mail.setText("Mail");
-
-
-            }
-
-            else {
-                call.setText("Chamada");
-                web.setText("Web");
-                mail.setText("Mail");
-
+                //map.setText("Map");
 
             }
             makeFavourite.setVisibility(View.GONE);
-            call.setVisibility(View.GONE);
+            //call.setVisibility(View.GONE);
             call.getLayoutParams().width = (width / 4);
             web.getLayoutParams().width = (width / 4);
             mail.getLayoutParams().width = (width / 4);
-           // map.getLayoutParams().width = (width / 4);
+            // map.getLayoutParams().width = (width / 4);
 
 
 
@@ -369,7 +345,7 @@ public class CompanyDirectoryFragment extends Fragment{
         }
 
         else{
-            Log.i("LOG", "LOG");
+            Log.i("LOG","LOG");
         }
 
 

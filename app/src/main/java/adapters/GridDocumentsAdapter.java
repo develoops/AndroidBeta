@@ -52,7 +52,7 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
 
             holder = new RecordHolder();
             holder.txtTitle = (TextView) row.findViewById(R.id.title_doc);
-            holder.size = (TextView) row.findViewById(R.id.size_doc);
+            //holder.size = (TextView) row.findViewById(R.id.size_doc);
 
             holder.imageItem = (ParseImageView) row.findViewById(R.id.doc_icon);
             row.setTag(holder);
@@ -83,7 +83,7 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
             Log.i("NO HAY FOTITO","NOFOTO");
         }
         holder.txtTitle.setText(mobiFile.getTitle());
-        holder.size.setText(mobiFile.getSize() + " MB");
+       /* holder.size.setText(mobiFile.getSize() + " MB");
 
 
         if((mobiFile.getSize()).doubleValue()>=1){
@@ -95,14 +95,14 @@ public class GridDocumentsAdapter extends ArrayAdapter<MobiFile> {
         }
 
 
-
+*/
         return row;
 
     }
 
     static class RecordHolder {
         TextView txtTitle;
-        TextView size;
+        //TextView size;
 
         ImageView imageItem;
 

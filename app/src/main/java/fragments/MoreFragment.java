@@ -2,6 +2,8 @@ package fragments;
 
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -84,47 +86,42 @@ public class MoreFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("subtype","library");
+        query.whereEqualTo("subtype","web");
         query.findInBackground(new FindCallback<MobiFile>() {
-              @Override
-              public void done(List<MobiFile> mobiFiles, ParseException e) {
+            @Override
+            public void done(List<MobiFile> mobiFiles, ParseException e) {
 
-                  adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
-                  listView.setAdapter(adapter);
+                adapter = new GridDocumentsAdapter(getActivity(),R.layout.cell_document,mobiFiles);
+                listView.setAdapter(adapter);
 
-                  listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                      @Override
-                      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                          ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
-                          MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
-                          Fragment fragment = DocumentDetailFragment.newInstance(mobiFile);
-                          final FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                          ft.replace(R.id.container,fragment);
-                          ft.addToBackStack(null);
-                          ft.commit();
-                      }
-                  });
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        ParseObject object = (ParseObject)(listView.getItemAtPosition(position));
+                        MobiFile mobiFile= ParseObject.createWithoutData(MobiFile.class, object.getObjectId());
+                        String url = mobiFile.geturlFile();
+                        Intent i = new Intent(Intent.ACTION_VIEW);
+                        i.setData(Uri.parse(url));
+                        startActivity(i);
 
-              }
-         });
+                    }
+                });
+
+            }
+        });
         /*
         query.whereEqualTo("subtype","gallery");
         query.findInBackground(new FindCallback<MobiFile>() {
             @Override
             public void done(List<MobiFile> mobiFiles, ParseException e) {
                     mFiles = (ArrayList<MobiFile>) mobiFiles;
-
                 gridview.setAdapter(new GridGalleryAdapter(getActivity(),mFiles));
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
                     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
                         MobiFile mobiFile = (MobiFile)(gridview.getItemAtPosition(position));
-
                         final Dialog dialogo = new Dialog(getActivity());
                         dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
                         dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
                         dialogo.setContentView(R.layout.map_box_layout);
                         final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
                         TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
@@ -135,21 +132,15 @@ public class MoreFragment extends Fragment {
                             //Load the image from the url into the ImageView.
                             imageLoader.displayImage(mobiFile.getParseFileV1().getUrl(), mapadialog);
                         }
-
-
                         dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
                         done.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 dialogo.dismiss();
-
                             }
                         });
-
                         dialogo.show();
-
                     }
-
                 });
             }
         });*/
