@@ -16,7 +16,7 @@ import java.util.List;
 
 import adapters.DirectiveListViewAdapter;
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.Actor;
 import model.MeetingApp;
 

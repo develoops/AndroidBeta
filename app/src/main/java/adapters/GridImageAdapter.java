@@ -7,31 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.parse.FindCallback;
-import com.parse.GetCallback;
-import com.parse.GetDataCallback;
-import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
-import com.parse.ParseQuery;
 
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.Facade;
-import model.MeetingApp;
-import model.Stand;
 
 /**
  * Created by Alvaro on 2/21/15.
@@ -52,6 +39,7 @@ public class GridImageAdapter extends BaseAdapter {
         inflater = LayoutInflater.from(context);
         this.arraylist = new ArrayList<>();
         this.arraylist.addAll(stands);
+
 
     }
 
@@ -100,7 +88,8 @@ public class GridImageAdapter extends BaseAdapter {
 
 
 
-        if(stands.get(position).getCompany()!=null){
+        if(stands.get(position).getCompany().getLogo()!=null){
+            Log.i("COMPANYLOGOSTAND",stands.get(position).getCompany().getObjectId());
             final ParseFile photoFile = stands.get(position).getCompany().getLogo().getParseFileV1();
             holder.image.setParseFile(photoFile);
             holder.image.loadInBackground();

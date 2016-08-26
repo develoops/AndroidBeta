@@ -26,7 +26,7 @@ import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
 import fragments.SponsorsFragment2;
-import mc.gastronomicon.myApp;
+import mc.cvdl.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;
@@ -140,21 +140,17 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             return FavouritesFragment.newInstance(mApp);
         }
 
-        else if(tabUIs.get(position).getnameView().equals("navSponsors")&& tabUIs.get(position).getTitle().equals("Desayunando con:")){
-            return SponsorsFragment2.newInstance(mApp);
-        }
 
-        else if(tabUIs.get(position).getnameView().equals("navSponsors")&& tabUIs.get(position).getTitle().equals("Patrocinadores")){
+
+        else if(tabUIs.get(position).getnameView().equals("navSponsors")){
             return SponsorsFragment.newInstance(mApp);
         }
 
-        else if(tabUIs.get(position).getnameView().equals("navGallery")){
+        else{
             return GalleryFragment.newInstance(mApp);
         }
 
-        else {
-            return MoreFragment.newInstance(mApp);
-        }
+
     }
 
     @Override

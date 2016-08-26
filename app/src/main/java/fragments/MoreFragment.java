@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,10 +18,11 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.MeetingApp;
 import model.MobiFile;
 
@@ -31,16 +31,16 @@ import model.MobiFile;
  */
 public class MoreFragment extends Fragment {
 
-    public static MeetingApp mApp;
+    //public static MeetingApp mApp;
     public static MobiFile map;
     public static ListView listView;
-    //ArrayList<MobiFile> mFiles = new ArrayList<>();
+   // public static ArrayList<MobiFile> mFiles = new ArrayList<>();
     GridDocumentsAdapter adapter;
 
-    public static MoreFragment newInstance(MeetingApp meetingApp) {
+    public static MoreFragment newInstance( ) {
 
         // Instantiate a new fragment
-        mApp= meetingApp; //Alfonso
+      //Alfonso
         MoreFragment fragment = new MoreFragment();
 
         fragment.setRetainInstance(true);

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.Event;
 
 /**

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.MobiFile;
 
 /**

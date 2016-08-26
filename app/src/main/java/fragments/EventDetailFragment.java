@@ -52,9 +52,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.gastronomicon.BroadcastAlarma;
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.BroadcastAlarma;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.view.ViewGroup.LayoutParams;
+
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

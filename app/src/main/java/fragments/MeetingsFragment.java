@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.gastronomicon.MainActivity;
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.MainActivity;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 
 import model.MeetingApp;
 

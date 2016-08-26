@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;
@@ -146,6 +146,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.events.palette");
 		query.include("meetingApps.events.place");
         query.include("meetingApps.events.library");
+		query.include("meetingApps.gallery");
 		query.include("meetingApps.library");
 		query.include("meetingApps.icon");
         query.include("meetingApps.palette");
@@ -292,6 +293,7 @@ public class LoadDataFragment extends Fragment {
 		query.include("meetingApps.events.palette");
 		query.include("meetingApps.events.place");
         query.include("meetingApps.events.library");
+		query.include("meetingApps.gallery");
 		query.include("meetingApps.library");
 		query.include("meetingApps.icon");
         query.include("meetingApps.palette");

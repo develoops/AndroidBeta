@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Actor;
 
 /**

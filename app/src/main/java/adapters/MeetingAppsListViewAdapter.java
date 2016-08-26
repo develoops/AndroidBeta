@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.MeetingApp;
 
 /**

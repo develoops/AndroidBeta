@@ -14,12 +14,10 @@ import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -28,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridGalleryAdapter;
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.MeetingApp;
 import model.MobiFile;
 import utils.TouchImageView;
@@ -75,6 +73,7 @@ public class GalleryFragment extends Fragment {
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
 
         query.whereEqualTo("subtype","gallery");
+
         query.findInBackground(new FindCallback<MobiFile>() {
             @Override
             public void done(List<MobiFile> list, ParseException e) {

@@ -18,7 +18,7 @@ import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.MeetingApp;
 import model.MobiFile;
 

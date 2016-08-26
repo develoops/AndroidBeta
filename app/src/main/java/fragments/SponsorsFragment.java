@@ -3,12 +3,9 @@ package fragments;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -23,7 +20,6 @@ import android.widget.RelativeLayout;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.GetCallback;
 import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 import java.util.ArrayList;
@@ -32,7 +28,7 @@ import java.util.Locale;
 
 import adapters.GridImageAdapter;
 
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
@@ -80,7 +76,7 @@ public class SponsorsFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("subtype","mapa");
+        query.whereEqualTo("subtype","mapa_comercial");
         query.getFirstInBackground(new GetCallback<MobiFile>() {
             @Override
             public void done(MobiFile mobiFile, ParseException e) {
@@ -112,7 +108,7 @@ public class SponsorsFragment extends Fragment {
                 dialogo.setContentView(R.layout.map_box_layout);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("subtype","mapa");
+                query.whereEqualTo("subtype","mapa_comercial");
                 query.getFirstInBackground(new GetCallback<MobiFile>() {
                     @Override
                     public void done(MobiFile mobiFile, ParseException e) {
@@ -170,6 +166,7 @@ public class SponsorsFragment extends Fragment {
                 for(Facade facade:facades){
                     if(!facade.getRole().equals("Organizadores")){
                         facade1.add(facade);
+                        Log.i("FACADE",facade.getObjectId());
                     }
                 }
                 Log.i("MAPP",String.valueOf(facade1));

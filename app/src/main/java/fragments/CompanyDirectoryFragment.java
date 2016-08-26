@@ -19,7 +19,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsoluteLayout;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,8 +35,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.gastronomicon.R;
-import mc.gastronomicon.MainActivity;
+import mc.cvdl.R;
+import mc.cvdl.MainActivity;
 import model.Company;
 import model.MeetingApp;
 
@@ -48,7 +50,7 @@ public class CompanyDirectoryFragment extends Fragment{
     public static String gmaps;
     SocietyLogoAdapter adapter;
     View RootView;
-    public Button call,map,web,mail,makeFavourite;
+    public Button call,map,web,mail,makeFavourite,ask;
     public String phone,email;
     public ParseImageView hdr;
     public RelativeLayout footer;
@@ -103,6 +105,7 @@ public class CompanyDirectoryFragment extends Fragment{
             //description.setMovementMethod(new ScrollingMovementMethod());
             //TextView companyName = (TextView) RootView.findViewById(R.id.companyname);
             makeFavourite = (Button) RootView.findViewById(R.id.makefavourite);
+            ask = (Button) RootView.findViewById(R.id.ask);
             call = (Button) RootView.findViewById(R.id.rate);
             web = (Button) RootView.findViewById(R.id.checkin);
             mail = (Button) RootView.findViewById(R.id.map);
@@ -208,37 +211,38 @@ public class CompanyDirectoryFragment extends Fragment{
 
             hdr.getLayoutParams().height = (height / 3) - dpToPx(55);
 
-            footer.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
+            footer.setBackgroundColor(getResources().getColor(R.color.companySecundario));
 
-
+            ask.setVisibility(View.GONE);
             call.setTextColor(Color.WHITE);
-            web.setTextColor(Color.WHITE);
+            web.setVisibility(View.GONE);
             mail.setTextColor(Color.WHITE);
            // map.setTextColor(Color.WHITE);
             makeFavourite.setTextColor(Color.WHITE);
 
 
+
             if(Locale.getDefault().getLanguage().equals("en")){
-                call.setText("Call");
-                web.setText("Web");
+                makeFavourite.setText("Call");
+                call.setText("Web");
                 mail.setText("Mail");
             //    map.setText("Map");
 
             }
             else {
-                call.setText("Llamar");
-                web.setText("Web");
+
+                makeFavourite.setText("Llamar");
+                call.setText("Web");
                 mail.setText("Mail");
                 //map.setText("Map");
 
             }
-            makeFavourite.setVisibility(View.GONE);
-            //call.setVisibility(View.GONE);
-            call.getLayoutParams().width = (width / 4);
-            web.getLayoutParams().width = (width / 4);
-            mail.getLayoutParams().width = (width / 4);
-           // map.getLayoutParams().width = (width / 4);
 
+            //call.setVisibility(View.GONE);
+            makeFavourite.getLayoutParams().width = width/3;
+            call.getLayoutParams().width = (width / 3);
+            mail.getLayoutParams().width = (width / 3);
+           // map.getLayoutParams().width = (width / 4);
 
 
 
@@ -260,7 +264,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 }
 
             }
-            call.setOnClickListener(new View.OnClickListener() {
+            makeFavourite.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -273,7 +277,7 @@ public class CompanyDirectoryFragment extends Fragment{
                 }
             });
 
-            web.setOnClickListener(new View.OnClickListener() {
+            call.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(com.getWeb()!=null){

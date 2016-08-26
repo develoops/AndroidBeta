@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.gastronomicon.MainActivity;
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.MainActivity;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

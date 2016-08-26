@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="mc.gastronomicon" >
+    package="mc.cvdl" >
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -11,10 +11,10 @@
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
-    <permission android:name="mc.gastronomicon.permission.C2D_MESSAGE"
+    <permission android:name="mc.cvdl.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="mc.gastronomicon.permission.C2D_MESSAGE" />
+    <uses-permission android:name="mc.cvdl.permission.C2D_MESSAGE" />
     <uses-feature android:name="android.hardware.telephony"  android:required="false" />
     <supports-screens
         android:anyDensity="true"
@@ -30,10 +30,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
-        android:name="mc.gastronomicon.myApp"
+        android:name="mc.cvdl.myApp"
         >
         <activity
-            android:name="mc.gastronomicon.MainActivity"
+            android:name="mc.cvdl.MainActivity"
 
             android:alwaysRetainTaskState="true"
             android:configChanges="keyboardHidden|orientation"
@@ -74,7 +74,7 @@
                 <!--
                   IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name.
                 -->
-                <category android:name="mc.gastronomicon" />
+                <category android:name="mc.cvdl" />
             </intent-filter>
         </receiver>
         <receiver android:name="utils.Receiver" android:exported="false">
@@ -86,10 +86,10 @@
         </receiver>
 
         <service
-            android:name="mc.gastronomicon.ServicioAlarma"
+            android:name="mc.cvdl.ServicioAlarma"
             android:enabled="true" />
 
-        <receiver android:name="mc.gastronomicon.BroadcastAlarma" />
+        <receiver android:name="mc.cvdl.BroadcastAlarma" />
 
         <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_launcher"/>
     </application>

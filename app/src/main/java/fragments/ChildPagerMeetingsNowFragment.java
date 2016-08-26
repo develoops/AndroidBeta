@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 import adapters.ChildPagerMeetingsAdapter;
-import mc.gastronomicon.R;
+import mc.cvdl.R;
 import model.Event;
 import model.MeetingApp;
 import utils.MUtil;

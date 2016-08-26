@@ -3,14 +3,15 @@ package adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import android.widget.RelativeLayout.LayoutParams;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
@@ -18,8 +19,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Company;
 
 /**
@@ -100,6 +101,11 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.name = (TextView) view.findViewById(R.id.time);
             holder.name.setTextSize(14);
             holder.name.setTextColor(Color.parseColor("#000000"));
+            RelativeLayout.LayoutParams params3 = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
+
+            Log.i("HEIGHT",String.valueOf(params3.height));
+            params3.setMargins(35, 40, 0, 0);
+            holder.name.setLayoutParams(params3);
 
             holder.eventSpeakers = (TextView) view.findViewById(R.id.eventSpeakers);
             holder.name_event = (TextView) view.findViewById(R.id.name_event);
@@ -116,20 +122,19 @@ public class SocietyLogoAdapter extends BaseAdapter {
             holder.relativeLayout.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
             holder.infoLayout = (RelativeLayout) view.findViewById(R.id.info);
             holder.infoLayout.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
+
             holder.icon = (ParseImageView) view.findViewById(R.id.icon_event);
-            LayoutParams lp2 = new LayoutParams(holder.name.getLayoutParams());
-            holder.name.setLayoutParams(lp2);
-            lp2.setMargins(dpToPx(5), dpToPx(30), 0, 0);
-            LayoutParams lp = new LayoutParams(holder.icon.getLayoutParams());
-            holder.icon.setLayoutParams(lp);
-            lp.width = dpToPx(40);
-            lp.height = dpToPx(80);
-            lp.setMargins(10, 5, 10, 0);
-            holder.icon.getLayoutParams().height = 150;
-            holder.icon.getLayoutParams().width = 150;
-          //  RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
-           // params.setMargins(0, 0, 0, 0);
-            //holder.icon.setLayoutParams(params);
+            holder.icon.getLayoutParams().height = 130 ;
+            holder.icon.getLayoutParams().width = 130;
+            holder.icon.setBackgroundColor(context.getResources().getColor(R.color.blanco));
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT);
+            params.setMargins(0, 0, 0, 0);
+            holder.relativeLayout.setLayoutParams(params);
+
+            RelativeLayout.LayoutParams params2 = new RelativeLayout.LayoutParams(130, 130);
+            params2.setMargins(0, 0, 0, 0);
+
+            holder.icon.setLayoutParams(params2);
 
 
             view.setBackgroundColor(context.getResources().getColor(R.color.companySecundario));
@@ -156,8 +161,8 @@ public class SocietyLogoAdapter extends BaseAdapter {
         }*/
         if(standList.get(position)!=null){
 
-                holder.name.setText(standList.get(position).getName());
-                holder.name.setTextColor(Color.WHITE);
+            holder.name.setText(standList.get(position).getName());
+            holder.name.setTextColor(Color.WHITE);
 
 
             if(standList.get(position).getLogo()!=null){

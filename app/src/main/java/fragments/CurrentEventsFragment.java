@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.gastronomicon.R;
-import mc.gastronomicon.myApp;
+import mc.cvdl.R;
+import mc.cvdl.myApp;
 import model.Event;
 import model.MeetingApp;
 

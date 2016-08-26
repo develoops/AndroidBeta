@@ -1,4 +1,4 @@
-package mc.gastronomicon;
+package mc.cvdl;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

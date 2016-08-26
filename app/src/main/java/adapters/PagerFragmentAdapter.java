@@ -73,7 +73,7 @@ public class PagerFragmentAdapter extends FragmentStatePagerAdapter
             return mCongressFragment.newInstance(LoadDataFragment.mobiCongress);
         }
         else {
-            return MoreCompanyFragment.newInstance(LoadDataFragment.files);
+            return MoreFragment.newInstance();
         }
 
 
