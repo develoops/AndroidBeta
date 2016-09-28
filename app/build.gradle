@@ -8,8 +8,8 @@ android {
         applicationId "mc.cvdl"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 3
-        versionName "1.2"
+        versionCode 5
+        versionName "1.4"
     }
     buildTypes {
         release {
@@ -30,4 +30,6 @@ dependencies {
     compile files('libs/Parse-1.9.1/bolts-android-1.2.0-javadoc.jar')
     compile files('libs/Parse-1.9.1/bolts-android-1.2.0.jar')
     compile 'it.sephiroth.android.library.imagezoom:imagezoom:+'
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.9.5"
 }

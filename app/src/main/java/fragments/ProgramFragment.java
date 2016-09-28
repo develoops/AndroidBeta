@@ -1,8 +1,11 @@
 package fragments;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
@@ -32,6 +35,7 @@ import mc.cvdl.R;
 
 import model.Event;
 import model.MeetingApp;
+import model.New;
 import model.Person;
 
 
@@ -81,7 +85,7 @@ public class ProgramFragment extends Fragment {
         headerDay = getArguments().getString("header");
         Log.e(getClass().getName(), "onCreateView + header: " + headerDay);
         barradias = (RelativeLayout) RootView.findViewById(R.id.navi_bar);
-        barradias.setBackgroundColor(getResources().getColor(R.color.eventoTerciario));
+        barradias.setBackgroundColor(getResources().getColor(R.color.modulo));
         pg_adapter = new PagerViewAdapter(getChildFragmentManager());
 
 
@@ -131,23 +135,7 @@ public class ProgramFragment extends Fragment {
 
             List<Event> events= eventList;
 
-            Collections.sort(events, new Comparator<Event>() {
-                @Override
-                public int compare(Event lhs, Event rhs) {
 
-                    int date1Diff = lhs.getStartDate().compareTo(rhs.getStartDate());
-                    if(date1Diff==0){
-                        return (int)lhs.getEndDate().getTime()-(int)rhs.getEndDate().getTime();
-                    }
-                    else {
-                        return (int)lhs.getStartDate().getTime() - (int)rhs.getStartDate().getTime();
-                    }
-
-                }
-            });
-
-
-/*
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -166,7 +154,25 @@ public class ProgramFragment extends Fragment {
                 }
             });
 
+/*
+            Collections.sort(events, new Comparator<Event>() {
+                @Override
+                public int compare(Event lhs, Event rhs) {
+
+                    int date1Diff = lhs.getStartDate().compareTo(rhs.getStartDate());
+                    if(date1Diff==0){
+                        return (int)lhs.getEndDate().getTime()-(int)rhs.getEndDate().getTime();
+                    }
+                    else {
+                        return (int)lhs.getStartDate().getTime() - (int)rhs.getStartDate().getTime();
+                    }
+
+                }
+            });
 */
+
+
+
 
 
             headerDay = headerDay.replace("October", "Octubre");
@@ -182,6 +188,31 @@ public class ProgramFragment extends Fragment {
             //listview.setTranscriptMode(ListView.TRANSCRIPT_MODE_ALWAYS_SCROLL);
             listview.setCacheColorHint(0);
 
+            mPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            // second argument is the default to use if the preference can't be found
+            Boolean welcomeScreenShown = mPrefs.getBoolean(welcomeScreenShownPref, false);
+            if (!welcomeScreenShown) {
+                // here you can launch another activity if you like
+                // the code below will display a popup
+                //String title ="Bienvenida";
+                String subtitle="";
+                if (meetingApp.getDetails()!=null){
+                    subtitle = meetingApp.getDetails();
+                }
+
+
+                                 //String whatsNewTitle = getResources().getString(R.string.whatsNewTitle);
+                //String whatsNewText = getResources().getString(R.string.whatsNewText);
+                new AlertDialog.Builder(getActivity()).setMessage(subtitle).setPositiveButton(
+                        "OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        }).show();
+                SharedPreferences.Editor editor = mPrefs.edit();
+                editor.putBoolean(welcomeScreenShownPref, true);
+                editor.commit(); // Very important to save the preference
+            }
 
 
             //startLoading();

@@ -91,7 +91,7 @@
 
         <receiver android:name="mc.cvdl.BroadcastAlarma" />
 
-        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_launcher"/>
+        <meta-data android:name="com.parse.push.notification_icon" android:resource="@drawable/ic_launcher2"/>
     </application>
 
 </manifest>

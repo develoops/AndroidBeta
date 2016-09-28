@@ -82,6 +82,7 @@ public class SponsorsFragment extends Fragment {
             public void done(MobiFile mobiFile, ParseException e) {
 
                 if(mobiFile!=null){
+                    mobiFile.getParseFileV1().getDataInBackground();
                     button.setVisibility(View.VISIBLE);
                     Log.i("MOBIFILE", String.valueOf(mobiFile.getObjectId()));
                     if(Locale.getDefault().getLanguage().equals("en")){
@@ -105,7 +106,7 @@ public class SponsorsFragment extends Fragment {
                 dialogo.requestWindowFeature(Window.FEATURE_NO_TITLE);
                 dialogo.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
 
-                dialogo.setContentView(R.layout.map_box_layout);
+                dialogo.setContentView(R.layout.map_box_layout2);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
                 query.whereEqualTo("subtype","mapa_comercial");
@@ -115,7 +116,7 @@ public class SponsorsFragment extends Fragment {
                         map=mobiFile;
                         final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
                         TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
-                        mapadialog.setMaxZoom(3f);
+                        mapadialog.setMaxZoom(4f);
                         mapadialog.setMinZoom(1f);
                         if (map!= null) {
                             ImageLoader imageLoader = ImageLoader.getInstance();

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
@@ -94,8 +95,20 @@ public class GridGalleryAdapter extends BaseAdapter {
 
         if(stands.get(position).getParseFileV1()!=null){
             final ParseFile photoFile = stands.get(position).getParseFileV1();
-            holder.image.setParseFile(photoFile);
-            holder.image.loadInBackground();
+            if (photoFile != null) {
+                //Get singleton instance of ImageLoader
+                ImageLoader imageLoader = ImageLoader.getInstance();
+                //Load the image from the url into the ImageView.
+
+                imageLoader.displayImage(photoFile.getUrl(), holder.image);
+
+
+            }
+            else{
+                Log.i("LOG","LOG");
+            }
+            Log.i("LOG","LOG");
+
         }
 
         else{

@@ -21,13 +21,13 @@
 
     <Button
 
-        android:layout_width="768dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/comercialmap"
         android:layout_below="@+id/gridView"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/eventoTerciario"
+        android:background="@color/modulo"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:layout_gravity="center"

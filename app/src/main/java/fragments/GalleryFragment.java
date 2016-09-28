@@ -78,6 +78,7 @@ public class GalleryFragment extends Fragment {
             @Override
             public void done(List<MobiFile> list, ParseException e) {
                 gridview.setAdapter(new GridGalleryAdapter(getActivity(),list));
+
                 gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

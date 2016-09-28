@@ -139,7 +139,7 @@ public class EventDetailFragment extends Fragment {
         if(selectedEvent.getAnidateEvents()==null){
 
 
-            footer.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
+            footer.setBackgroundColor(getResources().getColor(R.color.modulo));
 
         }
         else {
@@ -216,6 +216,15 @@ public class EventDetailFragment extends Fragment {
         rate.setTextColor(Color.WHITE);
         ask.setTextColor(Color.WHITE);
         map.setTextColor(Color.WHITE);
+
+        if(Locale.getDefault().getLanguage().equals("en") ){
+            rate.setText("Rate");
+            map.setText("Map");
+        }
+        else{
+            rate.setText("Evaluar");
+            map.setText("Mapa");
+        }
         checkin.setTextColor(Color.WHITE);
         makeFavourite.setTextColor(Color.WHITE);
         ask.setVisibility(View.INVISIBLE);
