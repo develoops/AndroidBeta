@@ -31,11 +31,10 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.cvdl.R;
+import mc.nefro.R;
 
 import model.Event;
 import model.MeetingApp;
-import model.New;
 import model.Person;
 
 
@@ -85,7 +84,7 @@ public class ProgramFragment extends Fragment {
         headerDay = getArguments().getString("header");
         Log.e(getClass().getName(), "onCreateView + header: " + headerDay);
         barradias = (RelativeLayout) RootView.findViewById(R.id.navi_bar);
-        barradias.setBackgroundColor(getResources().getColor(R.color.modulo));
+        barradias.setBackgroundColor(getResources().getColor(R.color.eventSecundario));
         pg_adapter = new PagerViewAdapter(getChildFragmentManager());
 
 
@@ -135,7 +134,7 @@ public class ProgramFragment extends Fragment {
 
             List<Event> events= eventList;
 
-
+/*
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -154,7 +153,9 @@ public class ProgramFragment extends Fragment {
                 }
             });
 
-/*
+            */
+
+
             Collections.sort(events, new Comparator<Event>() {
                 @Override
                 public int compare(Event lhs, Event rhs) {
@@ -169,7 +170,7 @@ public class ProgramFragment extends Fragment {
 
                 }
             });
-*/
+
 
 
 

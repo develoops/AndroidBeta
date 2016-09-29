@@ -1,2 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/it.sephiroth.android.library.imagezoom/imagezoom/2.2.5/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="406557a6f4369568e5515f8a3c66c97b23f21534">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/it.sephiroth.android.library.imagezoom-imagezoom-2.2.5_89a1eb03587c279e52b118618c0f52d573badd86.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/universal-image-loader-1.9.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a85588bec3e2c4584d593d3f15df1677321bca72">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.3_5bcd49208dab5279f45189dbe68905b9f98673e8.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="78b8f6e37921559ed21c1fae1f30f9f713494db8">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi_660cd3c46030d68708456643a2155834fd3a7e7c.jar" />
+    </item>
+    <item
+        jar="/Volumes/Mac OS X Install ESD/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3_9ed775a570c7c277bf031686fefa07513bb7c4ea.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/Parse-1.9.1/ParseCrashReporting-1.9.1.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2bfbcce5ae61bdd10676df8e89710693c1256024">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/ParseCrashReporting-1.9.1_61a06a18ae1de666a73242aefcdcfff5e680bf6e.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/Parse-1.9.1/bolts-android-1.2.0.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/bolts-android-1.2.0_0cc2fe50162c787bc3c0da929957c707341ee8d6.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/libs/Parse-1.9.1/Parse-1.9.1.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="1b065010f3c9d441ede9078aca8eabcd1c81e647">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/Parse-1.9.1_17ec8228108bfa38989de71863d0f47bc4b8fe6b.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-21.0.3_d168ebfad7dad11a4a56212668bfeff1b91b3148.jar" />
+    </item>
+    <item
+        jar="/Applications/Android Studio.app/Contents/gradle/m2repository/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/gson-2.2.4_d0ce76b63ce905fbab3c5d385c8e1b8692010f19.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="526853154e4387c4fcc0ead7e13e4947c62d9a94">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_501a8d244bb64d2591608342c4803e22efa9d750.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-21.0.3_f61ff9d834a08d74b08d08d350839177d8c69d4b.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3_3d9d522770523f7aea21f980dc2eb32775b890d0.jar" />
+    </item>
+    <item
+        jar="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="21.1.2"
+        sha1="e697f28d47e9924b9c5878b605a10799566c929c">
+        <dex dex="/Users/Alvaro/Downloads/AndroidBeta/app/build/intermediates/pre-dexed/debug/instant-run_40c7dd4f112a36eea26c1959366e0d2decba5886.jar" />
+    </item>
+
+</items>

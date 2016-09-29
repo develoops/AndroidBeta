@@ -1,4 +1,4 @@
-package mc.cvdl;
+package mc.nefro;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

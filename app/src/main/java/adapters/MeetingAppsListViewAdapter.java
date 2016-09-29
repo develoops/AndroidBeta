@@ -22,8 +22,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.MeetingApp;
 
 /**

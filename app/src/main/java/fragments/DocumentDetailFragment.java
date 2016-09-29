@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-import mc.cvdl.R;
+import mc.nefro.R;
 import model.MobiFile;
 
 /**

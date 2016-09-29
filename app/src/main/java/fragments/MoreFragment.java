@@ -18,12 +18,10 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.cvdl.R;
-import model.MeetingApp;
+import mc.nefro.R;
 import model.MobiFile;
 
 /**

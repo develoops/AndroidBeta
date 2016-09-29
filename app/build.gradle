@@ -5,11 +5,11 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "mc.cvdl"
+        applicationId "mc.nefro"
         minSdkVersion 16
         targetSdkVersion 21
-        versionCode 5
-        versionName "1.4"
+        versionCode 2
+        versionName "1.1"
     }
     buildTypes {
         release {

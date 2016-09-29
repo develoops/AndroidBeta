@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.Actor;
 
 /**

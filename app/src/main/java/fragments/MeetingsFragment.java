@@ -20,9 +20,9 @@ import java.util.List;
 
 
 import adapters.MeetingAppsListViewAdapter;
-import mc.cvdl.MainActivity;
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.MainActivity;
+import mc.nefro.R;
+import mc.nefro.myApp;
 
 import model.MeetingApp;
 

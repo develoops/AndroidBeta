@@ -34,8 +34,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.cvdl.MainActivity;
-import mc.cvdl.R;
+import mc.nefro.MainActivity;
+import mc.nefro.R;
 import model.Company;
 import model.Facade;
 import model.MeetingApp;

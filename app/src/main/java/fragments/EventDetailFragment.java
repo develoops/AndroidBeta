@@ -52,9 +52,9 @@ import adapters.DirectiveListViewAdapter;
 import adapters.GridDocumentsAdapter;
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.cvdl.BroadcastAlarma;
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.BroadcastAlarma;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;

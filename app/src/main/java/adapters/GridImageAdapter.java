@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-import mc.cvdl.R;
+import mc.nefro.R;
 import model.Facade;
 
 /**
@@ -76,8 +76,8 @@ public class GridImageAdapter extends BaseAdapter {
 
             // Locate the ImageView in listview_item.xml
             holder.image = (ParseImageView) view.findViewById(R.id.image);
-            holder.image.getLayoutParams().height = (height/ 3) - dpToPx(70);
-            holder.image.getLayoutParams().width = (width / 3);
+            holder.image.getLayoutParams().height = (height) - dpToPx(200);
+            holder.image.getLayoutParams().width = (width);
 
             view.setTag(holder);
 

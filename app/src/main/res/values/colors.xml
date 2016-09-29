@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="companyPrimario">#f2f2f2</color>
-    <color name="companySecundario">#192d2e</color>
-    <color name="companyTerciario">#192d2e</color>
-    <color name="conferencia">#4a9497</color>
-    <color name="curso">#7a9cbd</color>
+    <color name="companySecundario">#6198d4</color>
+    <color name="companyTerciario">#446acf</color>
+    <color name="conferencia">#afc8e9</color>
+    <color name="curso">#3f467a</color>
 
     <color name="eventPrimario">#f2f2f2</color>
-    <color name="eventSecundario">#536dfe</color>
-    <color name="eventoTerciario">#03a9f4</color>
-    <color name="modulo">#7a9cbd</color>
+    <color name="eventSecundario">#6198d4</color>
+    <color name="eventoTerciario">#446acf</color>
+    <color name="modulo">#7a808e</color>
     <color name="negro">#ff000000</color>
-    <color name="brk">#94b90a</color>
+    <color name="brk">#3f467a</color>
     <color name="gray">#ffd5dade</color>
     <color name="blanco">#FFF</color>
 

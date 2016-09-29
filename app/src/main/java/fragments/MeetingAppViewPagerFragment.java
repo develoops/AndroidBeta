@@ -20,9 +20,9 @@ import java.util.List;
 
 import adapters.EventsFragmentAdapter;
 import fragments.sliding_tab.SlidingTabLayout;
-import mc.cvdl.MainActivity;
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.MainActivity;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.Event;
 import model.MeetingApp;
 import model.Wall;

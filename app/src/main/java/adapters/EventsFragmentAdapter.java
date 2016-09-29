@@ -21,12 +21,10 @@ import fragments.ChildPagerMeetingsFragment;
 import fragments.CurrentEventsFragment;
 import fragments.FavouritesFragment;
 import fragments.GalleryFragment;
-import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import fragments.SponsorsFragment2;
-import mc.cvdl.myApp;
+import mc.nefro.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;

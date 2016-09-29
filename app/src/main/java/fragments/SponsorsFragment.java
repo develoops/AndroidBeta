@@ -28,7 +28,7 @@ import java.util.Locale;
 
 import adapters.GridImageAdapter;
 
-import mc.cvdl.R;
+import mc.nefro.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
@@ -76,7 +76,7 @@ public class SponsorsFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("subtype","mapa_comercial");
+        query.whereEqualTo("title","mapaComercial");
         query.getFirstInBackground(new GetCallback<MobiFile>() {
             @Override
             public void done(MobiFile mobiFile, ParseException e) {
@@ -109,7 +109,7 @@ public class SponsorsFragment extends Fragment {
                 dialogo.setContentView(R.layout.map_box_layout2);
 
                 ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("subtype","mapa_comercial");
+                query.whereEqualTo("title","mapaComercial");
                 query.getFirstInBackground(new GetCallback<MobiFile>() {
                     @Override
                     public void done(MobiFile mobiFile, ParseException e) {

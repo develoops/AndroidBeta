@@ -17,7 +17,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.cvdl.R;
+import mc.nefro.R;
 
 import model.MobiFile;
 

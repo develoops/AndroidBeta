@@ -21,8 +21,8 @@ import android.widget.ListView;
 import java.util.List;
 
 import adapters.NewsListViewAdapter;
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.New;
 
 /**

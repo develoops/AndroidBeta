@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

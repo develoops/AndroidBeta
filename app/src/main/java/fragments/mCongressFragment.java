@@ -14,7 +14,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.parse.ParseFile;
 import com.parse.ParseImageView;
 
-import mc.cvdl.R;
+import mc.nefro.R;
 import model.Company;
 
 /**

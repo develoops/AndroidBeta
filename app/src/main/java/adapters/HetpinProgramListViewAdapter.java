@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
 
-import mc.cvdl.R;
-import mc.cvdl.myApp;
+import mc.nefro.R;
+import mc.nefro.myApp;
 import model.Actor;
 import model.Event;
 import model.MeetingApp;
@@ -551,7 +551,7 @@ public class HetpinProgramListViewAdapter extends BaseAdapter implements Filtera
         else if (eventType.equals("curso")||
                 eventType.equals("Curso")||
                 eventType.equals("modulo")||
-                eventType.equals("Modulo")||
+                eventType.equals("Módulo")||
                 eventType.equals("Trabajos Libres")){
 
             if(eventList.get(position).getIcon()!=null){
