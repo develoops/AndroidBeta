@@ -103,9 +103,10 @@ public class ChildPagerMeetingsFragment extends Fragment implements View.OnClick
             if(anidateEvents!=null){
                 for(Event event: mApp.getEvents()){
                     if (anidateEvents.contains(event)){
-
+                        Log.i("EVENTONOSEMUESTRA",String.valueOf(event.getObjectId()));
                     }
                     else {
+                        Log.i("EVENTO",String.valueOf(event.getObjectId()));
                         events.add(event);
                     }
                 }

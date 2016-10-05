@@ -21,6 +21,7 @@ import fragments.ChildPagerMeetingsFragment;
 import fragments.CurrentEventsFragment;
 import fragments.FavouritesFragment;
 import fragments.GalleryFragment;
+import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
@@ -144,7 +145,11 @@ public class EventsFragmentAdapter extends FragmentStatePagerAdapter
             return SponsorsFragment.newInstance(mApp);
         }
 
-        else{
+        else if(tabUIs.get(position).getnameView().equals("navLibrary")){
+            return MoreFragment.newInstance(mApp);
+        }
+
+        else {
             return GalleryFragment.newInstance(mApp);
         }
 
