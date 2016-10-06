@@ -19,7 +19,7 @@ import com.parse.ParseObject;
 import java.util.List;
 
 import adapters.HetpinProgramListViewAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 import model.Event;
 import model.MeetingApp;
 

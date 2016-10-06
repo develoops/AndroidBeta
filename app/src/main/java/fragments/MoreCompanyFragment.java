@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridMediaAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MobiFile;
 
 /**

@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import imageTreatment.RoundedImageView;
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.neuro.R;
+import mc.neuro.myApp;
 import model.MeetingApp;
 import model.Person;
 

@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.SocietyLogoAdapter;
-import mc.nefro.R;
-import mc.nefro.MainActivity;
+import mc.neuro.R;
+import mc.neuro.MainActivity;
 import model.Company;
 import model.MeetingApp;
 

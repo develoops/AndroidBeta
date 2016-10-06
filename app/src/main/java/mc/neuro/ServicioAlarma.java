@@ -1,4 +1,4 @@
-package mc.nefro;
+package mc.neuro;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;

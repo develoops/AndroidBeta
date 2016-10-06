@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
-import mc.nefro.MainActivity;
+import mc.neuro.MainActivity;
 
 /**
  * Created by alvaro on 05-11-14.

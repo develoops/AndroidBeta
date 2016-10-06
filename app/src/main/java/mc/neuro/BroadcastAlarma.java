@@ -1,4 +1,4 @@
-package mc.nefro;
+package mc.neuro;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

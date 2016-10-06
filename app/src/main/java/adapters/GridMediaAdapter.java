@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MobiFile;
 
 /**

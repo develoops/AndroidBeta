@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridGalleryAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MeetingApp;
 import model.MobiFile;
 import utils.TouchImageView;

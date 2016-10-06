@@ -19,8 +19,8 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.neuro.R;
+import mc.neuro.myApp;
 import model.Company;
 
 /**

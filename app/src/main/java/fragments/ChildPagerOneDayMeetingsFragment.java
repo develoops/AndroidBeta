@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import mc.nefro.R;
+import mc.neuro.R;
 import model.Event;
 
 /**

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import adapters.GridDocumentsAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MeetingApp;
 import model.MobiFile;
 

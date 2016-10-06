@@ -25,7 +25,7 @@ import fragments.MoreFragment;
 import fragments.SpeakersFragment;
 import fragments.SponsorsFragment;
 
-import mc.nefro.myApp;
+import mc.neuro.myApp;
 import model.Event;
 import model.MeetingApp;
 import views.CustomViewPager;

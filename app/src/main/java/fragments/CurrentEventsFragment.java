@@ -20,8 +20,8 @@ import java.util.Locale;
 
 import adapters.HetpinProgramListViewAdapter;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.neuro.R;
+import mc.neuro.myApp;
 import model.Event;
 import model.MeetingApp;
 

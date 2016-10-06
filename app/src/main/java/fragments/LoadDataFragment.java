@@ -21,8 +21,8 @@ import com.parse.ParseQuery;
 
 import java.util.List;
 
-import mc.nefro.R;
-import mc.nefro.myApp;
+import mc.neuro.R;
+import mc.neuro.myApp;
 import model.Actor;
 import model.Company;
 import model.CompanyApp;

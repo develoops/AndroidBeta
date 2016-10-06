@@ -31,7 +31,7 @@ import java.util.Map;
 
 import adapters.HetpinProgramListViewAdapter;
 import adapters.PagerViewAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 
 import model.Event;
 import model.MeetingApp;

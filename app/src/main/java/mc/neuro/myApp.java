@@ -1,4 +1,4 @@
-package mc.nefro;
+package mc.neuro;
 
 import android.app.Application;
 import android.content.Context;
@@ -66,7 +66,7 @@ public class myApp extends Application {
         mContext = this;
         Parse.enableLocalDatastore(this);
         ParseCrashReporting.enable(this);
-        Parse.initialize(this, "SILmuxyZnDPmUjWsXrYov9QffmNQ3WrqullVS8Z7", "PK6YFAmEU9Tf5w0vvJb6qb13P5mASHIYZehaQTNr");
+        Parse.initialize(this, "K4iYwL6NwKSKIt40XdoNYvlyGqMGoYFTZzMlFLiQ", "BPn66jFmP2dKwJ2zd78xP3nFfLtUmlvUbp11wPMc");
         //Parse.initialize(this, "4cxQOqEv89irqJxoqXY67SCelvOpRuPMoUazSi4b", "zpSulFdKyT4HVVESQr8iC2oLN6JGjI0v7nZN9bxL");
         // Parse.initialize(this, "pThOBYo97xXHKzeBn32O2shH398KvwFrnRcqze4m", "i9915R5ITUDpF8OOw6vd0yFSzKgc9M8JRkLoiPSC");
         //Parse.initialize(this, "PJniJghr5jqtMkkadDbRmFwnCk37T8bWqaBsJvm8", "FliRL0Wp4yJAoIn6CqoGDDJePKKNQjX0AcQ3pJLb");//Expomeetings
@@ -124,7 +124,7 @@ public class myApp extends Application {
 
 
 
-        ParsePush.subscribeInBackground("nefro", new SaveCallback() {
+        ParsePush.subscribeInBackground("neuro", new SaveCallback() {
             @Override
             public void done(ParseException e) {
 

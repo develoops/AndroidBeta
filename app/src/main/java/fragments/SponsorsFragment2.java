@@ -18,7 +18,7 @@ import com.parse.ParseQuery;
 
 import java.util.ArrayList;
 
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MeetingApp;
 import model.MobiFile;
 

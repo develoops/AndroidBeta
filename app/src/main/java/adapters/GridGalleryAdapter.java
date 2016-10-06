@@ -17,7 +17,7 @@ import com.parse.ParseImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import mc.nefro.R;
+import mc.neuro.R;
 import model.MobiFile;
 
 /**

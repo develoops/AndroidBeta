@@ -28,7 +28,7 @@ import java.util.Locale;
 
 import adapters.GridImageAdapter;
 
-import mc.nefro.R;
+import mc.neuro.R;
 import model.Facade;
 import model.MeetingApp;
 import model.MobiFile;
@@ -76,7 +76,7 @@ public class SponsorsFragment extends Fragment {
 
 
         ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-        query.whereEqualTo("title","mapaComercial");
+        query.whereEqualTo("subtype","map");
         query.getFirstInBackground(new GetCallback<MobiFile>() {
             @Override
             public void done(MobiFile mobiFile, ParseException e) {
@@ -108,36 +108,70 @@ public class SponsorsFragment extends Fragment {
 
                 dialogo.setContentView(R.layout.map_box_layout2);
 
-                ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
-                query.whereEqualTo("title","mapaComercial");
-                query.getFirstInBackground(new GetCallback<MobiFile>() {
-                    @Override
-                    public void done(MobiFile mobiFile, ParseException e) {
-                        map=mobiFile;
-                        final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
-                        TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
-                        mapadialog.setMaxZoom(4f);
-                        mapadialog.setMinZoom(1f);
-                        if (map!= null) {
-                            ImageLoader imageLoader = ImageLoader.getInstance();
-                            //Load the image from the url into the ImageView.
-                            imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
-                        }
-
-
-                        dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
-                        done.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                dialogo.dismiss();
-
+                if(mApp.getObjectId().equals("v1QgRIVCNs")){
+                    ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
+                    query.whereEqualTo("title","PanoComercialSonepsyn");
+                    query.getFirstInBackground(new GetCallback<MobiFile>() {
+                        @Override
+                        public void done(MobiFile mobiFile, ParseException e) {
+                            map=mobiFile;
+                            final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
+                            TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
+                            mapadialog.setMaxZoom(4f);
+                            mapadialog.setMinZoom(1f);
+                            if (map!= null) {
+                                ImageLoader imageLoader = ImageLoader.getInstance();
+                                //Load the image from the url into the ImageView.
+                                imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
                             }
-                        });
 
-                        dialogo.show();
-                    }
-                });
 
+                            dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                            done.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    dialogo.dismiss();
+
+                                }
+                            });
+
+                            dialogo.show();
+                        }
+                    });
+
+                }
+
+                else {
+                    ParseQuery<MobiFile> query = ParseQuery.getQuery(MobiFile.class);
+                    query.whereEqualTo("title","PlanoComercialNeuro");
+                    query.getFirstInBackground(new GetCallback<MobiFile>() {
+                        @Override
+                        public void done(MobiFile mobiFile, ParseException e) {
+                            map=mobiFile;
+                            final Button done = (Button) dialogo.findViewById(R.id.btn_done_image_dialog);
+                            TouchImageView mapadialog = (TouchImageView) dialogo.findViewById(R.id.image_dialog);
+                            mapadialog.setMaxZoom(4f);
+                            mapadialog.setMinZoom(1f);
+                            if (map!= null) {
+                                ImageLoader imageLoader = ImageLoader.getInstance();
+                                //Load the image from the url into the ImageView.
+                                imageLoader.displayImage(map.getParseFileV1().getUrl(), mapadialog);
+                            }
+
+
+                            dialogo.getWindow().getAttributes().width = RelativeLayout.LayoutParams.MATCH_PARENT;
+                            done.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    dialogo.dismiss();
+
+                                }
+                            });
+
+                            dialogo.show();
+                        }
+                    });
+                }
 
 
 

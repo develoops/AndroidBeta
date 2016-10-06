@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Locale;
 
 import adapters.GridDocumentsAdapter;
-import mc.nefro.R;
+import mc.neuro.R;
 
 import model.MobiFile;
 
