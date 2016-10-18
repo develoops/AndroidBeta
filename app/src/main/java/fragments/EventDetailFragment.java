@@ -331,7 +331,6 @@ public class EventDetailFragment extends Fragment {
                 @Override
                 public int compare(Event lhs, Event rhs) {
 
-
                     int date1Diff = lhs.getStartDate().compareTo(rhs.getStartDate());
                     if (date1Diff == 0) {
                         return (int) lhs.getEndDate().getTime() - (int) rhs.getEndDate().getTime();
